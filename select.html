@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>實現選單的下拉</title>
+	<style>
+	  div{width:200px;height:300px;border:1px solid #000;background-color:#cacfd6;}
+	  ul{ list-style:none; }
+	  li .submenu{margin-left: -30px;
+    line-height: 30px;}/* background-color:#9abbd8;   #b0bac7*/
+	 li .active{background-color:#b0bac7}
+	</style>
+</head>
+<body>
+  <div>
+    <ul>
+	<!-- 第一項選單-->
+	  <li>
+	  <a id="dropmenu">一級 1</a>
+	   <ul style="display:none">
+	    <li class="submenu">二級 一.1</li>
+		<li class="submenu">二級 一.2</li>
+		<li class="submenu">二級 一.3</li>
+		<li class="submenu">二級 一.4</li>
+	   </ul>
+	  </li>
+     <!-- 第二項選單 -->
+	  <li>
+	  <a class="dropmenu" >一級 2</a>
+	    <ul style="display:none">
+	    <li class="submenu">二級 二·1</li>
+		<li class="submenu">二級 二·2</li>
+		<li class="submenu">二級 二·3</li>
+		<li class="submenu">二級 二·4</li>
+	   </ul>
+	  </li>
+	  <!-- 第三項選單 -->
+	  <li>
+	  <a class="dropmenu" >一級 3</a>
+	    <ul style="display:none">
+		<li class="submenu">二級 三.1</li>
+		<li class="submenu">二級 三.2</li>
+		<li class="submenu">二級 三.3</li>
+		<li class="submenu">二級 三.4</li>
+	   </ul>
+	  </li>
+	  
+	</ul>
+  </div> 
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script>
+     //選單的展開和收回
+     $('a').click(function(){
+		 var li_list=$(this).next();
+		 var otherli_list = $("a").next().not($(this).next());
+         otherli_list.hide();
+		 li_list.toggle(500);
+	 });
+    // 新增樣式
+      $("li[class='submenu']").click(function(){
+	  $("li").next().siblings().removeClass('active');
+      $(this).removeClass('active');
+      $(this).addClass('active');
+	});
+
+ 
+  </script>
+</body>
+</html>
