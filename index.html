@@ -6,12 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>home</title>
 <style id="applicationStylesheet" type="text/css">
-	li {
-		list-style-type: none;
-		margin: 0;
-    	padding: 0;
-		display: list-item;
-		text-align: -webkit-match-parent;
+	ul{
+		list-style:none; 
 	}
 	.mediaViewInfo {
 		--web-view-name: home;
@@ -706,18 +702,15 @@
 		color: rgba(255,255,255,1);
 		letter-spacing: 0.15px;
 	}
-	#menu {
-		/* list-style:none; */
+	.menu {
 		overflow: hidden;
 		padding-left: 0;
 		position: fixed;
-		width: 198px;
-		height: 600px;
 		left: 60px;
 		top: 184px;
 		overflow: visible;
 	}
-	.menu_aboutus {
+	.dropmenu {
 		overflow: visible;
 		white-space: nowrap;
 		text-align: left;
@@ -725,106 +718,45 @@
 		font-style: normal;
 		font-weight: bold;
 		font-size: 17px;
-		color: rgba(255,255,255,1);
+		color: rgba(256,256,256,1);
 		letter-spacing: 0.15px;
+		line-height:60px;
+        transition: color 0.3s;
+		-webkit-transition: color 0.3s;
 	}	
-	.menu_apply {
-		position: absolute;
-		top: 220px;
-		overflow: visible;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
-	}	
-	.component_apply {
+	.submenu {
 		text-decoration: none;
-		height: 60px;
-		opacity: 100;
-		position: absolute;
 		overflow: visible;
 		white-space: nowrap;
 		text-align: left;
+		margin-left: 30px;
 		font-family: Tw Cen MT;
 		font-style: normal;
-		font-weight: normal;
+		font-weight: bold;
 		font-size: 17px;
-		color: rgba(255,255,255,1);
+		color: rgba(256,256,256,1);
 		letter-spacing: 0.15px;
+		line-height:60px;
+		transition: color 0.3s;
+		-webkit-transition: color 0.3s;		
 	}
-	ul.menu li a:hover { /* 滑鼠滑入level 1文字變色*/
-		color: rgba(91,71,255,1);
-    }
-    ul.menu li:hover > a { /* 滑鼠移入次選單 上層按鈕保持變色*/
-		color: rgba(91,71,255,1);
-    }
-	ul.menu li ul { /*隱藏次選單*/
-        display: none;
+	a.dropmenu:hover { /* 滑鼠滑入level 1文字變色*/
+		color: rgba(91,71,255,1) !important;
     }
 	ul.menu li:hover > ul { /* 滑鼠滑入 展開次選單*/
+		opacity: 1;
         display: block;
     }
-	.component_apply:hover { /* 滑鼠滑入level 2文字變色*/
-		color: rgba(91,71,255,1);
+    ul.menu li:hover > a { /* 滑鼠移入次選單 上層按鈕保持變色*/
+		color: rgba(91,71,255,1)!important;
     }
-
-	#Component_37__2 {
-		position: absolute;
-		width: 41px;
-		height: 19px;
-		left: 0px;
-		top: 118px;
-		overflow: visible;
-	}
-	#News_cc {
-		left: 0px;
-		top: 0px;
-		position: absolute;
-		overflow: visible;
-		width: 42px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
-	}
-	#Apply_Requirements_cf {
-		left: 0px;
-		top: 0px;
-		position: absolute;
-		overflow: visible;
-		width: 141px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
-	}
-	#Apply_Now_ch {
-		left: 0px;
-		top: 0px;
-		position: absolute;
-		overflow: visible;
-		width: 80px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
-	}
+	ul.menu li ul { /*隱藏次選單*/
+		opacity: 0;
+        display: none;
+    }
+	.submenu:hover { /* 滑鼠滑入level 2文字變色*/
+		color: rgba(91,71,255,1)!important;
+    }
 	#button_apply_now {
 		position: absolute;
 		width: 260px;
@@ -5280,39 +5212,30 @@ window.application = new Application();
 	<div id="ID1-1heading">
 		<span>Simple can be simple,<br/>parking can be simpler.</span>
 	</div>
-	<ul id="menu" class="menu">
-		<!-- about us -->
-		<li><a id="about_us" class="menu_aboutus" style="line-height:60px">About Us</a>
-		<ul class="menu_level2">
-			<li><a href='/ParkingRobot/company_vision.html' class="component_apply" style="width: 140px; left: 22px; top: 60px;">
-				Company Vision
-			</a></li>
-			<li><a href='/ParkingRobot/our_service.html' class="component_apply"  style="width: 79px; left: 22px; top: 120px;">
-				Our Service
-			</a></li>
-			<li><a href='/ParkingRobot/operation_method.html' class="component_apply" style="width: 89px; left: 22px; top: 180px;">
-				Operation Method
-			</a></li>
+	<!-- menu -->
+	<div>
+		<ul class="menu">
+		<!-- 第一項選單-->
+		  <li>
+		  <a class="dropmenu">About us</a>
+		   <ul>
+			<li><a href='/ParkingRobot/company_vision.html' class="submenu">Company Vision</a></li>
+			<li><a href='/ParkingRobot/our_service.html' class="submenu">Our Service</a></li>
+			<li><a href='/ParkingRobot/operation_method.html' class="submenu">Operation Method</a></li>
+		   </ul>
+		  </li>
+		<!-- 第二項選單 -->
+		  <li>
+		  <a class="dropmenu">Apply</a>
+			<ul>
+			<li><a href='/ParkingRobot/apply_requirement.html' class="submenu">Apply Requirements</a></li>
+			<li><a href='/ParkingRobot/apply_now.html' class="submenu">Apply Now</a></li>
+			<li><a href='/ParkingRobot/apply_status1.html' class="submenu">Apply Status</a></li>
+		   </ul>
+		  </li>  
 		</ul>
-		</li>
+	</div>
 
-		<!-- apply -->
-		<li><a id="menu_apply" class="menu_apply" style="line-height:60px;">Apply</a>
-		<ul class="menu_level2">
-			<li><a href='/ParkingRobot/apply_requirement.html' class="component_apply" style="width: 140px; left: 22px; top: 300px;">
-				Apply Requirements
-			</a></li>
-			<li><a href='/ParkingRobot/apply_now.html' class="component_apply" style=" width: 79px; left: 22px; top: 360px;">
-				Apply Now
-			</a></li>
-			<li><a href='/ParkingRobot/apply_status1.html' class="component_apply" style="width: 89px; left: 22px; top: 420px;">
-				Apply Status
-			</a></li>
-		</ul>
-		</li>
-
-
-	</ul>
 	<a href='/ParkingRobot/apply_now.html' id="button_apply_now" class="button_apply_now">
 		<div id="Group_62">
 			<div id="Component_3__1" class="Component_3___1">
@@ -5719,15 +5642,32 @@ window.application = new Application();
 		</div>
 	</div>
 </div>
-</body>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
-	function ScrollToBottom(){
+	$(document).ready(function(){  
+		var scroll_pos = 0; 
+			$(document).scroll(function() { 
+			scroll_pos = $(this).scrollTop(); 
+			if(scroll_pos < 780) { 
+				$(".dropmenu").css('color', 'white');
+				$(".submenu").css('color', 'white'); 
+			}else if(scroll_pos >= 780 && scroll_pos <= 1900){ 
+				$(".dropmenu").css('color', 'black'); 
+				$(".submenu").css('color', 'black');
+			}else if(scroll_pos >= 1200){ 
+				$(".dropmenu").css('color', 'white');
+				$(".submenu").css('color', 'white');
+			}
+		}); 
+	}); 
+    function ScrollToBottom(){
 		window.scrollTo(0,document.body.scrollHeight);
 	}
 
 	function ScrollTop(){
 		window.scrollTo(0,document.body.scrollHeight);
 	}
+ 
 </script>
+</body>
 </html>

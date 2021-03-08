@@ -4,47 +4,81 @@
     <meta charset="UTF-8">
     <title>實現選單的下拉</title>
 	<style>
-	  div{width:200px;height:300px;border:1px solid #000;background-color:#cacfd6;}
-	  ul{ list-style:none; }
-	  li .submenu{margin-left: -30px;
-    line-height: 30px;}/* background-color:#9abbd8;   #b0bac7*/
-	 li .active{background-color:#b0bac7}
+	ul{
+		list-style:none; 
+	}
+	.menu {
+		overflow: hidden;
+		padding-left: 0;
+		position: fixed;
+		left: 60px;
+		top: 184px;
+		overflow: visible;
+	}
+	.dropmenu {
+		overflow: visible;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+		line-height:60px;
+	}	
+	.submenu {
+		text-decoration: none;
+		overflow: visible;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+		line-height:60px;
+	}
+	a.dropmenu:hover { /* 滑鼠滑入level 1文字變色*/
+		color: rgba(91,71,255,1);
+    }
+	ul.menu li:hover > ul { /* 滑鼠滑入 展開次選單*/
+        display: block;
+    }
+    ul.menu li:hover > a { /* 滑鼠移入次選單 上層按鈕保持變色*/
+		color: rgba(91,71,255,1);
+    }
+	ul.menu li ul { /*隱藏次選單*/
+        display: none;
+    }
+	.submenu:hover { /* 滑鼠滑入level 2文字變色*/
+		color: rgba(91,71,255,1);
+    }
+	
 	</style>
 </head>
 <body>
   <div>
-    <ul>
+    <ul class="menu">
 	<!-- 第一項選單-->
 	  <li>
-	  <a id="dropmenu">一級 1</a>
-	   <ul style="display:none">
-	    <li class="submenu">二級 一.1</li>
-		<li class="submenu">二級 一.2</li>
-		<li class="submenu">二級 一.3</li>
-		<li class="submenu">二級 一.4</li>
+	  <a class="dropmenu">About us</a>
+	   <ul>
+	    <li><a href='/ParkingRobot/company_vision.html' class="submenu">Company Vision</a></li>
+		<li><a href='/ParkingRobot/our_service.html' class="submenu">Our Service</a></li>
+		<li><a href='/ParkingRobot/operation_method.html' class="submenu">Operation Method</a></li>
 	   </ul>
 	  </li>
      <!-- 第二項選單 -->
 	  <li>
-	  <a class="dropmenu" >一級 2</a>
-	    <ul style="display:none">
-	    <li class="submenu">二級 二·1</li>
-		<li class="submenu">二級 二·2</li>
-		<li class="submenu">二級 二·3</li>
-		<li class="submenu">二級 二·4</li>
+	  <a class="dropmenu">Apply</a>
+	    <ul>
+	    <li><a href='/ParkingRobot/apply_requirement.html' class="submenu">Apply Requirements</a></li>
+		<li><a href='/ParkingRobot/apply_now.html' class="submenu">Apply Now</a></li>
+		<li><a href='/ParkingRobot/apply_status1.html' class="submenu">Apply Status</a></li>
 	   </ul>
-	  </li>
-	  <!-- 第三項選單 -->
-	  <li>
-	  <a class="dropmenu" >一級 3</a>
-	    <ul style="display:none">
-		<li class="submenu">二級 三.1</li>
-		<li class="submenu">二級 三.2</li>
-		<li class="submenu">二級 三.3</li>
-		<li class="submenu">二級 三.4</li>
-	   </ul>
-	  </li>
-	  
+	  </li>  
 	</ul>
   </div> 
 
