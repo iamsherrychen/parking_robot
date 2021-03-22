@@ -4,6 +4,8 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="stylesheet" href="./src/main.css">
 <title>home-apply-apply now</title>
 <script src="./path/to/dropzone.js"></script>
 <style id="applicationStylesheet" type="text/css">
@@ -31,7 +33,7 @@
 	#home-apply-apply_now {
 		position: absolute;
 		width: 1920px;
-		height: 2738px;
+		height: 2500px;
 		background-color: rgba(255,255,255,1);
 		overflow: hidden;
 		--web-view-name: home-apply-apply now;
@@ -49,10 +51,35 @@
 		}
 	
 	}
+	.classify {
+		left: 380px;
+		position: absolute;
+		overflow: visible;
+		width: 225px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 28px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	.names {
+		position: absolute;
+		overflow: visible;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
 	input{
-		fill: rgba(255,255,255,1);
-		stroke: rgba(0,0,0,1);
-		border: 2px black solid;
+		background-color: #F5F6F7;
+		outline:none;
 		position: absolute;
 		padding: 20px 20px;
     	margin: 8px 0;
@@ -81,8 +108,8 @@
 		position: absolute;
 		width: 195px;
 		height: 55px;
-		left: 1294px;
-		top: 1448px;
+		left: 914px;
+		top: 350px;
 		padding: 10px 10px;
 		text-align: center;
 		font-family: Tw Cen MT;
@@ -91,37 +118,10 @@
 		color: rgba(245,246,247,1);
 		letter-spacing: 0.15px;
 	}
-	.classify {
-		left: 380px;
-		position: absolute;
-		overflow: visible;
-		width: 225px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 28px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
-	.names {
-		left: 380px;
-		position: absolute;
-		overflow: visible;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
 	
 	#length {
-		left: 772px;
-		top: 616px;
+		left: 392px;
+		top: 273px;
 		position: absolute;
 		overflow: visible;
 		width: 43px;
@@ -135,8 +135,8 @@
 		letter-spacing: 0.15px;
 	}
 	#width {
-		left: 1017px;
-		top: 616px;
+		left: 637px;
+		top: 273px;
 		position: absolute;
 		overflow: visible;
 		width: 51px;
@@ -150,8 +150,8 @@
 		letter-spacing: 0.15px;
 	}
 	#m2 {
-		left: 1270px;
-		top: 616px;
+		left: 890px;
+		top: 273px;
 		position: absolute;
 		overflow: visible;
 		width: 32px;
@@ -164,69 +164,60 @@
 		color: rgba(0,0,0,1);
 		letter-spacing: 0.15px;
 	}
-	.pictures {
-		fill: rgba(255,255,255,1);
-		stroke: rgba(0,0,0,1);
-		stroke-width: 2px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-		position: absolute;
-		overflow: visible;
+	#estimate_line{
+		display:none;
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+	}
+	/* Drag and Drop File Upload CSS */
+	#pictures{
+		position:relative; 
+		top: 355px;
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+	}
+	.drop-zone {
+		position: absolute; 
+		top: 0px;
 		width: 173px;
 		height: 173px;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-weight: 500;
+		font-size: 20px;
+		cursor: pointer;
+		color: black;
+		background-color: #F5F6F7;
 	}
-	#Rectangle_7_ba {
-		fill: rgba(255,255,255,1);
-		stroke: rgba(0,0,0,1);
-		stroke-width: 2px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
+	.drop-zone--over {
+		border-style: solid;
 	}
-	.Rectangle_7_ba {
+	.drop-zone__input {
+		display: none;
+	}
+	.drop-zone__thumb {
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+		overflow: hidden;
+		background-color: #cccccc;
+		background-size: cover;
+		position: relative;
+	}
+	.drop-zone__thumb::after {
+		content: attr(data-label);
 		position: absolute;
-		overflow: visible;
-		width: 173px;
-		height: 173px;
-		left: 952px;
-		top: 818px;
-	}
-	#Rectangle_7_bb {
-		fill: rgba(255,255,255,1);
-		stroke: rgba(0,0,0,1);
-		stroke-width: 2px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Rectangle_7_bb {
-		position: absolute;
-		overflow: visible;
-		width: 173px;
-		height: 173px;
-		left: 1133px;
-		top: 818px;
-	}
-	#Rectangle_7_bc {
-		fill: rgba(255,255,255,1);
-		stroke: rgba(0,0,0,1);
-		stroke-width: 2px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Rectangle_7_bc {
-		position: absolute;
-		overflow: visible;
-		width: 173px;
-		height: 173px;
-		left: 1314px;
-		top: 818px;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 5px 0;
+		color: #ffffff;
+		background: rgba(0, 0, 0, 0.75);
+		font-size: 14px;
+		text-align: center;
 	}
 	#Rectangle_28 {
 		fill: rgba(255,255,255,1);
@@ -261,8 +252,8 @@
 		letter-spacing: 0.15px;
 	}
 	#from {
-		left: 772px;
-		top: 517px;
+		left: 392px;
+		top: 174px;
 		position: absolute;
 		overflow: visible;
 		width: 33px;
@@ -276,8 +267,8 @@
 		letter-spacing: 0.15px;
 	}
 	#to {
-		left: 1027px;
-		top: 517px;
+		left: 647px;
+		top: 174px;
 		position: absolute;
 		overflow: visible;
 		width: 14px;
@@ -357,11 +348,26 @@
 		top: 601px;
 	}
 	#car_parking_spaces_ {
-		left: 960px;
-		top: 715px;
+		left: 580px;
+		top: 374px;
 		position: absolute;
 		overflow: visible;
 		width: 150px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(88,72,245,1);
+		letter-spacing: 0.15px;
+	}
+	#motorcycle_parking_spaces {
+		left: 932px;
+		top: 374px;
+		position: absolute;
+		overflow: visible;
+		width: 186px;
 		white-space: nowrap;
 		text-align: left;
 		font-family: Tw Cen MT;
@@ -435,201 +441,7 @@
 		color: rgba(176,178,186,1);
 		letter-spacing: 0.15px;
 	}
-	#motorcycle_parking_spaces {
-		left: 1312px;
-		top: 715px;
-		position: absolute;
-		overflow: visible;
-		width: 186px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(88,72,245,1);
-		letter-spacing: 0.15px;
-	}
-	#Group_56 {
-		position: absolute;
-		width: 18px;
-		height: 18px;
-		left: 848.5px;
-		top: 895.5px;
-		overflow: visible;
-	}
-	#Path_15 {
-		fill: transparent;
-		stroke: rgba(0,0,0,1);
-		stroke-width: 1.5px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Path_15 {
-		overflow: visible;
-		position: absolute;
-		width: 18px;
-		height: 1.5px;
-		left: 0px;
-		top: 9px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Path_16 {
-		fill: transparent;
-		stroke: rgba(0,0,0,1);
-		stroke-width: 1.5px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Path_16 {
-		overflow: visible;
-		position: absolute;
-		width: 18px;
-		height: 1px;
-		transform: translate(-848.5px, -685.5px) matrix(1,0,0,1,848.4998,694.5) rotate(90deg);
-		transform-origin: center;
-		left: 0px;
-		top: 0px;
-	}
-	#Group_57 {
-		position: absolute;
-		width: 18px;
-		height: 18px;
-		left: 1029.5px;
-		top: 895.5px;
-		overflow: visible;
-	}
-	#Path_15_bz {
-		fill: transparent;
-		stroke: rgba(0,0,0,1);
-		stroke-width: 1.5px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Path_15_bz {
-		overflow: visible;
-		position: absolute;
-		width: 18px;
-		height: 1.5px;
-		left: 0px;
-		top: 9px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Path_16_b {
-		fill: transparent;
-		stroke: rgba(0,0,0,1);
-		stroke-width: 1.5px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Path_16_b {
-		overflow: visible;
-		position: absolute;
-		width: 18px;
-		height: 1px;
-		transform: translate(-848.5px, -685.5px) matrix(1,0,0,1,848.4998,694.5) rotate(90deg);
-		transform-origin: center;
-		left: 0px;
-		top: 0px;
-	}
-	#Group_58 {
-		position: absolute;
-		width: 18px;
-		height: 18px;
-		left: 1210.5px;
-		top: 895.5px;
-		overflow: visible;
-	}
-	#Path_15_b {
-		fill: transparent;
-		stroke: rgba(0,0,0,1);
-		stroke-width: 1.5px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Path_15_b {
-		overflow: visible;
-		position: absolute;
-		width: 18px;
-		height: 1.5px;
-		left: 0px;
-		top: 9px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Path_16_ca {
-		fill: transparent;
-		stroke: rgba(0,0,0,1);
-		stroke-width: 1.5px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Path_16_ca {
-		overflow: visible;
-		position: absolute;
-		width: 18px;
-		height: 1px;
-		transform: translate(-848.5px, -685.5px) matrix(1,0,0,1,848.4998,694.5) rotate(90deg);
-		transform-origin: center;
-		left: 0px;
-		top: 0px;
-	}
-	#Group_59 {
-		position: absolute;
-		width: 18px;
-		height: 18px;
-		left: 1391.5px;
-		top: 895.5px;
-		overflow: visible;
-	}
-	#Path_15_ca {
-		fill: transparent;
-		stroke: rgba(0,0,0,1);
-		stroke-width: 1.5px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Path_15_ca {
-		overflow: visible;
-		position: absolute;
-		width: 18px;
-		height: 1.5px;
-		left: 0px;
-		top: 9px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Path_16_cb {
-		fill: transparent;
-		stroke: rgba(0,0,0,1);
-		stroke-width: 1.5px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Path_16_cb {
-		overflow: visible;
-		position: absolute;
-		width: 18px;
-		height: 1px;
-		transform: translate(-848.5px, -685.5px) matrix(1,0,0,1,848.4998,694.5) rotate(90deg);
-		transform-origin: center;
-		left: 0px;
-		top: 0px;
-	}
+	
 	#Rectangle_37 {
 		fill: rgba(91,71,255,1);
 	}
@@ -657,19 +469,22 @@
 		color: rgba(245,246,247,1);
 		letter-spacing: 0.15px;
 	}
-	#Group_54 {
-		position: absolute;
+	#button-lets_talk {
+		position: fixed;
 		width: 90px;
 		height: 90px;
 		left: 1770px;
 		top: 920px;
 		overflow: visible;
+		background-color: transparent;
+		border-width:0px;/*邊框透明*/
+		outline:none;/*點擊後無邊框*/
 	}
-	#Ellipse_13 {
+	#ellipse {
 		fill: rgba(245,246,247,1);
 	}
-	.Ellipse_13 {
-		filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+	.ellipse {
+		filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.251));
 		position: absolute;
 		overflow: visible;
 		width: 108px;
@@ -691,6 +506,45 @@
 		font-size: 17px;
 		color: rgba(91,71,255,1);
 		letter-spacing: 0.15px;
+		transition: all 0.2s;
+		-webkit-transition: all 0.2s;
+	}
+	#msg_pic {
+		opacity: 0;
+		position: absolute;
+		width: 25.665px;
+		height: 25.665px;
+		left: 32.167px;
+		top: 0px;
+		overflow: visible;
+		transition: all 0.2s;
+		-webkit-transition: all 0.2s;
+	}
+	#Path_11 {
+		fill: rgba(91,71,255,1);
+	}
+	.Path_11 {
+		overflow: visible;
+		position: absolute;
+		width: 25.665px;
+		height: 25.665px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.button_lets_talk:hover > #Lets_Talk{
+		opacity: 0;
+		left: 11px;
+		top: 72px;
+        transition: all 0.2s;
+		-webkit-transition: all 0.2s;
+	}
+	.button_lets_talk:hover > #msg_pic{
+		opacity: 1;
+		left: 32.167px;
+		top: 36px;
+		transition: all 0.2s;
+		-webkit-transition: all 0.2s;
 	}
 	/* menu css */
 	.menu {
@@ -884,6 +738,9 @@
 		font-size: 17px;
 		color: rgba(0,0,0,1);
 		letter-spacing: 0.15px;
+		background-color: transparent;
+		border-width:0px;/*邊框透明*/
+		outline:none;/*點擊後無邊框*/
 	}
 	#EN {
 		left: 39px;
@@ -899,6 +756,9 @@
 		font-size: 17px;
 		color: rgba(0,0,0,1);
 		letter-spacing: 0.15px;
+		background-color: transparent;
+		border-width:0px;/*邊框透明*/
+		outline:none;/*點擊後無邊框*/
 	}#login_a {
 		position: absolute;
 		width: 75px;
@@ -963,7 +823,7 @@
 		letter-spacing: 0.15px;
 	}
 	#Apply_now {
-		left: 317px;
+		left: 380px;
 		top: 200px;
 		position: absolute;
 		overflow: visible;
@@ -1381,87 +1241,6 @@
 		top: 0px;
 		transform: matrix(1,0,0,1,0,0);
 	}
-	#Rectangle_37_d {
-		fill: rgba(91,71,255,1);
-	}
-	.Rectangle_37_d {
-		position: absolute;
-		overflow: visible;
-		width: 195px;
-		height: 55px;
-		left: 985px;
-		top: 1369px;
-	}
-	#Update_Settings {
-		left: 1009px;
-		top: 1385px;
-		position: absolute;
-		overflow: visible;
-		width: 148px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 22px;
-		color: rgba(245,246,247,1);
-		letter-spacing: 0.15px;
-	}
-	#pictures_descripe {
-		left: 356px;
-		top: 927px;
-		position: absolute;
-		overflow: visible;
-		width: 190px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
-	#calendar-2 {
-		position: absolute;
-		width: 26.958px;
-		height: 26.958px;
-		left: 955.042px;
-		top: 512.521px;
-		overflow: visible;
-	}
-	#Path_540 {
-		fill: rgba(0,0,0,1);
-	}
-	.Path_540 {
-		overflow: visible;
-		position: absolute;
-		width: 26.958px;
-		height: 26.958px;
-		left: 0px;
-		top: 0px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#calendar-2_d {
-		position: absolute;
-		width: 26.958px;
-		height: 26.958px;
-		left: 1171.042px;
-		top: 512.521px;
-		overflow: visible;
-	}
-	#Path_540_ea {
-		fill: rgba(0,0,0,1);
-	}
-	.Path_540_ea {
-		overflow: visible;
-		position: absolute;
-		width: 26.958px;
-		height: 26.958px;
-		left: 0px;
-		top: 0px;
-		transform: matrix(1,0,0,1,0,0);
-	}
 </style>
 
 </head>
@@ -1469,103 +1248,72 @@
 <div id="home-apply-apply_now">
 	<form>
 		<!-- Venue Information -->
-		<p class="classify" style="top: 343px">Venue Information</p>
-		<!-- address -->
-		<p class="names" style="top: 417px">address*</p>
-		<p><input type="text" placeholder="Taipei city..." autofocus required style="width: 715px; left: 772px; top: 402px;"></p>
-		<!-- date -->
-		<p class="names" style="top: 517px">date*</p>
-		<p id="from">from</p>
-		<p><input type="date" value="2021-03-08" required style="width: 190px; left: 819px; top: 495px;"></p>
-		<p id="to">to</p>
-		<p><input type="date" value="2022-03-08" required style="width: 190px; left: 1060px; top: 495px;"></p>
-		<!-- size -->
-		<p class="names" style="top: 616px">size*</p>
-		<p id="length">length</p>
-		<p><input type="number" required style="width: 170px; left: 829px; top: 594px;"></p>
-		<p id="width">x width</p>
-		<p><input type="number" required style="width: 170px; left: 1081px; top: 594px;;"></p>
+		<div class="classify" style="top: 343px">
+			<span>Venue Information</span>
+			<!-- address -->
+			<p class="names" style="top: 74px">address*</p>
+			<p><input type="text" placeholder="Taipei city..." autofocus required style="width: 715px; left: 392px; top: 59px;"></p>
+			<!-- date -->
+			<p class="names" style="top: 174px">date*</p>
+			<p id="from">from</p>
+			<p><input type="date" value="2021-03-08" required style="width: 190px; left: 439px; top: 152px;"></p>
+			<p id="to">to</p>
+			<p><input type="date" value="2022-03-08" required style="width: 190px; left: 680px; top: 152px;"></p>
+			<!-- size -->
+			<p class="names" style="top: 274px">size*</p>
+			<p id="length">length</p>
+			<p><input id="length_num" type="number" required style="width: 170px; left: 449px; top: 251px;" onclick="getSize();"></p>
+			<p id="width">x width</p>
+			<p><input id="width_num" type="number" required style="width: 170px; left: 701px; top: 251px;" onclick="getSize();"></p>
 
-		<p id="m2">(m2)</p>
-		<!-- estimate -->
-		<p class="names" style="top: 715px; color: rgba(88,72,245,1)">estimate</p>
-		<p><input class="estimate" type="number" value="15" style="width: 170px; left: 772px; top: 690px;" readonly="readonly"></p>
-		<p id="car_parking_spaces_" style="color: rgba(88,72,245,1);">car parking spaces +</p>
-		<p><input class="estimate" type="number" value="22" style="width: 170px; left: 1128px; top: 690px;" readonly="readonly"></p>
-		<p id="motorcycle_parking_spaces" style="color: rgba(88,72,245,1);">motorcycle parking spaces</p>
-
-		<!-- pictures -->
-		<p class="names" style="top: 814px">pictures* (Up to 5MB per attachment)</p>
-		<p class="names" style="top: 900px">Must be a PNG/JPG<br/>Up to 5MB per attachment</p>
-		<p><input class="pictures" type="file" required style="width: 173px; height: 173px; left: 772px; top: 818px;"></p>
-
-		<svg class="Rectangle_7_ba">
-			<rect id="Rectangle_7_ba" rx="0" ry="0" x="0" y="0" width="173" height="173">
-			</rect>
-		</svg>
-		<svg class="Rectangle_7_bb">
-			<rect id="Rectangle_7_bb" rx="0" ry="0" x="0" y="0" width="173" height="173">
-			</rect>
-		</svg>
-		<svg class="Rectangle_7_bc">
-			<rect id="Rectangle_7_bc" rx="0" ry="0" x="0" y="0" width="173" height="173">
-			</rect>
-		</svg>
-		<div id="Group_56">
-			<svg class="Path_15" viewBox="6595.2 2553.333 18 1.5">
-				<path id="Path_15" d="M 6595.19970703125 2553.333251953125 L 6613.19970703125 2553.333251953125">
-				</path>
-			</svg>
-			<svg class="Path_16" viewBox="6595.2 2553.333 18 1.5">
-				<path id="Path_16" d="M 6595.19970703125 2553.333251953125 L 6613.19970703125 2553.333251953125">
-				</path>
-			</svg>
+			<p id="m2">(m2)</p>
+			<!-- estimate -->
+			<div id="estimate_line">
+				<p class="names" style="top: 374px; color: rgba(88,72,245,1)">estimate</p>
+				<p><input class="estimate" type="number" value="15" style="width: 170px; left: 392px; top: 349px;" readonly="readonly"></p>
+				<p id="car_parking_spaces_" style="color: rgba(88,72,245,1);">car parking spaces +</p>
+				<p><input class="estimate" type="number" value="22" style="width: 170px; left: 748px; top: 349px;" readonly="readonly"></p>
+				<p id="motorcycle_parking_spaces" style="color: rgba(88,72,245,1);">motorcycle parking spaces</p>
+			</div>
+			<!-- pictures -->
+			<div id="pictures">
+				<p class="names">pictures* (Up to 5MB per attachment)</p>
+				<p class="names" style="top: 100px">Must be a PNG/JPG<br/>Up to 5MB per attachment</p>
+				<div class="drop-zone" style="left: 392px;">
+					<span class="drop-zone__prompt">+</span>
+					<input type="file" name="pic_1" class="drop-zone__input" required>
+				</div>
+				<div class="drop-zone" style="left: 572px;">
+					<span class="drop-zone__prompt">+</span>
+					<input type="file" name="pic_1" class="drop-zone__input" required>
+				</div>
+				<div class="drop-zone" style="left: 752px;">
+					<span class="drop-zone__prompt">+</span>
+					<input type="file" name="pic_1" class="drop-zone__input" required>
+				</div>
+				<div class="drop-zone" style="left: 932px;">
+					<span class="drop-zone__prompt">+</span>
+					<input type="file" name="pic_1" class="drop-zone__input" required>
+				</div>
+			</div>
 		</div>
-		<div id="Group_57">
-			<svg class="Path_15_bz" viewBox="6595.2 2553.333 18 1.5">
-				<path id="Path_15_bz" d="M 6595.19970703125 2553.333251953125 L 6613.19970703125 2553.333251953125">
-				</path>
-			</svg>
-			<svg class="Path_16_b" viewBox="6595.2 2553.333 18 1.5">
-				<path id="Path_16_b" d="M 6595.19970703125 2553.333251953125 L 6613.19970703125 2553.333251953125">
-				</path>
-			</svg>
-		</div>
-		<div id="Group_58">
-			<svg class="Path_15_b" viewBox="6595.2 2553.333 18 1.5">
-				<path id="Path_15_b" d="M 6595.19970703125 2553.333251953125 L 6613.19970703125 2553.333251953125">
-				</path>
-			</svg>
-			<svg class="Path_16_ca" viewBox="6595.2 2553.333 18 1.5">
-				<path id="Path_16_ca" d="M 6595.19970703125 2553.333251953125 L 6613.19970703125 2553.333251953125">
-				</path>
-			</svg>
-		</div>
-		<div id="Group_59">
-			<svg class="Path_15_ca" viewBox="6595.2 2553.333 18 1.5">
-				<path id="Path_15_ca" d="M 6595.19970703125 2553.333251953125 L 6613.19970703125 2553.333251953125">
-				</path>
-			</svg>
-			<svg class="Path_16_cb" viewBox="6595.2 2553.333 18 1.5">
-				<path id="Path_16_cb" d="M 6595.19970703125 2553.333251953125 L 6613.19970703125 2553.333251953125">
-				</path>
-			</svg>
-		</div>
+		
 		<!-- Contact Information -->
 		<div class="classify" style="top: 1076px">
 			<span>Contact Information</span>
+			<!-- name -->
+			<p class="names" style="top: 74px">name</p>
+			<p><input type="text" placeholder="wang pin yun" required style="width: 715px; left: 392px; top: 49px;"></p>
+			<!-- phone -->
+			<p class="names" style="top: 174px">phone</p>
+			<p><input type="tel" placeholder="0933-333-333" required style="width: 715px; left: 392px; top: 149px;"></p>
+			<!-- Email -->
+			<p class="names" style="top: 274px">email</p>
+			<p><input type="email" placeholder="gomezzz0821@gmail.com" required style="width: 715px; left: 392px; top: 249px;"></p>
+			<!-- confirm -->
+			<p><input class="confirm" type="submit" value="Confirm"></p>
 		</div>
-		<!-- name -->
-		<p class="names" style="top: 1150px">name</p>
-		<p><input type="text" placeholder="wang pin yun" required style="width: 715px; left: 772px; top: 1134px;"></p>
-		<!-- phone -->
-		<p class="names" style="top: 1262px">phone</p>
-		<p><input type="tel" placeholder="0933-333-333" required style="width: 715px; left: 772px; top: 1246px;"></p>
-		<!-- Email -->
-		<p class="names" style="top: 1384px">email</p>
-		<p><input type="email" placeholder="gomezzz0821@gmail.com" required style="width: 715px; left: 772px; top: 1368px;"></p>
-		<!-- confirm -->
-		<p><input class="confirm" type="submit" value="Confirm"></p>
+		
 	</form>
 
 	<!-- menu -->
@@ -1631,12 +1379,12 @@
 	</div>
 	
 	<div id="Component_44__12" class="Component_44___12">
-		<div id="CH">
+		<button id="CH">
 			<span>CH</span>
-		</div>
-		<div id="EN">
+		</button>
+		<button id="EN">
 			<span>EN</span>
-		</div>
+		</button>
 	</div>
 	<a href='/ParkingRobot/login.html' id="login_a">
 		<div class="login">
@@ -1650,15 +1398,17 @@
 	<div id="_c">
 		<span>|</span>
 	</div>
-	<div id="Group_54">
-		<svg class="Ellipse_13">
-			<ellipse id="Ellipse_13" rx="45" ry="45" cx="45" cy="45">
-			</ellipse>
+	<button id="button-lets_talk" class="button_lets_talk">
+		<svg class="ellipse">
+			<ellipse id="ellipse" rx="45" ry="45" cx="45" cy="45"></ellipse>
 		</svg>
-		<div id="Lets_Talk">
-			<span>Let's Talk</span>
-		</div>
-	</div>
+		<span id="Lets_Talk">Let's Talk</span>
+		
+		<svg id="msg_pic" class="Path_11" viewBox="0 0.002 25.665 25.665">
+			<path id="Path_11" d="M 22.91533851623535 0.002000000094994903 L 2.749838352203369 0.002000000094994903 C 1.231143474578857 0.002000000094994903 0 1.233143329620361 0 2.751838207244873 L 0 17.41765975952148 C 0 18.93635559082031 1.231143474578857 20.16749954223633 2.749838352203369 20.16749954223633 L 6.00383186340332 20.16749954223633 L 5.505208969116211 24.64973640441895 C 5.449621200561523 25.15292167663574 5.812471389770508 25.6058406829834 6.315659523010254 25.66142845153809 C 6.575496673583984 25.69010734558105 6.835227966308594 25.60648536682129 7.029543399810791 25.43161392211914 L 12.8793420791626 20.16749954223633 L 22.91533851623535 20.16749954223633 C 24.43403434753418 20.16749954223633 25.6651782989502 18.93635559082031 25.6651782989502 17.41765975952148 L 25.6651782989502 2.751838207244873 C 25.66517448425293 1.233143329620361 24.43403244018555 0.002000000094994903 22.91533851623535 0.002000000094994903 Z M 23.8319149017334 17.41766166687012 C 23.8319149017334 17.92391204833984 23.42153358459473 18.33429145812988 22.915283203125 18.33429145812988 L 12.52733993530273 18.33429145812988 C 12.30085372924805 18.33434677124023 12.08242511749268 18.41828918457031 11.91410446166992 18.56985282897949 L 7.593206405639648 22.45904922485352 L 7.938762187957764 19.35264587402344 C 7.994940757751465 18.84956359863281 7.632681369781494 18.39616203308105 7.129546642303467 18.33993148803711 C 7.095711231231689 18.33617210388184 7.061714172363281 18.33423805236816 7.027663707733154 18.33429145812988 L 2.749838352203369 18.33429145812988 C 2.243588924407959 18.33429145812988 1.833207845687866 17.92391204833984 1.833207845687866 17.41766166687012 L 1.833207845687866 2.751838207244873 C 1.833207845687866 2.245589017868042 2.243588924407959 1.83520781993866 2.749838590621948 1.83520781993866 L 22.91533851623535 1.83520781993866 C 23.42158889770508 1.83520781993866 23.83196830749512 2.245589017868042 23.83196830749512 2.751838684082031 L 23.83196830749512 17.41766166687012 Z">
+			</path>
+		</svg>			
+	</button>
 	
 	<div id="Apply_now">
 		<span>Apply now</span>
@@ -1762,6 +1512,90 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
+	//get size and show the estimate
+	function getSize(){
+		window.setInterval(function(){
+            const lengthElement = document.getElementById("length_num");
+			const widthElement = document.getElementById("width_num");
+			const length = lengthElement.value;
+			const width = widthElement.value;
+			if(length>0 && width>0){
+				$("#estimate_line").css('display', 'block');
+				$("#estimate_line").css('transition', 'all 0.5s');
+				$("#estimate_line").css('-webkit-transition', 'all 0.5s');
+				$("#pictures").css('top', '455px');
+			}
+        }, 500);
+		
+	}
+	//Drop file here or click to upload
+	document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+		const dropZoneElement = inputElement.closest(".drop-zone");
+
+		dropZoneElement.addEventListener("click", (e) => {
+			inputElement.click();
+		});
+
+		inputElement.addEventListener("change", (e) => {
+			if (inputElement.files.length) {
+			updateThumbnail(dropZoneElement, inputElement.files[0]);
+			}
+		});
+
+		dropZoneElement.addEventListener("dragover", (e) => {
+			e.preventDefault();
+			dropZoneElement.classList.add("drop-zone--over");
+		});
+
+		["dragleave", "dragend"].forEach((type) => {
+			dropZoneElement.addEventListener(type, (e) => {
+			dropZoneElement.classList.remove("drop-zone--over");
+			});
+		});
+
+		dropZoneElement.addEventListener("drop", (e) => {
+			e.preventDefault();
+
+			if (e.dataTransfer.files.length) {
+			inputElement.files = e.dataTransfer.files;
+			updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+			}
+
+			dropZoneElement.classList.remove("drop-zone--over");
+		});
+		});
+
+		//Updates the thumbnail on a drop zone element.
+		function updateThumbnail(dropZoneElement, file) {
+		let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+		// First time - remove the prompt
+		if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+			dropZoneElement.querySelector(".drop-zone__prompt").remove();
+		}
+
+		// First time - there is no thumbnail element, so lets create it
+		if (!thumbnailElement) {
+			thumbnailElement = document.createElement("div");
+			thumbnailElement.classList.add("drop-zone__thumb");
+			dropZoneElement.appendChild(thumbnailElement);
+		}
+
+		thumbnailElement.dataset.label = file.name;
+
+		// Show thumbnail for image files
+		if (file.type.startsWith("image/")) {
+			const reader = new FileReader();
+
+			reader.readAsDataURL(file);
+			reader.onload = () => {
+			thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+			};
+		} else {
+			thumbnailElement.style.backgroundImage = null;
+		}
+	}
+
 	$('#Group_289').on('click', function(event){ 
 		event.preventDefault(); 
 		$('html, body').stop().animate({scrollTop: $('#home-apply-apply_now').offset().top}, 500); 
@@ -1769,6 +1603,15 @@
 	$('#Group_172').on('click', function(event){ 
 		event.preventDefault(); 
 		$('html, body').stop().animate({scrollTop: $('#home-apply-apply_now').offset().top}, 500); 
+	}); 
+	$('#CH').on('click', function(event){
+		$("#CH").css('font-weight', 'bold');
+		$("#EN").css('font-weight', 'normal');
+	}); 
+	
+	$('#EN').on('click', function(event){
+		$("#CH").css('font-weight', 'normal');
+		$("#EN").css('font-weight', 'bold');
 	}); 
 </script>
 </body>
