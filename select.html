@@ -1,104 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html> 
 <head>
-    <meta charset="UTF-8">
-    <title>實現選單的下拉</title>
-	<style>
-	ul{
-		list-style:none; 
-	}
-	.menu {
-		overflow: hidden;
-		padding-left: 0;
-		position: fixed;
-		left: 60px;
-		top: 184px;
-		overflow: visible;
-	}
-	.dropmenu {
-		overflow: visible;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-		line-height:60px;
-	}	
-	.submenu {
-		text-decoration: none;
-		overflow: visible;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-		line-height:60px;
-	}
-	a.dropmenu:hover { /* 滑鼠滑入level 1文字變色*/
-		color: rgba(91,71,255,1);
-    }
-	ul.menu li:hover > ul { /* 滑鼠滑入 展開次選單*/
-        display: block;
-    }
-    ul.menu li:hover > a { /* 滑鼠移入次選單 上層按鈕保持變色*/
-		color: rgba(91,71,255,1);
-    }
-	ul.menu li ul { /*隱藏次選單*/
-        display: none;
-    }
-	.submenu:hover { /* 滑鼠滑入level 2文字變色*/
-		color: rgba(91,71,255,1);
-    }
-	
-	</style>
+	<meta charset="utf-8">
+	<title>Bootstrap-Table摺疊</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
 </head>
 <body>
-  <div>
-    <ul class="menu">
-	<!-- 第一項選單-->
-	  <li>
-	  <a class="dropmenu">About us</a>
-	   <ul>
-	    <li><a href='./company_vision.html' class="submenu">Company Vision</a></li>
-		<li><a href='./our_service.html' class="submenu">Our Service</a></li>
-		<li><a href='./operation_method.html' class="submenu">Operation Method</a></li>
-	   </ul>
-	  </li>
-     <!-- 第二項選單 -->
-	  <li>
-	  <a class="dropmenu">Apply</a>
-	    <ul>
-	    <li><a href='./apply_requirement.html' class="submenu">Apply Requirements</a></li>
-		<li><a href='./apply_now.html' class="submenu">Apply Now</a></li>
-		<li><a href='./apply_status.html' class="submenu">Apply Status</a></li>
-	   </ul>
-	  </li>  
-	</ul>
-  </div> 
+	<div class="container" style="top: 200px;position: relative;">
+		<table class="table table-striped table-bordered mydatatable" style="width: 100%">
+			<thead style="background-color: rgba(91,71,255,1); color: white;">
+				<tr>
+					<th></th>
+					<th>number</th>
+					<th>date</th>
+					<th>address</th>
+					<th>status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>&gt;</td>
+					<td>20210325001</td>
+					<td>20210325</td>
+					<td>台北市中山區...</td>
+					<td>completed</td>
+				</tr>
+				<tr>
+					<td>&gt;</td>
+					<td>20210325002</td>
+					<td>20210325</td>
+					<td>台北市內湖區...</td>
+					<td>in progress</td>
+				</tr>
+				<tr>
+					<td>&gt;</td>
+					<td>20210325003</td>
+					<td>20210325</td>
+					<td>新北市中和區...</td>
+					<td>in progress</td>
+				</tr>
+				<tr>
+					<td>&gt;</td>
+					<td>20210325004</td>
+					<td>20210325</td>
+					<td>台北市大同區...</td>
+					<td>invalidation</td>
+				</tr>
+				<tr>
+					<td>&gt;</td>
+					<td>20210325005</td>
+					<td>20210325</td>
+					<td>台北市中正區...</td>
+					<td>in progress</td>
+				</tr>
+				<tr>
+					<td>&gt;</td>
+					<td>20210325006</td>
+					<td>20210325</td>
+					<td>台北市信義區...</td>
+					<td>in progress</td>
+				</tr>
+				<tr>
+					<td>&gt;</td>
+					<td>20210325007</td>
+					<td>20210325</td>
+					<td>台北市大安區...</td>
+					<td>in progress</td>
+				</tr>
+				<tr>
+					<td>&gt;</td>
+					<td>20210325008</td>
+					<td>20210325</td>
+					<td>新北市板橋區...</td>
+					<td>in progress</td>
+				</tr>
+				<tr>
+					<td>&gt;</td>
+					<td>20210325009</td>
+					<td>20210325</td>
+					<td>新北市新莊區...</td>
+					<td>in progress</td>
+				</tr>
+				<tr>
+					<td>&gt;</td>
+					<td>20210325010</td>
+					<td>20210325</td>
+					<td>新北市三重區...</td>
+					<td>in progress</td>
+				</tr>
+				<tr>
+					<td>&gt;</td>
+					<td>20210325011</td>
+					<td>20210325</td>
+					<td>新北市林口區...</td>
+					<td>in progress</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script>
-     //選單的展開和收回
-     $('a').click(function(){
-		 var li_list=$(this).next();
-		 var otherli_list = $("a").next().not($(this).next());
-         otherli_list.hide();
-		 li_list.toggle(500);
-	 });
-    // 新增樣式
-      $("li[class='submenu']").click(function(){
-	  $("li").next().siblings().removeClass('active');
-      $(this).removeClass('active');
-      $(this).addClass('active');
-	});
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/1ibs/popper.js/1.14.7/umd/popper.ain.js"></script>
+	<script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
- 
-  </script>
+	<script src= "https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+	<script src= "https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+	<script>
+		$('.mydatatable').DataTable({
+			"ordering": false, //排序功能
+			"searching": true, //搜尋功能, 預設是開啟
+    		"paging": true //分頁功能
+		});
+	</script>
+
 </body>
 </html>
