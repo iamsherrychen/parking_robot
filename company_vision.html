@@ -30,7 +30,7 @@
 	#company_vision {
 		position: absolute;
 		width: 1920px;
-		height: 2961px;
+		height: 2785px;
 		background-color: rgba(255,255,255,1);
 		overflow: hidden;
 		--web-view-name: company vision;
@@ -126,12 +126,11 @@
 		color: rgba(0,0,0,1);
 		letter-spacing: 0.15px;
 	}
-	#Company_Vision {
-		left: 317px;
+	#Company_Vision_title {
+		left: 310px;
 		top: 200px;
 		position: absolute;
 		overflow: visible;
-		width: 376px;
 		white-space: nowrap;
 		text-align: left;
 		font-family: Work Sans;
@@ -295,20 +294,139 @@
 		top: 2001px;
 		overflow: visible;
 	}
-	#Rectangle_146 {
-		fill: rgba(36,35,36,1);
+	
+
+	#language {
+		position: absolute;
+		width: 59px;
+		height: 19px;
+		left: 1696px;
+		top: 84px;
+		overflow: visible;
 	}
-	.Rectangle_146 {
-		width: 960px;
-		height: 1920px;
+	#CH {
+		left: 0px;
+		top: 0px;
 		position: absolute;
 		overflow: visible;
-		transform: translate(0px, -3823px) matrix(1,0,0,1,480,3343) rotate(90deg);
-		transform-origin: center;
+		width: 21px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+		background-color: transparent;
+		border-width:0px;/*邊框透明*/
+		outline:none;/*點擊後無邊框*/
+	}
+	#EN {
+		left: 39px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 21px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+		background-color: transparent;
+		border-width:0px;/*邊框透明*/
+		outline:none;/*點擊後無邊框*/
+	}
+	#divider {
+		left: 23px;
+		top: -3px;
+		position: absolute;
+		overflow: visible;
+		width: 13px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+	}
+	#login {
+		position: absolute;
+		width: 75px;
+		height: 35px;
+		left: 1785px;
+		top: 75px;
+		overflow: visible;
+	}
+	.login {
+		left: 18px;
+		top: 8px;
+		position: absolute;
+		overflow: visible;
+		width: 41px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+		transition: color 0.3s;
+		-webkit-transition: color 0.3s;
+	}
+	#login_rectangle:hover{
+		stroke: rgba(91,71,255,1);
+	}
+	#login:hover > div{
+		color: rgba(91,71,255,1);
+	}
+	#login_rectangle {
+		fill: transparent;
+		position: absolute;
+		overflow: visible;
+		width: 75px;
+		height: 35px;
+		left: 0px;
+		top: 0px;
+		stroke: rgba(0,0,0,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+		transition: stroke 0.3s;
+		-webkit-transition: stroke 0.3s;
+	}
+	/* contact */
+	#Rectangle_bottom {
+		fill: rgba(36,35,36,1);
+		width: 1920px;
+		height: 890px;
+	}
+	.Rectangle_bottom {
+		width: 1920px;
+		height: 890px;
+		top: 1900px;
+		position: absolute;
+		overflow: visible;
+	}
+	#bottom_logo {
+		position: absolute;
+		width: 70.841px;
+		height: 105px;
+		left: 317px;
+		top: 2023px;
+		overflow: visible;
 	}
 	#Contact {
 		left: 317px;
-		top: 357.4px;
+		top: 2180.4px;
 		position: absolute;
 		overflow: visible;
 		width: 202px;
@@ -321,15 +439,73 @@
 		color: rgba(255,255,255,1);
 		letter-spacing: 0.15px;
 	}
+	.contact_submenu{
+		position: absolute;
+		overflow: visible;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.15px;
+		transition: color 0.3s;
+		-webkit-transition: color 0.3s;
+	}
+	.contact_submenu:hover { /* 滑鼠滑入level 2文字變色*/
+		color: rgba(91,71,255,1);
+    }
+	.contact_submenu:hover > .contact_menu { /* 滑鼠移入次選單 上層按鈕保持變色*/
+		color: rgba(91,71,255,1);
+    }
+
+	#Group_283 {
+		position: absolute;
+		width: 130px;
+		height: 196px;
+		left: 317px;
+		top: 2289.4px;
+		overflow: visible;
+	}
+	#About_Us_np {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 69px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.15px;
+	}
+	#Company_Vision {
+		left: 0px;
+		top: 59px;
+	}
+	#Our_Service {
+		left: 0px;
+		top: 118px;
+		width: 83px;
+	}
+	#Operation_Method {
+		left: 0px;
+		top: 177px;
+		width: 131px;
+	}
 	#Group_284 {
 		position: absolute;
 		width: 140px;
 		height: 196px;
 		left: 597px;
-		top: 466.4px;
+		top: 2289.4px;
 		overflow: visible;
 	}
-	#Apply_b {
+	#Apply_nk {
 		left: 0px;
 		top: 0px;
 		position: absolute;
@@ -347,119 +523,22 @@
 	#Apply_Requirements {
 		left: 0px;
 		top: 59px;
-		position: absolute;
-		overflow: visible;
 		width: 141px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
 	}
 	#Apply_Now {
 		left: 0px;
 		top: 118px;
-		position: absolute;
-		overflow: visible;
 		width: 80px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
 	}
 	#Apply_Status {
 		left: 0px;
 		top: 177px;
-		position: absolute;
-		overflow: visible;
 		width: 90px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
 	}
-	#Group_283 {
-		position: absolute;
-		width: 130px;
-		height: 196px;
-		left: 317px;
-		top: 466.4px;
-		overflow: visible;
-	}
-	#About_Us_b {
-		left: 0px;
-		top: 0px;
-		position: absolute;
-		overflow: visible;
-		width: 69px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
-	}
-	#Company_Vision_b {
-		left: 0px;
-		top: 59px;
-		position: absolute;
-		overflow: visible;
-		width: 113px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
-	}
-	#Our_Service_b {
-		left: 0px;
-		top: 118px;
-		position: absolute;
-		overflow: visible;
-		width: 83px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
-	}
-	#Operation_Method_b {
-		left: 0px;
-		top: 177px;
-		position: absolute;
-		overflow: visible;
-		width: 131px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
-	}
+
 	#Pinry__2020_All_rights_reserve {
 		left: 317px;
-		top: 741px;
+		top: 2564px;
 		position: absolute;
 		overflow: visible;
 		width: 234px;
@@ -474,7 +553,7 @@
 	}
 	#Privacy_Policy {
 		left: 317px;
-		top: 712px;
+		top: 2535px;
 		position: absolute;
 		overflow: visible;
 		width: 104px;
@@ -487,13 +566,46 @@
 		color: rgba(255,255,255,1);
 		letter-spacing: 0.15px;
 	}
-	#Group_172 {
+	#Web_Designer {
+		left: 886px;
+		top: 2289px;
+		position: absolute;
+		overflow: visible;
+		width: 282px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.15px;
+	}
+	#Web_Engineer {
+		left: 1312px;
+		top: 2289px;
+		position: absolute;
+		overflow: visible;
+		width: 304px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.15px;
+	}
+	#Pagetop_button {
 		position: absolute;
 		width: 19px;
 		height: 107.18px;
 		left: 60px;
-		top: 781.82px;
+		top: 2604.82px;
 		overflow: visible;
+		background-color: transparent;
+		border-width:0px;/*邊框透明*/
+		outline:none;/*點擊後無邊框*/
 	}
 	#Pagetop {
 		transform: translate(-60px, -1982.82px) matrix(1,0,0,1,39.5,2050.5) rotate(90deg);
@@ -522,7 +634,7 @@
 		top: 0px;
 		overflow: visible;
 	}
-	#Path_8 {
+	#Path_8_ny {
 		fill: transparent;
 		stroke: rgba(255,255,255,1);
 		stroke-width: 1px;
@@ -531,7 +643,7 @@
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.Path_8 {
+	.Path_8_ny {
 		overflow: visible;
 		position: absolute;
 		width: 8.373px;
@@ -539,341 +651,9 @@
 		transform: translate(0px, 39.667px) matrix(1,0,0,1,15.6466,-15.6466) rotate(90deg);
 		transform-origin: center;
 		left: 0px;
-		top: 0px;
-	}
-	#Wang_Pin_Yun_-_Web_Designer_88 {
-		left: 886px;
-		top: 466px;
-		position: absolute;
-		overflow: visible;
-		width: 282px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 22px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
-	}
-	#Chen_Shiuan_Ling_-_Web_Enginee {
-		left: 1312px;
-		top: 466px;
-		position: absolute;
-		overflow: visible;
-		width: 304px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 22px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
-	}
-	#Group_288 {
-		position: absolute;
-		width: 70.841px;
-		height: 105px;
-		left: 317px;
-		top: 200px;
-		overflow: visible;
-	}
-	#Group_285_ci {
-		position: absolute;
-		width: 67.094px;
-		height: 89.04px;
-		left: 1.874px;
-		top: 0px;
-		overflow: visible;
-	}
-	#Path_530_cj {
-		fill: rgba(91,71,255,1);
-	}
-	.Path_530_cj {
-		overflow: visible;
-		position: absolute;
-		width: 30.131px;
-		height: 17.396px;
-		left: 36.522px;
-		top: 58.73px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Path_531_ck {
-		fill: rgba(91,71,255,1);
-	}
-	.Path_531_ck {
-		overflow: visible;
-		position: absolute;
-		width: 67.094px;
-		height: 89.04px;
-		left: 0px;
-		top: 0px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#PINRY_cl {
-		position: absolute;
-		width: 70.841px;
-		height: 7.517px;
-		left: 0px;
-		top: 97.483px;
-		overflow: visible;
-	}
-	#Group_286_cm {
-		mix-blend-mode: normal;
-		position: absolute;
-		width: 70.841px;
-		height: 7.517px;
-		left: 0px;
-		top: 0px;
-		overflow: visible;
-	}
-	#Path_532_cn {
-		fill: rgba(91,71,255,1);
-	}
-	.Path_532_cn {
-		overflow: visible;
-		position: absolute;
-		width: 5.683px;
-		height: 7.517px;
-		left: 0px;
-		top: 0px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Path_533_co {
-		fill: rgba(91,71,255,1);
-	}
-	.Path_533_co {
-		overflow: visible;
-		position: absolute;
-		width: 1.226px;
-		height: 7.517px;
-		left: 17.175px;
-		top: 0px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Path_534_cp {
-		fill: rgba(91,71,255,1);
-	}
-	.Path_534_cp {
-		overflow: visible;
-		position: absolute;
-		width: 5.886px;
-		height: 7.517px;
-		left: 30.301px;
-		top: 0px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Path_535_cq {
-		fill: rgba(91,71,255,1);
-	}
-	.Path_535_cq {
-		overflow: visible;
-		position: absolute;
-		width: 5.703px;
-		height: 7.517px;
-		left: 48.071px;
-		top: 0px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Path_536_cr {
-		fill: rgba(91,71,255,1);
-	}
-	.Path_536_cr {
-		overflow: visible;
-		position: absolute;
-		width: 6.266px;
-		height: 7.517px;
-		left: 64.575px;
-		top: 0px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Component_44__14 {
-		position: absolute;
-		width: 59px;
-		height: 19px;
-		left: 1696px;
-		top: 84px;
-		overflow: visible;
-	}
-	#CH {
-		left: 0px;
-		top: 0px;
-		position: absolute;
-		overflow: visible;
-		width: 21px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
-	#EN {
-		left: 39px;
-		top: 0px;
-		position: absolute;
-		overflow: visible;
-		width: 21px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
-	#login_c {
-		position: absolute;
-		width: 75px;
-		height: 35px;
-		left: 1785px;
-		top: 75px;
-		overflow: visible;
-	}
-	#Login_c {
-		left: 18px;
-		top: 8px;
-		position: absolute;
-		overflow: visible;
-		width: 41px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
-	#Rectangle_6_c {
-		fill: transparent;
-		stroke: rgba(0,0,0,1);
-		stroke-width: 2px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Rectangle_6_c {
-		position: absolute;
-		overflow: visible;
-		width: 75px;
-		height: 35px;
-		left: 0px;
-		top: 0px;
-	}
-	#_c {
-		left: 1720px;
-		top: 81px;
-		position: absolute;
-		overflow: visible;
-		width: 13px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 22px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
-	#Component_44__15 {
-		position: absolute;
-		width: 59px;
-		height: 19px;
-		left: 1696px;
-		top: 84px;
-		overflow: visible;
-	}
-	#CH_c {
-		left: 0px;
-		top: 0px;
-		position: absolute;
-		overflow: visible;
-		width: 21px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
-	#EN_c {
-		left: 39px;
-		top: 0px;
-		position: absolute;
-		overflow: visible;
-		width: 21px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
-	#login_c {
-		position: absolute;
-		width: 75px;
-		height: 35px;
-		left: 1785px;
-		top: 75px;
-		overflow: visible;
-	}
-	#Login_c {
-		left: 18px;
-		top: 8px;
-		position: absolute;
-		overflow: visible;
-		width: 41px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
-	#Rectangle_6_c {
-		fill: transparent;
-		stroke: rgba(0,0,0,1);
-		stroke-width: 2px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Rectangle_6_c {
-		position: absolute;
-		overflow: visible;
-		width: 75px;
-		height: 35px;
-		left: 0px;
-		top: 0px;
-	}
-	#_c {
-		left: 1720px;
-		top: 81px;
-		position: absolute;
-		overflow: visible;
-		width: 13px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 22px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
+		top: -37px;
+	}	
+
 </style>
 <script id="applicationScript">
 ///////////////////////////////////////
@@ -3749,7 +3529,7 @@ window.application = new Application();
 	<div id="Due_to_the_limited_land_space_">
 		<span>Due to the limited land space in the city, parking space is<br/>generally insufficient in Taipei City,  and it is not easy to<br/>obtain parking land. Proper use of land is relatively important.<br/>Many urban planners often struggle with the problem of<br/>insufficient parking spaces, but effective land use is even more<br/>important.</span>
 	</div>
-	<div id="Company_Vision">
+	<div id="Company_Vision_title">
 		<span>Company<br/>Vision</span>
 	</div>
 	
@@ -3763,6 +3543,30 @@ window.application = new Application();
 	</svg>
 	<div id="The_path_to_a_livable_city">
 		<span>The path to<br/>a livable city.</span>
+	</div>	
+
+	<div id="language" class="language">
+		<button id="CH">
+			<span>CH</span>
+		</button>
+		<button id="EN">
+			<span>EN</span>
+		</button>
+		<div id="divider">
+			<span>|</span>
+		</div>
+	</div>
+	<a href='./login.html' id="login">
+		<div class="login">
+			<span>Login</span>
+		</div>
+		<svg id="login_rectangle">
+			<rect rx="0" ry="0" x="0" y="0" width="75" height="35">
+			</rect>
+		</svg>
+	</a>
+	<div id="ID01__I__Company_Vision">
+		<span>01  I  Company Vision</span>
 	</div>
 	<button id="button-lets_talk" class="button_lets_talk">
 		<svg class="ellipse">
@@ -3775,145 +3579,92 @@ window.application = new Application();
 			</path>
 		</svg>			
 	</button>
-	<div id="ID01__I__Company_Vision">
-		<span>01  I  Company Vision</span>
-	</div>
-	<div id="Group_292">
-		<svg class="Rectangle_146">
-			<rect id="Rectangle_146" rx="0" ry="0" x="0" y="0" width="960" height="1920">
+
+	<!-- contact -->
+	<div>
+		<svg class="Rectangle_bottom">
+			<rect id="Rectangle_bottom" rx="0" ry="0" x="0" y="0" width="960" height="1920">
 			</rect>
 		</svg>
+		<div id="bottom_logo">
+			<img id="logo_purple" src="./logo_purple.png" width="65px" height="96px">
+		</div>
 		<div id="Contact">
 			<span>Contact</span>
 		</div>
-		<div id="Group_284">
-			<div id="Apply_b">
-				<span>Apply</span>
-			</div>
-			<div id="Apply_Requirements">
-				<span>Apply Requirements</span>
-			</div>
-			<div id="Apply_Now">
-				<span>Apply Now</span>
-			</div>
-			<div id="Apply_Status">
-				<span>Apply Status</span>
-			</div>
-		</div>
 		<div id="Group_283">
-			<div id="About_Us_b">
+			<div id="About_Us_np" class="contact_menu">
 				<span>About Us</span>
 			</div>
-			<div id="Company_Vision_b">
+			<a href='./company_vision.html' id="Company_Vision" class="contact_submenu">
 				<span>Company Vision</span>
-			</div>
-			<div id="Our_Service_b">
+			</a>
+			<a href='./our_service.html' id="Our_Service" class="contact_submenu">
 				<span>Our Service</span>
-			</div>
-			<div id="Operation_Method_b">
+			</a>
+			<a href='./operation_method.html' id="Operation_Method" class="contact_submenu">
 				<span>Operation Method</span>
-			</div>
+			</a>
 		</div>
+	
+		<div id="Group_284">
+			<div id="Apply_nk" class="contact_menu">
+				<span>Apply</span>
+			</div>
+			<a href='./apply_requirement.html' id="Apply_Requirements" class="contact_submenu">
+				<span>Apply Requirements</span>
+			</a>
+			<a href='./apply_now.html' id="Apply_Now" class="contact_submenu">
+				<span>Apply Now</span>
+			</a>
+			<a href='./apply_status.html' id="Apply_Status" class="contact_submenu">
+				<span>Apply Status</span>
+			</a>
+		</div>
+		
 		<div id="Pinry__2020_All_rights_reserve">
 			<span>Pinry © 2020 All rights reserved.</span>
 		</div>
 		<div id="Privacy_Policy">
 			<span>Privacy Policy</span>
 		</div>
-		<div id="Group_172">
+		<div id="Web_Designer">
+			<span>Wang Pin Yun - Web Designer<br/>+886 921599975<br/>gomezzz0821@gmail.com</span>
+		</div>
+		<div id="Web_Engineer">
+			<span>Chen Shiuan Ling - Web Engineer<br/>+886 926922369<br/>sherrychen97@gmail.com</span>
+		</div>
+	
+		<button id="Pagetop_button">
 			<div id="Pagetop">
 				<span>Pagetop</span>
 			</div>
 			<div id="Group_148">
-				<svg class="Path_8" viewBox="0 0 8.373 39.667">
-					<path id="Path_8" d="M 0 39.6666259765625 L 0 0 L 8.373489379882813 8.37353515625 L 0 8.37353515625">
+				<svg class="Path_8_ny" viewBox="0 0 8.373 39.667">
+					<path id="Path_8_ny" d="M 0 39.6666259765625 L 0 0 L 8.373489379882813 8.37353515625 L 0 8.37353515625">
 					</path>
 				</svg>
 			</div>
-		</div>
-		<div id="Wang_Pin_Yun_-_Web_Designer_88">
-			<span>Wang Pin Yun - Web Designer<br/>+886 921599975<br/>gomezzz0821@gmail.com</span>
-		</div>
-		<div id="Chen_Shiuan_Ling_-_Web_Enginee">
-			<span>Chen Shiuan Ling - Web Engineer<br/>+886 926922369<br/>sherrychen97@gmail.com</span>
-		</div>
-		<div id="Group_288">
-			<div id="Group_285_ci">
-				<svg class="Path_530_cj" viewBox="1008.249 1045.743 30.131 17.396">
-					<path id="Path_530_cj" d="M 1008.249267578125 1048.718139648438 L 1008.249267578125 1048.718139648438 L 1013.403198242188 1051.693725585938 L 1028.072265625 1060.162963867188 L 1028.072265625 1060.162963867188 L 1033.22607421875 1063.138671875 L 1038.380004882813 1060.162963867188 L 1013.403198242188 1045.74267578125 L 1008.249267578125 1048.718139648438 Z">
-					</path>
-				</svg>
-				<svg class="Path_531_ck" viewBox="515.043 254.916 67.094 89.04">
-					<path id="Path_531_ck" d="M 582.1369018554688 282.2687683105469 L 534.8348388671875 254.916015625 L 534.8348388671875 254.9165954589844 L 534.8348388671875 260.8679504394531 L 534.8348388671875 269.3599243164063 L 534.8348388671875 277.3485412597656 L 534.8348388671875 277.8059997558594 L 523.0549926757813 270.9942626953125 L 520.6602172851563 269.6095275878906 L 520.1889038085938 269.3369750976563 L 515.0430908203125 266.3612670898438 L 515.0431518554688 343.956298828125 L 520.1889038085938 340.9806823730469 L 520.1889038085938 335.0294494628906 L 520.1889038085938 318.0913696289063 L 520.1889038085938 312.14013671875 L 520.1889038085938 298.1776123046875 L 520.1889038085938 292.2263488769531 L 520.1889038085938 290.2187805175781 L 520.1889038085938 275.2882080078125 L 534.8348388671875 283.7572937011719 L 534.8348388671875 290.2187805175781 L 534.8348388671875 294.672119140625 L 534.8348388671875 305.6589660644531 L 534.8348388671875 309.62158203125 L 534.8348388671875 326.5604858398438 L 534.8348388671875 332.5116577148438 L 539.9805908203125 329.5360107421875 L 539.9805908203125 323.5848388671875 L 539.9805908203125 323.1273498535156 L 539.9805908203125 306.64599609375 L 545.7168579101563 303.3289489746094 L 545.7168579101563 303.3296203613281 L 555.0222778320313 297.9486999511719 L 555.0218505859375 297.9482116699219 L 575.7783813476563 285.9456176757813 L 576.9902954101563 285.2448120117188 L 582.1363525390625 282.2691040039063 L 582.1363525390625 282.2691040039063 L 582.1369018554688 282.2687683105469 Z M 539.9805908203125 300.6947326660156 L 539.9805908203125 294.672119140625 L 539.9805908203125 286.73291015625 L 552.0529174804688 293.7138671875 L 539.9805908203125 300.6947326660156 Z M 562.9634399414063 287.4046325683594 L 557.19873046875 290.7381896972656 L 539.9805908203125 280.7816162109375 L 539.9805908203125 280.3240661621094 L 539.9805908203125 263.8435668945313 L 571.8445434570313 282.2691955566406 L 562.9634399414063 287.4046325683594 Z">
-					</path>
-				</svg>
-			</div>
-			<div id="PINRY_cl">
-				<div id="Group_286_cm">
-					<svg class="Path_532_cn" viewBox="489.813 1567.576 5.683 7.517">
-						<path id="Path_532_cn" d="M 495.1516418457031 1571.055908203125 C 494.9220275878906 1571.383666992188 494.6045837402344 1571.628173828125 494.1993713378906 1571.790283203125 C 493.7941589355469 1571.952392578125 493.3281555175781 1572.03369140625 492.8013610839844 1572.03369140625 L 491.1400451660156 1572.03369140625 C 491.0724792480469 1572.03369140625 491.0387268066406 1572.067260742188 491.0387268066406 1572.134643554688 L 491.0387268066406 1574.920532226563 C 491.0387268066406 1575.035522460938 490.9779357910156 1575.092895507813 490.8564147949219 1575.092895507813 L 489.9750671386719 1575.092895507813 C 489.9142761230469 1575.092895507813 489.8720397949219 1575.081298828125 489.8484191894531 1575.057373046875 C 489.8247375488281 1575.033813476563 489.8129577636719 1574.994873046875 489.8129577636719 1574.94091796875 L 489.8129577636719 1567.728149414063 C 489.8129577636719 1567.626953125 489.8601379394531 1567.576049804688 489.9548034667969 1567.576049804688 L 492.6595764160156 1567.576049804688 C 493.1929016113281 1567.576049804688 493.6742248535156 1567.65380859375 494.1031799316406 1567.809204101563 C 494.5319519042969 1567.964599609375 494.8713073730469 1568.207885742188 495.1212463378906 1568.538452148438 C 495.3710632324219 1568.869506835938 495.4961242675781 1569.294921875 495.4961242675781 1569.815063476563 C 495.4961242675781 1570.314819335938 495.3811340332031 1570.728515625 495.1516418457031 1571.055908203125 Z M 494.0373229980469 1569.02978515625 C 493.9020690917969 1568.83740234375 493.7114562988281 1568.697387695313 493.4649353027344 1568.609497070313 C 493.2183532714844 1568.521728515625 492.9263610839844 1568.477783203125 492.5887145996094 1568.477783203125 L 491.1907043457031 1568.477783203125 C 491.0893859863281 1568.477783203125 491.0387268066406 1568.525024414063 491.0387268066406 1568.61962890625 L 491.0387268066406 1570.979736328125 C 491.0387268066406 1571.081298828125 491.0757751464844 1571.1318359375 491.1502380371094 1571.1318359375 L 492.6595764160156 1571.1318359375 C 493.1390686035156 1571.1318359375 493.5221862792969 1571.020629882813 493.8094177246094 1570.797485351563 C 494.0964050292969 1570.574829101563 494.2399597167969 1570.237182617188 494.2399597167969 1569.784545898438 C 494.2399597167969 1569.47412109375 494.1722717285156 1569.222412109375 494.0373229980469 1569.02978515625 Z">
-						</path>
-					</svg>
-					<svg class="Path_533_co" viewBox="721.434 1567.576 1.226 7.517">
-						<path id="Path_533_co" d="M 722.5281982421875 1567.576049804688 C 722.61572265625 1567.576049804688 722.6597900390625 1567.626953125 722.6597900390625 1567.728149414063 L 722.6597900390625 1574.900512695313 C 722.6597900390625 1574.974731445313 722.6446533203125 1575.025512695313 722.6141357421875 1575.052368164063 C 722.583740234375 1575.079345703125 722.5281982421875 1575.092895507813 722.447021484375 1575.092895507813 L 721.6163330078125 1575.092895507813 C 721.5419921875 1575.092895507813 721.4931640625 1575.081298828125 721.469482421875 1575.057373046875 C 721.44580078125 1575.033813476563 721.4339599609375 1574.991577148438 721.4339599609375 1574.9306640625 L 721.4339599609375 1567.728149414063 C 721.4339599609375 1567.626953125 721.481201171875 1567.576049804688 721.5758056640625 1567.576049804688 L 722.5281982421875 1567.576049804688 Z">
-						</path>
-					</svg>
-					<svg class="Path_534_cp" viewBox="898.491 1567.576 5.886 7.517">
-						<path id="Path_534_cp" d="M 904.26513671875 1567.576049804688 C 904.3394165039063 1567.576049804688 904.3765869140625 1567.620239257813 904.3765869140625 1567.707885742188 L 904.3765869140625 1574.96142578125 C 904.3765869140625 1575.001831054688 904.3631591796875 1575.033813476563 904.336181640625 1575.057373046875 C 904.3091430664063 1575.081298828125 904.2718505859375 1575.092895507813 904.2247314453125 1575.092895507813 L 903.566162109375 1575.092895507813 C 903.5189819335938 1575.092895507813 903.4783935546875 1575.087890625 903.4447021484375 1575.07763671875 C 903.410888671875 1575.067504882813 903.3771362304688 1575.038818359375 903.34326171875 1574.991577148438 L 899.6458129882813 1569.683227539063 C 899.612060546875 1569.63623046875 899.5850219726563 1569.615966796875 899.5647583007813 1569.622680664063 C 899.5446166992188 1569.62939453125 899.5344848632813 1569.65283203125 899.5344848632813 1569.693481445313 L 899.5344848632813 1574.951049804688 C 899.5344848632813 1575.045776367188 899.4802856445313 1575.092895507813 899.3722534179688 1575.092895507813 L 898.653076171875 1575.092895507813 C 898.5449829101563 1575.092895507813 898.4909057617188 1575.045776367188 898.4909057617188 1574.951049804688 L 898.4909057617188 1567.728149414063 C 898.4909057617188 1567.626953125 898.541748046875 1567.576049804688 898.6429443359375 1567.576049804688 L 899.4331665039063 1567.576049804688 C 899.487060546875 1567.576049804688 899.529296875 1567.582885742188 899.5596923828125 1567.596435546875 C 899.590087890625 1567.609985351563 899.6220703125 1567.643920898438 899.6559448242188 1567.69775390625 L 903.2014770507813 1572.833740234375 C 903.2420654296875 1572.887939453125 903.2774047851563 1572.909790039063 903.3079833984375 1572.899536132813 C 903.3383178710938 1572.889404296875 903.353515625 1572.860961914063 903.353515625 1572.8134765625 L 903.353515625 1567.717895507813 C 903.353515625 1567.62353515625 903.4006958007813 1567.576049804688 903.4953002929688 1567.576049804688 L 904.26513671875 1567.576049804688 Z">
-						</path>
-					</svg>
-					<svg class="Path_535_cq" viewBox="1138.159 1567.576 5.703 7.517">
-						<path id="Path_535_cq" d="M 1143.756103515625 1575.02685546875 C 1143.732421875 1575.071044921875 1143.693603515625 1575.092895507813 1143.639526367188 1575.092895507813 L 1142.656860351563 1575.092895507813 C 1142.575805664063 1575.092895507813 1142.515380859375 1575.045776367188 1142.474609375 1574.951049804688 L 1141.23876953125 1571.87158203125 C 1141.204956054688 1571.790283203125 1141.120483398438 1571.749877929688 1140.985473632813 1571.749877929688 L 1139.506469726563 1571.749877929688 C 1139.459106445313 1571.749877929688 1139.427124023438 1571.761840820313 1139.410278320313 1571.785400390625 C 1139.393310546875 1571.809204101563 1139.385009765625 1571.83447265625 1139.385009765625 1571.861206054688 L 1139.385009765625 1574.910522460938 C 1139.385009765625 1575.031982421875 1139.320678710938 1575.092895507813 1139.1923828125 1575.092895507813 L 1138.331298828125 1575.092895507813 C 1138.263916015625 1575.092895507813 1138.218139648438 1575.079345703125 1138.194580078125 1575.052368164063 C 1138.1708984375 1575.025512695313 1138.1591796875 1574.984985351563 1138.1591796875 1574.9306640625 L 1138.1591796875 1567.728149414063 C 1138.1591796875 1567.626953125 1138.206420898438 1567.576049804688 1138.301025390625 1567.576049804688 L 1141.228637695313 1567.576049804688 C 1142.059448242188 1567.576049804688 1142.705932617188 1567.7451171875 1143.168701171875 1568.082763671875 C 1143.630981445313 1568.420532226563 1143.862426757813 1568.91357421875 1143.862426757813 1569.561889648438 C 1143.862426757813 1569.93310546875 1143.791625976563 1570.25244140625 1143.649780273438 1570.51904296875 C 1143.508056640625 1570.785888671875 1143.327270507813 1571.001831054688 1143.107788085938 1571.167236328125 C 1142.888305664063 1571.3330078125 1142.653564453125 1571.452880859375 1142.403686523438 1571.527099609375 C 1142.356567382813 1571.54736328125 1142.343139648438 1571.587768554688 1142.363159179688 1571.648559570313 L 1143.76123046875 1574.880249023438 C 1143.781372070313 1574.934204101563 1143.779541015625 1574.983276367188 1143.756103515625 1575.02685546875 Z M 1142.185913085938 1570.589965820313 C 1142.45947265625 1570.390991210938 1142.59619140625 1570.078369140625 1142.59619140625 1569.65283203125 C 1142.59619140625 1569.247802734375 1142.47119140625 1568.943725585938 1142.221435546875 1568.7412109375 C 1141.971435546875 1568.538452148438 1141.616943359375 1568.437255859375 1141.157470703125 1568.437255859375 L 1139.547119140625 1568.437255859375 C 1139.43896484375 1568.437255859375 1139.385009765625 1568.477783203125 1139.385009765625 1568.558837890625 L 1139.385009765625 1570.7470703125 C 1139.385009765625 1570.841674804688 1139.421875 1570.888916015625 1139.496337890625 1570.888916015625 L 1140.985473632813 1570.888916015625 C 1141.51220703125 1570.888916015625 1141.912353515625 1570.789306640625 1142.185913085938 1570.589965820313 Z">
-						</path>
-					</svg>
-					<svg class="Path_536_cr" viewBox="1360.76 1567.576 6.266 7.517">
-						<path id="Path_536_cr" d="M 1367.017211914063 1567.621826171875 C 1367.03369140625 1567.652099609375 1367.028930664063 1567.691040039063 1367.002075195313 1567.73828125 L 1364.601196289063 1571.729736328125 C 1364.567138671875 1571.770141601563 1364.546997070313 1571.815673828125 1364.540283203125 1571.8662109375 C 1364.533569335938 1571.9169921875 1364.530151367188 1572.003051757813 1364.530151367188 1572.124633789063 L 1364.530151367188 1574.890258789063 C 1364.530151367188 1575.025512695313 1364.455810546875 1575.092895507813 1364.307373046875 1575.092895507813 L 1363.486938476563 1575.092895507813 C 1363.419067382813 1575.092895507813 1363.37353515625 1575.079345703125 1363.349853515625 1575.052368164063 C 1363.326293945313 1575.025512695313 1363.314453125 1574.981323242188 1363.314453125 1574.920532226563 L 1363.314453125 1572.134643554688 C 1363.314453125 1572.060546875 1363.306274414063 1572.003051757813 1363.289306640625 1571.962524414063 C 1363.272338867188 1571.922119140625 1363.250366210938 1571.878173828125 1363.223388671875 1571.830688476563 L 1360.792114257813 1567.768798828125 C 1360.75830078125 1567.714721679688 1360.751586914063 1567.669067382813 1360.77197265625 1567.631958007813 C 1360.792114257813 1567.5947265625 1360.839233398438 1567.576049804688 1360.913818359375 1567.576049804688 L 1361.88623046875 1567.576049804688 C 1361.96044921875 1567.576049804688 1362.011108398438 1567.586181640625 1362.038208007813 1567.606567382813 C 1362.065063476563 1567.626953125 1362.095581054688 1567.663940429688 1362.12939453125 1567.717895507813 L 1363.89208984375 1570.767333984375 C 1363.932495117188 1570.841674804688 1363.969604492188 1570.878662109375 1364.003540039063 1570.878662109375 C 1364.037231445313 1570.878662109375 1364.070922851563 1570.848266601563 1364.104736328125 1570.787353515625 L 1365.857299804688 1567.717895507813 C 1365.890991210938 1567.657104492188 1365.921508789063 1567.618530273438 1365.948486328125 1567.6015625 C 1365.975219726563 1567.584594726563 1366.022705078125 1567.576049804688 1366.090209960938 1567.576049804688 L 1366.90087890625 1567.576049804688 C 1366.961547851563 1567.576049804688 1367.000244140625 1567.591430664063 1367.017211914063 1567.621826171875 Z">
-						</path>
-					</svg>
-				</div>
-			</div>
-		</div>
+		</button>
 	</div>
-	<div id="Component_44__14" class="Component_44___14">
-		<div id="CH">
-			<span>CH</span>
-		</div>
-		<div id="EN">
-			<span>EN</span>
-		</div>
-	</div>
-	<div id="login_c" class="login">
-		<div id="Login_c">
-			<span>Login</span>
-		</div>
-		<svg class="Rectangle_6_c">
-			<rect id="Rectangle_6_c" rx="0" ry="0" x="0" y="0" width="75" height="35">
-			</rect>
-		</svg>
-	</div>
-	<div id="_c">
-		<span>|</span>
-	</div>
-	<div id="Component_44__15" class="Component_44___15">
-		<div id="CH_c">
-			<span>CH</span>
-		</div>
-		<div id="EN_c">
-			<span>EN</span>
-		</div>
-	</div>
-	<div id="login_c" class="login">
-		<div id="Login_c">
-			<span>Login</span>
-		</div>
-		<svg class="Rectangle_6_c">
-			<rect id="Rectangle_6_c" rx="0" ry="0" x="0" y="0" width="75" height="35">
-			</rect>
-		</svg>
-	</div>
-	<div id="_c">
-		<span>|</span>
-	</div>
+	
+	
 </div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	$('#Pagetop_button').on('click', function(event){ 
+		event.preventDefault(); 
+		$('html, body').stop().animate({scrollTop: $('#company_vision').offset().top}, 500); 
+	}); 
+	$('#CH').on('click', function(event){
+		$("#CH").css('font-weight', 'bold');
+		$("#EN").css('font-weight', 'normal');
+	}); 
+	$('#EN').on('click', function(event){
+		$("#CH").css('font-weight', 'normal');
+		$("#EN").css('font-weight', 'bold');
+	}); 
+	
+</script>
 </body>
 </html>
