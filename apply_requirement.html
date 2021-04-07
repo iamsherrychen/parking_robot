@@ -6,6 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>home-apply-apply requirement1</title>
 <style id="applicationStylesheet" type="text/css">
+	ul{
+		list-style:none; 
+	}
+	a{
+		text-decoration:none;
+	}
 	.mediaViewInfo {
 		--web-view-name: home-apply-apply requirement1;
 		--web-view-id: home-apply-apply_requirement1;
@@ -98,7 +104,7 @@
 		color: rgba(91,71,255,1);
 		letter-spacing: 0.15px;
 	}
-	# {
+	#bg_1 {
 		left: 378px;
 		top: 184px;
 		position: absolute;
@@ -140,81 +146,6 @@
 		font-style: normal;
 		font-weight: normal;
 		font-size: 22px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
-	#Apply_ {
-		left: 60px;
-		top: 243px;
-		position: absolute;
-		overflow: visible;
-		width: 45px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(91,71,255,1);
-		letter-spacing: 0.15px;
-	}
-	#Apply_Requirements {
-		left: 82px;
-		top: 302px;
-		position: absolute;
-		overflow: visible;
-		width: 141px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(91,71,255,1);
-		letter-spacing: 0.15px;
-	}
-	#Apply_Now {
-		left: 82px;
-		top: 361px;
-		position: absolute;
-		overflow: visible;
-		width: 80px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
-	#Apply_Status {
-		left: 82px;
-		top: 420px;
-		position: absolute;
-		overflow: visible;
-		width: 90px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-	}
-	#About_Us {
-		left: 60px;
-		top: 184px;
-		position: absolute;
-		overflow: visible;
-		width: 69px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
 		color: rgba(0,0,0,1);
 		letter-spacing: 0.15px;
 	}
@@ -323,6 +254,68 @@
 		color: rgba(91,71,255,1);
 		letter-spacing: 0.15px;
 	}
+	#purple_logo {
+		display: block;
+		position: fixed;
+		width: 65px;
+		height: 96.343px;
+		left: 60px;
+		top: 44px;
+		overflow: visible;
+	}
+	/* menu css */
+	.menu {
+		padding-left: 0;
+		position: fixed;
+		left: 60px;
+		top: 184px;
+	}
+	.dropmenu {
+		white-space: nowrap;
+		text-align: left;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+		line-height:60px;
+        transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+	}	
+	.submenu {
+		text-decoration: none;
+		overflow: visible;
+		white-space: nowrap;
+		text-align: left;
+		margin-left: 30px;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.15px;
+		line-height:60px;
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;		
+	}
+	a.dropmenu:hover { /* 滑鼠滑入level 1文字變色*/
+		color: rgba(91,71,255,1) !important;
+    }
+	ul.menu li:hover > ul { /* 滑鼠滑入 展開次選單*/
+		opacity: 1;
+        display: block;
+    }
+    ul.menu li:hover > a { /* 滑鼠移入次選單 上層按鈕保持變色*/
+		color: rgba(91,71,255,1)!important;
+    }
+	ul.menu li ul { /*隱藏次選單*/
+		opacity: 0;
+        display: none;
+    }
+	.submenu:hover { /* 滑鼠滑入level 2文字變色*/
+		color: rgba(91,71,255,1)!important;
+    }
 	#Rectangle_145 {
 		fill: rgba(255,255,255,1);
 	}
@@ -3927,7 +3920,7 @@ window.application = new Application();
 	<div id="Apply">
 		<span>Apply</span>
 	</div>
-	<div id="">
+	<div id="bg_1">
 		<span>></span>
 	</div>
 	<div id="ID01_Apply_method">
@@ -3936,23 +3929,7 @@ window.application = new Application();
 	<div id="fill_out_the_form_on_the_websi">
 		<span>fill out the form on the website.</span>
 	</div>
-	<div id="Apply_">
-		<span>Apply</span>
-	</div>
-	<div id="Apply_Requirements">
-		<span>Apply Requirements</span>
-	</div>
-	<div id="Apply_Now">
-		<span>Apply Now</span>
-	</div>
-	<div id="Apply_Status">
-		<span>Apply Status</span>
-	</div>
-	
-	<div id="About_Us">
-		<span>About Us</span>
-	</div>
-	
+		
 	<div id="Group_130">
 		<img id="Shadow" src="Shadow.png" srcset="Shadow.png 1x, Shadow@2x.png 2x">
 			
@@ -3974,7 +3951,29 @@ window.application = new Application();
 		<span>></span>
 	</div>
 	<div onclick="application.goToTargetView(event)" id="PINRY">
-		<span>PINRY</span>
+		<img id="purple_logo" src="./logo_purple.png" width="65px" height="96px">
+	</div>
+	<div>
+		<ul class="menu">
+		<!-- 第一項選單-->
+		  <li>
+		  <a class="dropmenu">About us</a>
+		   <ul>
+			<li><a href='./company_vision.html' class="submenu">Company Vision</a></li>
+			<li><a href='./our_service.html' class="submenu">Our Service</a></li>
+			<li><a href='./operation_method.html' class="submenu">Operation Method</a></li>
+		   </ul>
+		  </li>
+		<!-- 第二項選單 -->
+		  <li>
+		  <a class="dropmenu">Apply</a>
+			<ul>
+			<li><a href='./apply_requirement.html' class="submenu">Apply Requirements</a></li>
+			<li><a href='./apply_now.html' class="submenu">Apply Now</a></li>
+			<li><a href='./apply_status.html' class="submenu">Apply Status</a></li>
+		   </ul>
+		  </li>  
+		</ul>
 	</div>
 	<svg class="Rectangle_145">
 		<rect id="Rectangle_145" rx="0" ry="0" x="0" y="0" width="1920" height="684">
