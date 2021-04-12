@@ -3133,68 +3133,8 @@
 		color: rgba(255,255,255,1);
 		letter-spacing: 0.15px;
 	}
-	#Component_56__1 {
-		position: absolute;
-		width: 599px;
-		height: 619px;
-		left: 983px;
-		top: 3007px;
-		overflow: visible;
-	}
-	#for_driver_normal {
-		position: absolute;
-		width: 579px;
-		height: 619px;
-		left: 20px;
-		top: 0px;
-	}
-	#for_driver_big {
-		display: none;
-		position: absolute;
-		width: 579px;
-		height: 619px;
-		left: 20px;
-		top: 0px;
-		z-index: 99;
-	}
-	#Rectangle_157 {
-		opacity: 0.34;
-		fill: rgba(0,0,0,1);
-		transition: all 0.3s;
-		-webkit-transition: all 0.3s;
-	}
-	#Rectangle_157:hover {
-		opacity: 0;
-		transition: all 0.3s;
-		-webkit-transition: all 0.3s;
-	}
-	.Component_56___1:hover #for_driver_big{
-		display:block;
-	}
-	.Rectangle_157 {
-		position: absolute;
-		overflow: visible;
-		width: 579px;
-		height: 619px;
-		left: 20px;
-		top: 0px;
-	}
-	#For_Driver {
-		left: 0px;
-		top: 20px;
-		position: absolute;
-		overflow: visible;
-		width: 532px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 70px;
-		color: rgba(255,255,255,1);
-		letter-spacing: 0.15px;
-	}
-	#Component_55__2 {
+	/* our service */
+	#for_landowner {
 		opacity: 0.997;
 		position: absolute;
 		width: 599px;
@@ -3203,22 +3143,26 @@
 		top: 3007px;
 		overflow: visible;
 	}
-	#for_landowner_normal {
+	.our_service_pic {
 		position: absolute;
 		width: 579px;
 		height: 619px;
 		left: 20px;
 		top: 0px;
-		overflow: visible;
+		overflow: hidden;
+	}
+	.our_service_pic img {
+		filter:brightness(70%);
+		transform: scale(1,1);
+		transition: all 0.3s ease-out;
+	}
+	.our_service_pic img:hover {
+		transform: scale(1.2,1.2);
+		filter:brightness(100%);
 	}
 	#Rectangle_156 {
 		opacity: 0.34;
 		fill: rgba(0,0,0,1);
-		transition: all 0.3s;
-		-webkit-transition: all 0.3s;
-	}
-	#Rectangle_156:hover {
-		opacity: 0;
 		transition: all 0.3s;
 		-webkit-transition: all 0.3s;
 	}
@@ -3230,12 +3174,59 @@
 		left: 20px;
 		top: 0px;
 	}
-	#For_Landowner {
+	#Rectangle_156:hover {
+		opacity: 0;
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+	}
+	#for_landowner_text {
 		left: 0px;
 		top: 20px;
 		position: absolute;
 		overflow: visible;
 		width: 473px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Tw Cen MT;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 70px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.15px;
+	}
+	#for_driver {
+		position: absolute;
+		width: 599px;
+		height: 619px;
+		left: 983px;
+		top: 3007px;
+		overflow: visible;
+	}
+	#Rectangle_157 {
+		opacity: 0.34;
+		fill: rgba(0,0,0,1);
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+	}
+	.Rectangle_157 {
+		position: absolute;
+		overflow: visible;
+		width: 579px;
+		height: 619px;
+		left: 20px;
+		top: 0px;
+	}
+	#Rectangle_157:hover {
+		opacity: 0;
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+	}
+	#for_driver_text {
+		left: 0px;
+		top: 20px;
+		position: absolute;
+		overflow: visible;
+		width: 532px;
 		white-space: nowrap;
 		text-align: left;
 		font-family: Tw Cen MT;
@@ -4559,25 +4550,29 @@
 		<span>SIMPLE CAN BE SIMPLE,<br/>PARKING CAN BE SIMPLER.</span>
 	</div>
 	<!-- for landowner -->
-	<a href='./our_service.html' id="Component_55__2" class="Component_55___2">
-		<img id="for_landowner_normal" src="img/for_landowner_normal.png">
+	<a href='./our_service.html' id="for_landowner">
+		<div class="our_service_pic">
+			<img src="img/for_landowner_normal.png">
+		</div>
 		
-		<svg class="Rectangle_156">
+		<!-- <svg class="Rectangle_156">
 			<rect id="Rectangle_156" rx="0" ry="0" x="0" y="0" width="579" height="619">
 			</rect>
-		</svg>
-		<div id="For_Landowner">
+		</svg> -->
+		<div id="for_landowner_text">
 			<span>For<br/>Landowner</span><br><span style="position: absolute;font-style:normal;font-weight:normal;font-size:22px;">Use this platform to apply for land as a parking lot.</span>
 		</div>
 	</a>
 	<!-- for driver -->
-	<a href='./our_service.html#Path_61' id="Component_56__1" class="Component_56___1">
-		<img id="for_driver_normal" src="img/for_driver_normal.png">
-		<svg class="Rectangle_157">
+	<a href='./our_service.html#Path_61' id="for_driver">
+		<div class="our_service_pic">
+			<img src="img/for_driver_normal.png">
+		</div>
+		<!-- <svg class="Rectangle_157">
 			<rect id="Rectangle_157" rx="0" ry="0" x="0" y="0" width="579" height="619">
 			</rect>
-		</svg>
-		<div id="For_Driver">
+		</svg> -->
+		<div id="for_driver_text">
 			<span>For<br/>Driver</span><br><span style="position: absolute;font-style:normal;font-weight:normal;font-size:22px;">Use the system to guide drivers to suitable parking spaces.</span>
 		</div>
 	</a>
