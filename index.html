@@ -2788,7 +2788,7 @@
 		transition: stroke 0.3s;
 		-webkit-transition: stroke 0.3s;
 	}
-	.icons{
+	.icons_1{
 		position: absolute;
 		width: 100px;
 		height: 100px;
@@ -2801,9 +2801,15 @@
 		top: 2700px;
 		opacity: 0;
 	}
-	.icons:hover{
+	.icons:hover > .icons_1{
 		top: 2900px;
 		opacity: 0;
+		transition: all 0.2s;
+		-webkit-transition: all 0.2s;
+	}
+	.icons:hover > .icons_2{
+		top: 2800px;
+		opacity: 1;
 		transition: all 0.2s;
 		-webkit-transition: all 0.2s;
 	}
@@ -2812,7 +2818,7 @@
 		67% {transform: translateY(-30px);}
 		100% {transform: translateY(0px);}
 	}
-	.icons:hover {
+	.icons_1:hover {
 		animation: swing 0.2s 1;
 	} */
 	
@@ -3135,13 +3141,21 @@
 		top: 3007px;
 		overflow: visible;
 	}
-	#victor-xok-qd-zd2MoeE8-unsplas {
+	#for_driver_normal {
 		position: absolute;
 		width: 579px;
 		height: 619px;
 		left: 20px;
 		top: 0px;
-		overflow: visible;
+	}
+	#for_driver_big {
+		display: none;
+		position: absolute;
+		width: 579px;
+		height: 619px;
+		left: 20px;
+		top: 0px;
+		z-index: 99;
 	}
 	#Rectangle_157 {
 		opacity: 0.34;
@@ -3153,6 +3167,9 @@
 		opacity: 0;
 		transition: all 0.3s;
 		-webkit-transition: all 0.3s;
+	}
+	.Component_56___1:hover #for_driver_big{
+		display:block;
 	}
 	.Rectangle_157 {
 		position: absolute;
@@ -3186,7 +3203,7 @@
 		top: 3007px;
 		overflow: visible;
 	}
-	#linkedin-sales-navigator-wS73L {
+	#for_landowner_normal {
 		position: absolute;
 		width: 579px;
 		height: 619px;
@@ -4433,20 +4450,20 @@
 	</a>
 	<!-- icons in "our service" -->
 	<div>
-		<div>
-			<img id="icon1_1" class="icons" src="img/icon1.png" style="left: 523px;">
-			<img id="icon1_2" class="icons_2" src="img/img/icon1.png" style="left: 523px;">
+		<div class="icons">
+			<img id="icon1_1" class="icons_1" src="img/icon1.png" style="left: 523px;">
+			<img id="icon1_2" class="icons_2" src="img/icon1.png" style="left: 523px;">
 		</div>
-		<div>
-		<img id="icon2_1" class="icons" src="img/icon2.png" style="left: 810px; width: 46px;">
+		<div class="icons">
+			<img id="icon2_1" class="icons_1" src="img/icon2.png" style="left: 810px; width: 46px;">
 			<img id="icon2_2" class="icons_2" src="img/icon2.png" style="left: 810Px; width: 46px;">
 		</div>
-		<div>
-			<img id="icon3_1" class="icons" src="img/icon3.png" style="left: 1043px;">
+		<div class="icons">
+			<img id="icon3_1" class="icons_1" src="img/icon3.png" style="left: 1043px;">
 			<img id="icon3_2" class="icons_2" src="img/icon3.png" style="left: 1043px;">
 		</div>
-		<div>
-			<img id="icon4_1" class="icons" src="img/icon4.png" style="left: 1313px;">
+		<div class="icons">
+			<img id="icon4_1" class="icons_1" src="img/icon4.png" style="left: 1313px;">
 			<img id="icon4_2" class="icons_2" src="img/icon4.png" style="left: 1313px;">
 		</div>
 	</div>
@@ -4543,8 +4560,8 @@
 	</div>
 	<!-- for landowner -->
 	<a href='./our_service.html' id="Component_55__2" class="Component_55___2">
-		<img id="linkedin-sales-navigator-wS73L" src="img/linkedin-sales-navigator-wS73L.png" srcset="img/linkedin-sales-navigator-wS73L.png 1x, img/linkedin-sales-navigator-wS73L@2x.png 2x">
-			
+		<img id="for_landowner_normal" src="img/for_landowner_normal.png">
+		
 		<svg class="Rectangle_156">
 			<rect id="Rectangle_156" rx="0" ry="0" x="0" y="0" width="579" height="619">
 			</rect>
@@ -4555,8 +4572,7 @@
 	</a>
 	<!-- for driver -->
 	<a href='./our_service.html#Path_61' id="Component_56__1" class="Component_56___1">
-		<img id="victor-xok-qd-zd2MoeE8-unsplas" src="img/victor-xok-qd-zd2MoeE8-unsplas.png" srcset="img/victor-xok-qd-zd2MoeE8-unsplas.png 1x, img/victor-xok-qd-zd2MoeE8-unsplas@2x.png 2x">
-			
+		<img id="for_driver_normal" src="img/for_driver_normal.png">
 		<svg class="Rectangle_157">
 			<rect id="Rectangle_157" rx="0" ry="0" x="0" y="0" width="579" height="619">
 			</rect>
