@@ -3154,7 +3154,7 @@
 	.our_service_pic img {
 		filter:brightness(70%);
 		transform: scale(1,1);
-		transition: all 0.3s ease-out;
+		transition: all 0.5s ease-out;
 	}
 	.our_service_pic img:hover {
 		transform: scale(1.2,1.2);
@@ -4554,11 +4554,6 @@
 		<div class="our_service_pic">
 			<img src="img/for_landowner_normal.png">
 		</div>
-		
-		<!-- <svg class="Rectangle_156">
-			<rect id="Rectangle_156" rx="0" ry="0" x="0" y="0" width="579" height="619">
-			</rect>
-		</svg> -->
 		<div id="for_landowner_text">
 			<span>For<br/>Landowner</span><br><span style="position: absolute;font-style:normal;font-weight:normal;font-size:22px;">Use this platform to apply for land as a parking lot.</span>
 		</div>
@@ -4568,10 +4563,6 @@
 		<div class="our_service_pic">
 			<img src="img/for_driver_normal.png">
 		</div>
-		<!-- <svg class="Rectangle_157">
-			<rect id="Rectangle_157" rx="0" ry="0" x="0" y="0" width="579" height="619">
-			</rect>
-		</svg> -->
 		<div id="for_driver_text">
 			<span>For<br/>Driver</span><br><span style="position: absolute;font-style:normal;font-weight:normal;font-size:22px;">Use the system to guide drivers to suitable parking spaces.</span>
 		</div>
@@ -4644,6 +4635,11 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
+	// 頁面刷新，回到頂部
+	$("html,body").animate({
+        scrollTop: 0,
+        screenLeft: 0,
+    }, 200);
 	$(document).ready(function(){  
 		var scroll_pos = 0; 
 			$(document).scroll(function() { 

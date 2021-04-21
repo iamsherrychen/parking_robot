@@ -5,11 +5,136 @@
 	<title>Bootstrap-Table摺疊</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+	<style>
+		body{
+			line-height: 2;
+			font-size: 17px;
+			text-align: center;
+		}
+		/* menu css */
+		.menu {
+			padding-left: 0;
+			position: fixed;
+			left: 60px;
+			top: 184px;
+		}
+		.dropmenu {
+			white-space: nowrap;
+			text-align: left;
+			font-family: Tw Cen MT;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 17px;
+			color: rgba(0,0,0,1);
+			letter-spacing: 0.15px;
+			line-height:60px;
+			transition: all 0.3s;
+			-webkit-transition: all 0.3s;
+		}	
+		.submenu {
+			text-decoration: none;
+			overflow: visible;
+			white-space: nowrap;
+			text-align: left;
+			margin-left: 30px;
+			font-family: Tw Cen MT;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 17px;
+			color: rgba(0,0,0,1);
+			letter-spacing: 0.15px;
+			line-height:60px;
+			transition: all 0.3s;
+			-webkit-transition: all 0.3s;		
+		}
+		a.dropmenu:hover { /* 滑鼠滑入level 1文字變色*/
+			color: rgba(91,71,255,1) !important;
+		}
+		ul.menu li:hover > ul { /* 滑鼠滑入 展開次選單*/
+			opacity: 1;
+			display: block;
+		}
+		ul.menu li:hover > a { /* 滑鼠移入次選單 上層按鈕保持變色*/
+			color: rgba(91,71,255,1)!important;
+		}
+		ul.menu li ul { /*隱藏次選單*/
+			opacity: 0;
+			display: none;
+		}
+		.submenu:hover { /* 滑鼠滑入level 2文字變色*/
+			color: rgba(91,71,255,1)!important;
+		}
+		
+		.table_head{
+			background-color: rgba(91,71,255,1); 
+			color: white;
+			font-size: 24px;
+		}
+		.arrow{
+			transform:rotate(90deg);
+			font-size: 2px;
+			text-align:center;
+		}
+		.cc_completed{
+			color: rgba(51,210,71,1);
+		}
+		.cc_inPro{
+			color: rgba(255,200,158,1);
+		}
+		.cc_invalidation{
+			color: rgba(255,85,85,1);
+		}
+		.table-striped tbody tr:nth-of-type(odd){ /* odd欄位的背景色 */
+			background-color: rgba(242,249,255,1);
+		}
+		.table-bordered td, .table-bordered th, .table-bordered  {
+    		border: none;
+		}
+		.form-control{
+			border: none;
+		}
+		.dataTables_length{
+			display: none;
+		}
+		/* pagination's dom */
+		div.dataTables_wrapper div.dataTables_paginate ul.pagination{
+			margin: 2px 0;
+    		white-space: nowrap;
+			justify-content: flex-start;
+		}
+
+	</style>
 </head>
 <body>
+	<!-- menu -->
+	<div>
+		<img id="purple_logo" src="img/logo_purple.png" width="65px" height="96px">
+	</div>
+	<div>
+		<ul class="menu">
+		<!-- 第一項選單-->
+		  <li>
+		  <a class="dropmenu">About us</a>
+		   <ul>
+			<li><a href='./company_vision.html' class="submenu">Company Vision</a></li>
+			<li><a href='./our_service.html' class="submenu">Our Service</a></li>
+			<li><a href='./operation_method.html' class="submenu">Operation Method</a></li>
+		   </ul>
+		  </li>
+		<!-- 第二項選單 -->
+		  <li>
+		  <a class="dropmenu">Apply</a>
+			<ul>
+			<li><a href='./apply_requirement.html' class="submenu">Apply Requirements</a></li>
+			<li><a href='./apply_now.html' class="submenu">Apply Now</a></li>
+			<li><a href='./apply_status.html' class="submenu">Apply Status</a></li>
+		   </ul>
+		  </li>  
+		</ul>
+	</div>
 	<div class="container" style="top: 200px;position: relative;">
 		<table class="table table-striped table-bordered mydatatable" style="width: 100%">
-			<thead style="background-color: rgba(91,71,255,1); color: white;">
+			<thead class="table_head">
 				<tr>
 					<th></th>
 					<th>number</th>
@@ -20,81 +145,81 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>&gt;</td>
+					<td><div class="arrow">▲</div></td>
 					<td>20210325001</td>
 					<td>20210325</td>
 					<td>台北市中山區...</td>
-					<td>completed</td>
+					<td class="cc_completed">completed</td>
 				</tr>
 				<tr>
-					<td>&gt;</td>
+					<td><div class="arrow">▲</div></td>
 					<td>20210325002</td>
 					<td>20210325</td>
 					<td>台北市內湖區...</td>
-					<td>in progress</td>
+					<td class="cc_inPro">in progress</td>
 				</tr>
 				<tr>
-					<td>&gt;</td>
+					<td><div class="arrow">▲</div></td>
 					<td>20210325003</td>
 					<td>20210325</td>
 					<td>新北市中和區...</td>
-					<td>in progress</td>
+					<td class="cc_inPro">in progress</td>
 				</tr>
 				<tr>
-					<td>&gt;</td>
+					<td><div class="arrow">▲</div></td>
 					<td>20210325004</td>
 					<td>20210325</td>
 					<td>台北市大同區...</td>
-					<td>invalidation</td>
+					<td class="cc_invalidation">invalidation</td>
 				</tr>
 				<tr>
-					<td>&gt;</td>
+					<td><div class="arrow">▲</div></td>
 					<td>20210325005</td>
 					<td>20210325</td>
 					<td>台北市中正區...</td>
-					<td>in progress</td>
+					<td class="cc_completed">completed</td>
 				</tr>
 				<tr>
-					<td>&gt;</td>
+					<td><div class="arrow">▲</div></td>
 					<td>20210325006</td>
 					<td>20210325</td>
 					<td>台北市信義區...</td>
-					<td>in progress</td>
+					<td class="cc_completed">completed</td>
 				</tr>
 				<tr>
-					<td>&gt;</td>
+					<td><div class="arrow">▲</div></td>
 					<td>20210325007</td>
 					<td>20210325</td>
 					<td>台北市大安區...</td>
-					<td>in progress</td>
+					<td class="cc_inPro">in progress</td>
 				</tr>
 				<tr>
-					<td>&gt;</td>
+					<td><div class="arrow">▲</div></td>
 					<td>20210325008</td>
 					<td>20210325</td>
 					<td>新北市板橋區...</td>
-					<td>in progress</td>
+					<td class="cc_inPro">in progress</td>
 				</tr>
 				<tr>
-					<td>&gt;</td>
+					<td><div class="arrow">▲</div></td>
 					<td>20210325009</td>
 					<td>20210325</td>
 					<td>新北市新莊區...</td>
-					<td>in progress</td>
+					<td class="cc_inPro">in progress</td>
 				</tr>
 				<tr>
-					<td>&gt;</td>
+					<td><div class="arrow">▲</div></td>
 					<td>20210325010</td>
 					<td>20210325</td>
 					<td>新北市三重區...</td>
-					<td>in progress</td>
+					<td class="cc_completed">completed</td>
 				</tr>
 				<tr>
-					<td>&gt;</td>
+					<td><div class="arrow">▲</div></td>
 					<td>20210325011</td>
 					<td>20210325</td>
 					<td>新北市林口區...</td>
-					<td>in progress</td>
+					<td class="cc_inPro">in progress</td>
 				</tr>
 			</tbody>
 		</table>
