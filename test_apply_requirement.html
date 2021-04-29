@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>apply requirement</title>
+		<link rel="stylesheet" type="text/scss" href="sass/all.scss">
+		<style>
+			#title {
+				left: 572px;
+				top: 200px;
+				position: absolute;
+				overflow: visible;
+				width: 776px;
+				white-space: nowrap;
+				text-align: left;
+				font-family: Work Sans;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 80px;
+				color: rgba(91,71,255,1);
+				letter-spacing: 0.15px;
+			}
+			/* picture change */
+			.play {
+				height: 3900px;
+			}
+			.procedure_pic{
+				top: 250px;
+				left: 959px;
+				position:fixed;
+				opacity: 1;
+				transition: all 0.7s;
+			}
+			.hidden {
+				transform: scale(0);
+				opacity: 0;
+				transition: all 0.7s;
+			}
+			.pic5_style{
+				top: 3260px;
+				left: 959px;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="title">
+			<span>Apply Requirement</span>
+		</div>
+		<div class="play">
+			<div class="procedure_pic hidden" id="pic_1" style="opacity:1;"><img src="img/r1.png"/></div>
+			<div class="procedure_pic hidden" id="pic_2"><img src="img/r2.png"/></div>
+			<div class="procedure_pic hidden" id="pic_3"><img src="img/r3.png"/></div>
+			<div class="procedure_pic hidden" id="pic_4"><img src="img/r4.png"/></div>
+			<div class="procedure_pic procedure_pic5 hidden pic5_style" id="pic_5"><img src="img/r5.png"/></div>
+			
+			<div id="pic_logo" style="position:absolute; top:4000px">
+				<img src="img/logo_black.png"/>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script>
+			// 頁面刷新，回到頂部
+			$("html,body").animate({
+				scrollTop: 0,
+				screenLeft: 0,
+			}, 200);
+			$(document).ready(function() { 
+				$('#pic_1').removeClass('hidden');
+				var scroll_pos = 0; 
+				var pic_now;
+				$(document).scroll(function() { 
+					scroll_pos = $(this).scrollTop(); 
+					if(scroll_pos > 3000) {			
+						$('#pic_5').removeClass('procedure_pic');
+						$('#pic_5').addClass('pic5_style');
+						console.log('6666');
+					}else if(scroll_pos > 2500){
+						$('#pic_5').removeClass('pic5_style hidden');
+						$('#pic_5').addClass('procedure_pic');
+						$('#pic_4').addClass('hidden');
+						// console.log(scroll_pos);
+						console.log('5555');
+						// $('#pic_5').css({'top': '500px','position': 'fixed','opacity':'1'});
+						// $('#pic_4').css({'position': 'absolute','opacity':'0'});
+					}
+					else if(scroll_pos > 2000) {
+						$('#pic_4').removeClass('hidden');
+						$('#pic_3').addClass('hidden');
+						$('#pic_5').addClass('hidden');
+						// console.log(scroll_pos);
+						// console.log('4444');
+						// $('#pic_4').css({'position': 'fixed','opacity':'1'});
+						// $('#pic_3').css({'position': 'absolute','opacity':'0'});
+						// $('#pic_5').css({'position': 'absolute','opacity':'0'});
+					}
+					else if(scroll_pos > 1500) {
+						$('#pic_3').removeClass('hidden');
+						$('#pic_2').addClass('hidden');
+						$('#pic_4').addClass('hidden');
+						// console.log(scroll_pos);
+						// console.log('3333');
+						// $('#pic_3').css({'position': 'fixed','opacity':'1'});
+						// $('#pic_2').css({'position': 'absolute','opacity':'0'});
+						// $('#pic_4').css({'position': 'absolute','opacity':'0'});
+					}
+					else if(scroll_pos > 1000) {
+						$('#pic_2').removeClass('hidden');
+						$('#pic_1').addClass('hidden');
+						$('#pic_3').addClass('hidden');
+						// console.log(scroll_pos);
+						// console.log('2222');
+						// $('#pic_2').css({'position': 'fixed','opacity':'1'});
+						// $('#pic_1').css({'position': 'absolute','opacity':'0'});
+						// $('#pic_3').css({'position': 'absolute','opacity':'0'});
+					}
+					else if(scroll_pos > 30){
+						$('#pic_1').removeClass('hidden');
+						$('#pic_2').addClass('hidden');
+						$('#pic_5').removeClass('pic5_style');						
+						// console.log(scroll_pos);
+						// console.log('1111');
+						// $('#pic_1').css({'position': 'fixed','opacity':'1'});
+						// $('#pic_2').css({'position': 'absolute','opacity':'0'});
+					}
+				});				
+			});
+		</script>
+	</body>
+</html>

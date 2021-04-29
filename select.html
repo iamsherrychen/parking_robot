@@ -6,10 +6,23 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
 	<style>
+		ul{
+			list-style:none; 
+		}
+		a{
+			text-decoration:none;
+		}
 		body{
+			background-color: rgba(242,249,255,1);
 			line-height: 2;
 			font-size: 17px;
 			text-align: center;
+			font-family:Tw Cen MT;
+		}
+		#Group_141 {
+			width: 790px;
+			height: 163px;
+			overflow: visible;
 		}
 		/* menu css */
 		.menu {
@@ -64,11 +77,21 @@
 		.submenu:hover { /* 滑鼠滑入level 2文字變色*/
 			color: rgba(91,71,255,1)!important;
 		}
-		
+		/* table */
+		.Container{
+			margin: 0 auto;
+			top: 100px;
+			position: relative;
+			width: 1440px;
+		}
 		.table_head{
 			background-color: rgba(91,71,255,1); 
 			color: white;
 			font-size: 24px;
+			line-height: 1.5;
+		}
+		.detail_inf{
+			display: none; 
 		}
 		.arrow{
 			transform:rotate(90deg);
@@ -87,11 +110,15 @@
 		.table-striped tbody tr:nth-of-type(odd){ /* odd欄位的背景色 */
 			background-color: rgba(242,249,255,1);
 		}
+		.table-striped tbody tr:nth-of-type(even){ /* even欄位的背景色 */
+			background-color: rgba(256,256,256,1);
+		}
 		.table-bordered td, .table-bordered th, .table-bordered  {
     		border: none;
 		}
-		.form-control{
+		.form-control{ /*search*/
 			border: none;
+			background-color: rgba(242,249,255,1);
 		}
 		.dataTables_length{
 			display: none;
@@ -106,13 +133,11 @@
 	</style>
 </head>
 <body>
-	<!-- menu -->
-	<div>
+	<!-- <div>
 		<img id="purple_logo" src="img/logo_purple.png" width="65px" height="96px">
 	</div>
 	<div>
 		<ul class="menu">
-		<!-- 第一項選單-->
 		  <li>
 		  <a class="dropmenu">About us</a>
 		   <ul>
@@ -121,7 +146,6 @@
 			<li><a href='./operation_method.html' class="submenu">Operation Method</a></li>
 		   </ul>
 		  </li>
-		<!-- 第二項選單 -->
 		  <li>
 		  <a class="dropmenu">Apply</a>
 			<ul>
@@ -131,8 +155,8 @@
 		   </ul>
 		  </li>  
 		</ul>
-	</div>
-	<div class="container" style="top: 200px;position: relative;">
+	</div> -->
+	<div class="Container">
 		<table class="table table-striped table-bordered mydatatable" style="width: 100%">
 			<thead class="table_head">
 				<tr>
@@ -144,77 +168,84 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
+				<tr class="main_data">
 					<td><div class="arrow">▲</div></td>
 					<td>20210325001</td>
 					<td>20210325</td>
 					<td>台北市中山區...</td>
 					<td class="cc_completed">completed</td>
 				</tr>
-				<tr>
+				<tr class="main_data">
 					<td><div class="arrow">▲</div></td>
 					<td>20210325002</td>
 					<td>20210325</td>
 					<td>台北市內湖區...</td>
 					<td class="cc_inPro">in progress</td>
 				</tr>
-				<tr>
+				<tr class="main_data">
 					<td><div class="arrow">▲</div></td>
 					<td>20210325003</td>
 					<td>20210325</td>
 					<td>新北市中和區...</td>
 					<td class="cc_inPro">in progress</td>
 				</tr>
-				<tr>
+				<tr class="main_data">
 					<td><div class="arrow">▲</div></td>
 					<td>20210325004</td>
 					<td>20210325</td>
 					<td>台北市大同區...</td>
 					<td class="cc_invalidation">invalidation</td>
 				</tr>
-				<tr>
+				<tr class="main_data">
 					<td><div class="arrow">▲</div></td>
 					<td>20210325005</td>
 					<td>20210325</td>
 					<td>台北市中正區...</td>
 					<td class="cc_completed">completed</td>
 				</tr>
-				<tr>
+				<tr class="main_data">
 					<td><div class="arrow">▲</div></td>
 					<td>20210325006</td>
 					<td>20210325</td>
 					<td>台北市信義區...</td>
 					<td class="cc_completed">completed</td>
 				</tr>
-				<tr>
+				<tr class="main_data">
 					<td><div class="arrow">▲</div></td>
 					<td>20210325007</td>
 					<td>20210325</td>
 					<td>台北市大安區...</td>
 					<td class="cc_inPro">in progress</td>
 				</tr>
-				<tr>
+				<tr class="main_data">
 					<td><div class="arrow">▲</div></td>
 					<td>20210325008</td>
 					<td>20210325</td>
 					<td>新北市板橋區...</td>
 					<td class="cc_inPro">in progress</td>
 				</tr>
-				<tr>
+				<tr class="main_data">
 					<td><div class="arrow">▲</div></td>
 					<td>20210325009</td>
 					<td>20210325</td>
 					<td>新北市新莊區...</td>
 					<td class="cc_inPro">in progress</td>
 				</tr>
-				<tr>
+				<tr class="main_data">
 					<td><div class="arrow">▲</div></td>
 					<td>20210325010</td>
 					<td>20210325</td>
 					<td>新北市三重區...</td>
 					<td class="cc_completed">completed</td>
 				</tr>
-				<tr>
+				<tr class="detail_inf">
+					<td><div class="arrow">▲</div></td>
+					<td>20210325011</td>
+					<td>20210325</td>
+					<td>新北市林口區...</td>
+					<td class="cc_inPro">in progress</td>
+				</tr>
+				<tr class="main_data">
 					<td><div class="arrow">▲</div></td>
 					<td>20210325011</td>
 					<td>20210325</td>
@@ -235,8 +266,14 @@
 		$('.mydatatable').DataTable({
 			"ordering": false, //排序功能
 			"searching": true, //搜尋功能, 預設是開啟
-    		"paging": true //分頁功能
+			"bInfo" : false, //Showing 1 of N entries
+    		"paging": false //分頁功能
 		});
+		$('.main_data').click(function() { 
+			$(".detail_inf").show();
+			console.log(111111);
+            $(this).nextUntil('.Date').toggleClass('hide'); // don't use toggle() because it change display to block/none, we have to use display table-row 
+        }).click(); // hide by default
 	</script>
 
 </body>

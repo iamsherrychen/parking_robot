@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="utf-8">
+	<title>Bootstrap-Table摺疊</title>
+    <style>
+        tr.hide { 
+            display: none; 
+        } 
+    </style>
+</head>
+<body>
+    <table> 
+    
+        <tr class="Date first_data"><td>Day 1</td></tr> 
+        
+        <tr><td>Event 1</td></tr> 
+        
+        <tr><td>Event 2</td></tr> 
+        
+        <tr><td>Event 3</td></tr> 
+        
+        
+        
+        <tr class="Date"><td>Day 2</td></tr> 
+        
+        <tr><td>Event 1</td></tr> 
+        
+        <tr><td>Event 2</td></tr> 
+        
+        <tr><td>Event 3</td></tr> 
+        
+        <tr><td>Event 4</td></tr> 
+        
+        
+        
+        <tr class="Date"><td>Day 3</td></tr> 
+        <div class="event">
+            <tr><td>Event 1</td></tr> 
+            
+            <tr class="last_data"><td>Event 2</td></tr> 
+        </div>
+        
+    </table>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $('.Date').click(function() { 
+            $(this).nextUntil('.Date').toggleClass('hide'); // don't use toggle() because it change display to block/none, we have to use display table-row 
+        }).click(); // hide by default 
+    </script>
+</body>
