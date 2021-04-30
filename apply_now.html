@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="/assets/favicon.ico">
 <link rel="stylesheet" href="./src/main.css">
+<link rel="stylesheet" type="text/css" href="css/menu.css">
+
 <title>apply now</title>
 <script src="./path/to/dropzone.js"></script>
 <style id="applicationStylesheet" type="text/css">
@@ -546,59 +548,7 @@
 		transition: all 0.2s;
 		-webkit-transition: all 0.2s;
 	}
-	/* menu css */
-	.menu {
-		padding-left: 0;
-		position: fixed;
-		left: 60px;
-		top: 184px;
-	}
-	.dropmenu {
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-		line-height:60px;
-        transition: color 0.3s;
-		-webkit-transition: color 0.3s;
-	}	
-	.submenu {
-		text-decoration: none;
-		overflow: visible;
-		white-space: nowrap;
-		text-align: left;
-		margin-left: 30px;
-		font-family: Tw Cen MT;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 17px;
-		color: rgba(0,0,0,1);
-		letter-spacing: 0.15px;
-		line-height:60px;
-		transition: color 0.3s;
-		-webkit-transition: color 0.3s;		
-	}
-	a.dropmenu:hover { /* 滑鼠滑入level 1文字變色*/
-		color: rgba(91,71,255,1) !important;
-    }
-	ul.menu li:hover > ul { /* 滑鼠滑入 展開次選單*/
-		opacity: 1;
-        display: block;
-    }
-    ul.menu li:hover > a { /* 滑鼠移入次選單 上層按鈕保持變色*/
-		color: rgba(91,71,255,1)!important;
-    }
-	ul.menu li ul { /*隱藏次選單*/
-		opacity: 0;
-        display: none;
-    }
-	.submenu:hover { /* 滑鼠滑入level 2文字變色*/
-		color: rgba(91,71,255,1)!important;
-    }	
+	
 	#Group_289 {
 		position: fixed;
 		width: 65px;
@@ -1318,6 +1268,9 @@
 
 	<!-- menu -->
 	<div>
+		<img id="purple_logo" src="img/logo_purple.png" width="65px" height="96px">
+	</div>
+	<div>
 		<ul class="menu">
 		<!-- 第一項選單-->
 		  <li>
@@ -1330,10 +1283,10 @@
 		  </li>
 		<!-- 第二項選單 -->
 		  <li>
-		  <a class="dropmenu" style="color: rgba(91,71,255,1);">Apply</a>
-			<ul style="opacity: 1; display:block">
+		  <a class="dropmenu">Apply</a>
+			<ul>
 			<li><a href='./apply_requirement.html' class="submenu">Apply Requirements</a></li>
-			<li><a href='./apply_now.html' class="submenu" style="color: rgba(91,71,255,1);">Apply Now</a></li>
+			<li><a href='./apply_now.html' class="submenu">Apply Now</a></li>
 			<li><a href='./apply_status.html' class="submenu">Apply Status</a></li>
 		   </ul>
 		  </li>  

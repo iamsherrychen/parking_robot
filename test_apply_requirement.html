@@ -5,21 +5,36 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>apply requirement</title>
-		<link rel="stylesheet" type="text/scss" href="sass/all.scss">
+		<link rel="stylesheet" type="text/css" href="css/menu.css">
 		<style>
+			ul{
+				list-style:none; 
+			}
+			a{
+				text-decoration:none;
+			}
+			body {
+				background-color: rgba(242,249,255,1);
+			}			
 			#title {
 				left: 572px;
 				top: 200px;
 				position: absolute;
-				overflow: visible;
-				width: 776px;
 				white-space: nowrap;
-				text-align: left;
 				font-family: Work Sans;
-				font-style: normal;
 				font-weight: bold;
 				font-size: 80px;
 				color: rgba(91,71,255,1);
+				letter-spacing: 0.15px;
+			}
+			#sub_title {
+				left: 729px;
+				top: 323px;
+				position: absolute;
+				font-family: Tw Cen MT;
+				font-weight: bold;
+				font-size: 50px;
+				color: rgba(0,0,0,1);
 				letter-spacing: 0.15px;
 			}
 			/* picture change */
@@ -32,32 +47,180 @@
 				position:fixed;
 				opacity: 1;
 				transition: all 0.7s;
+				z-index:1;
 			}
 			.hidden {
 				transform: scale(0);
 				opacity: 0;
 				transition: all 0.7s;
 			}
-			.pic5_style{
+			.pic1_style{
+				position: absolute;
+				top:510px;
+				left: 959px;
+				opacity:0;
+			}
+			/* after_pic5 */
+			#after_pic5 {
+				opacity:0;
+			}
+			.pic5_style {
+				position: absolute;
 				top: 3260px;
 				left: 959px;
+				z-index:3;
+			}
+			#block_pic5 {
 				position: absolute;
+				top: 3250px;
+				left: 350px;
+				width: 1200px;
+				height: 500px;
+				background-color: rgba(242,249,255,1);
+				z-index:2;
+			}
+			/* text change */
+			.pic_text {
+				position: fixed;
+				left: 412px;
+				top: 275px;
+				opacity: 1;
+				transition: all 0.3s;
+			}
+			.hidden_text {
+				transform: translateY(200px);
+				opacity: 0;
+			}
+			.num_odd {
+				font-family: Work Sans;
+				font-weight: bold;
+				font-size: 150px;
+				color: rgba(91,71,255,1);
+			}
+			.num_even {
+				font-family: Work Sans;
+				font-weight: bold;
+				font-size: 150px;
+				-webkit-text-stroke:1px rgba(91,71,255,1);
+				-webkit-text-fill-color:transparent;
+			}
+			.num_text {
+				top: 186px;
+				position: absolute;
+				white-space: nowrap;
+				line-height: 30px;
+				margin-top: -4px;
+				font-family: Tw Cen MT;
+				font-size: 22px;
+				color: rgba(0,0,0,1);
+				letter-spacing: 0.15px;
+			}
+			/* dot */
+			.dot {
+				position: fixed;
+				width: 223px;
+				height: 12px;
+				left: 1500px;
+				top: 458px;
+				display: flex;
+				justify-content:space-between;
+				transform: rotate(90deg);
+			}
+			.dot_begin {
+				position:absolute;
+				top: 718px;
+			}
+			.circle {
+				background: rgba(176,178,186,1);
+				border-radius: 50%;
+				width: 12px;
+				height: 12px;
+				transition: all 0.7s;
 			}
 		</style>
 	</head>
 	<body>
-		<div id="title">
-			<span>Apply Requirement</span>
+		<div id="title">Apply Requirement</div>
+		<div id="sub_title">Operating procedures</div>
+		<!-- menu -->
+		<div>
+			<img id="purple_logo" src="img/logo_purple.png" width="65px" height="96px">
 		</div>
+		<div>
+			<ul class="menu">
+			<!-- 第一項選單-->
+			<li>
+			<a class="dropmenu">About us</a>
+			<ul>
+				<li><a href='./company_vision.html' class="submenu">Company Vision</a></li>
+				<li><a href='./our_service.html' class="submenu">Our Service</a></li>
+				<li><a href='./operation_method.html' class="submenu">Operation Method</a></li>
+			</ul>
+			</li>
+			<!-- 第二項選單 -->
+			<li>
+			<a class="dropmenu">Apply</a>
+				<ul>
+				<li><a href='./apply_requirement.html' class="submenu">Apply Requirements</a></li>
+				<li><a href='./apply_now.html' class="submenu">Apply Now</a></li>
+				<li><a href='./apply_status.html' class="submenu">Apply Status</a></li>
+			</ul>
+			</li>  
+			</ul>
+		</div>
+		<!-- five change  -->
 		<div class="play">
-			<div class="procedure_pic hidden" id="pic_1" style="opacity:1;"><img src="img/r1.png"/></div>
-			<div class="procedure_pic hidden" id="pic_2"><img src="img/r2.png"/></div>
-			<div class="procedure_pic hidden" id="pic_3"><img src="img/r3.png"/></div>
-			<div class="procedure_pic hidden" id="pic_4"><img src="img/r4.png"/></div>
-			<div class="procedure_pic procedure_pic5 hidden pic5_style" id="pic_5"><img src="img/r5.png"/></div>
-			
-			<div id="pic_logo" style="position:absolute; top:4000px">
-				<img src="img/logo_black.png"/>
+			<div>
+				<div class="procedure_pic hidden pic1_style" id="pic_1"><img src="img/r1.png"/></div>
+				<div class="procedure_pic hidden" id="pic_2"><img src="img/r2.png"/></div>
+				<div class="procedure_pic hidden" id="pic_3"><img src="img/r3.png"/></div>
+				<div class="procedure_pic hidden" id="pic_4"><img src="img/r4.png"/></div>
+				<div class="procedure_pic hidden" id="pic_5"><img src="img/r5.png"/></div>
+				<div id="after_pic5" >
+					<div id="block_pic5"></div>		
+					<div class="pic5_style"><img src="img/r5.png"/></div>	 
+				</div>				
+			</div>
+			<!-- five text -->
+			<div>
+				<div class="pic_text hidden_text" id="text1">
+					<div class="num_odd">01</div>
+					<div class="num_text">
+						<span>After </span><span style="color:rgba(88,72,245,1);">landowner</span><span> completes the venue<br/>application on the website, we will arrange<br/>the robot to the site to evaluate whether the<br/>venue can be used for parking, and apply<br/>status will displays </span><span style="font-style:normal;font-weight:bold;">"In the process"</span><span>.</span>
+					</div>
+				</div>
+				<div class="pic_text hidden_text" id="text2">
+					<div class="num_even">02</div>
+					<div class="num_text">
+						<span>If the relevant conditions are met, the evaluation<br/>result will be returned to website, apply status<br/>will display </span><span style="font-style:normal;font-weight:bold;">"success"</span><span>; if the relevant conditions<br/>are not met, the application will be cancelled,<br/>apply status will display </span><span style="font-style:normal;font-weight:bold;">"canceled"</span><span>.</span>
+					</div>
+				</div>
+				<div class="pic_text hidden_text" id="text3">
+					<div class="num_odd">03</div>
+					<div class="num_text">
+						<span>After robot evaluation, you can view the<br/>parking space plan on the website. If you<br/>want to modify the site plan, you can call<br/>0800-xxx-xxx and we will adjust the site<br/>configuration for you.</span>
+					</div>
+				</div>
+				<div class="pic_text hidden_text" id="text4">
+					<div class="num_even">04</div>
+					<div class="num_text">
+						<span>If you agree to the final planning result, our<br/>company will handle the parking lot usage<br/>procedures for you.</span>
+					</div>
+				</div>
+				<div class="pic_text hidden_text" id="text5">
+					<div class="num_odd">05</div>
+					<div class="num_text">
+						<span>You can adjust the site "provide parking<br/>service" at any time on the website. If you<br/>have other site usage needs, you can<br/>temporarily stop using it as a parking lot,<br/>and open the parking lot when the site has<br/>no other uses.</span>
+					</div>
+				</div>
+			</div>
+			<!-- five dot -->
+			<div class="dot dot_begin" id="dot">
+				<div class="circle" id="dot1"></div>
+				<div class="circle" id="dot2"></div>
+				<div class="circle" id="dot3"></div>
+				<div class="circle" id="dot4"></div>
+				<div class="circle" id="dot5"></div>
 			</div>
 		</div>
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -69,18 +232,24 @@
 			}, 200);
 			$(document).ready(function() { 
 				$('#pic_1').removeClass('hidden');
+				$('#text1').removeClass('hidden_text');
 				var scroll_pos = 0; 
 				var pic_now;
 				$(document).scroll(function() { 
 					scroll_pos = $(this).scrollTop(); 
-					if(scroll_pos > 3000) {			
-						$('#pic_5').removeClass('procedure_pic');
-						$('#pic_5').addClass('pic5_style');
+					if(scroll_pos > 3000) {		
+						$('#pic_5-2').css({'opacity':'1'});
+						$('#block_pic5').css({'opacity':'1'});
 						console.log('6666');
 					}else if(scroll_pos > 2500){
-						$('#pic_5').removeClass('pic5_style hidden');
-						$('#pic_5').addClass('procedure_pic');
+						$('#pic_5').removeClass('hidden');
 						$('#pic_4').addClass('hidden');
+
+						$('#text5').removeClass('hidden_text');
+						$('#text4').addClass('hidden_text');
+
+						$('#dot5').css({'background': 'rgba(91,71,255,1)'});
+						$('#dot4').css({'background': 'rgba(176,178,186,1)'});
 						// console.log(scroll_pos);
 						console.log('5555');
 						// $('#pic_5').css({'top': '500px','position': 'fixed','opacity':'1'});
@@ -90,6 +259,14 @@
 						$('#pic_4').removeClass('hidden');
 						$('#pic_3').addClass('hidden');
 						$('#pic_5').addClass('hidden');
+
+						$('#text4').removeClass('hidden_text');
+						$('#text3').addClass('hidden_text');
+						$('#text5').addClass('hidden_text');
+
+						$('#dot4').css({'background': 'rgba(91,71,255,1)'});
+						$('#dot3').css({'background': 'rgba(176,178,186,1)'});
+						$('#dot5').css({'background': 'rgba(176,178,186,1)'});
 						// console.log(scroll_pos);
 						// console.log('4444');
 						// $('#pic_4').css({'position': 'fixed','opacity':'1'});
@@ -100,6 +277,14 @@
 						$('#pic_3').removeClass('hidden');
 						$('#pic_2').addClass('hidden');
 						$('#pic_4').addClass('hidden');
+
+						$('#text3').removeClass('hidden_text');
+						$('#text2').addClass('hidden_text');
+						$('#text4').addClass('hidden_text');
+
+						$('#dot3').css({'background': 'rgba(91,71,255,1)'});
+						$('#dot2').css({'background': 'rgba(176,178,186,1)'});
+						$('#dot4').css({'background': 'rgba(176,178,186,1)'});
 						// console.log(scroll_pos);
 						// console.log('3333');
 						// $('#pic_3').css({'position': 'fixed','opacity':'1'});
@@ -110,18 +295,32 @@
 						$('#pic_2').removeClass('hidden');
 						$('#pic_1').addClass('hidden');
 						$('#pic_3').addClass('hidden');
+
+						$('#text2').removeClass('hidden_text');
+						$('#text1').addClass('hidden_text');
+						$('#text3').addClass('hidden_text');
+
+						$('#dot2').css({'background': 'rgba(91,71,255,1)'});
+						$('#dot1').css({'background': 'rgba(176,178,186,1)'});
+						$('#dot3').css({'background': 'rgba(176,178,186,1)'});
 						// console.log(scroll_pos);
 						// console.log('2222');
 						// $('#pic_2').css({'position': 'fixed','opacity':'1'});
 						// $('#pic_1').css({'position': 'absolute','opacity':'0'});
 						// $('#pic_3').css({'position': 'absolute','opacity':'0'});
 					}
-					else if(scroll_pos > 30){
-						$('#pic_1').removeClass('hidden');
+					else if(scroll_pos > 130){
+						$('#pic_1').removeClass('hidden pic1_style');
 						$('#pic_2').addClass('hidden');
-						$('#pic_5').removeClass('pic5_style');						
-						// console.log(scroll_pos);
-						// console.log('1111');
+						$('#pic_5').removeClass('pic5_style');
+
+						$('#text1').removeClass('hidden_text');
+						$('#text2').addClass('hidden_text');
+
+						$('#dot1').css({'background': 'rgba(91,71,255,1)'});
+						$('#dot2').css({'background': 'rgba(176,178,186,1)'});
+
+						$('#dot').removeClass('dot_begin');
 						// $('#pic_1').css({'position': 'fixed','opacity':'1'});
 						// $('#pic_2').css({'position': 'absolute','opacity':'0'});
 					}

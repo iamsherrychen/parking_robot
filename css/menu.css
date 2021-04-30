@@ -1,0 +1,62 @@
+/* menu css */
+#purple_logo {
+    display: block;
+    position: fixed;
+    width: 65px;
+    height: 96.343px;
+    left: 60px;
+    top: 44px;
+    overflow: visible;
+}
+.menu {
+    padding-left: 0; 
+    position: fixed;
+    left: 60px;
+    top: 184px;
+}
+.dropmenu {
+    white-space: nowrap;
+    text-align: left;
+    font-family: Tw Cen MT;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    color: rgba(0,0,0,1);
+    letter-spacing: 0.15px;
+    line-height:60px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}	
+.submenu {
+    text-decoration: none;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: left;
+    margin-left: 30px;
+    font-family: Tw Cen MT;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    color: rgba(0,0,0,1);
+    letter-spacing: 0.15px;
+    line-height:60px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;		
+}
+a.dropmenu:hover { /* 滑鼠滑入level 1文字變色*/
+    color: rgba(91,71,255,1) !important;
+}
+ul.menu li:hover > ul { /* 滑鼠滑入 展開次選單*/
+    opacity: 1;
+    display: block;
+}
+ul.menu li:hover > a { /* 滑鼠移入次選單 上層按鈕保持變色*/
+    color: rgba(91,71,255,1)!important;
+}
+ul.menu li ul { /*隱藏次選單*/
+    opacity: 0;
+    display: none;
+}
+.submenu:hover { /* 滑鼠滑入level 2文字變色*/
+    color: rgba(91,71,255,1)!important;
+}
