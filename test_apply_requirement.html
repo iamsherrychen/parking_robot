@@ -39,7 +39,9 @@
 			}
 			/* picture change */
 			.play {
+				position: absolute;
 				height: 3900px;
+				z-index:1;
 			}
 			.procedure_pic{
 				top: 250px;
@@ -47,7 +49,7 @@
 				position:fixed;
 				opacity: 1;
 				transition: all 0.7s;
-				z-index:1;
+				
 			}
 			.hidden {
 				transform: scale(0);
@@ -63,14 +65,6 @@
 			/* after_pic5 */
 			#after_pic5 {
 				opacity:0;
-			}
-			.pic5_style {
-				position: absolute;
-				top: 3260px;
-				left: 959px;
-				z-index:3;
-			}
-			#block_pic5 {
 				position: absolute;
 				top: 3250px;
 				left: 350px;
@@ -78,6 +72,18 @@
 				height: 500px;
 				background-color: rgba(242,249,255,1);
 				z-index:2;
+			}
+			.pic5_style {
+				position: relative;
+				top: 10px;
+				left: 609px;
+			}
+			.pic5_text {
+				position: fixed;
+				left: 412px;
+				top: 275px;
+				opacity: 1;
+				transition: all 0.3s;
 			}
 			/* text change */
 			.pic_text {
@@ -101,7 +107,7 @@
 				font-family: Work Sans;
 				font-weight: bold;
 				font-size: 150px;
-				-webkit-text-stroke:1px rgba(91,71,255,1);
+				-webkit-text-stroke:3px rgba(91,71,255,1);
 				-webkit-text-fill-color:transparent;
 			}
 			.num_text {
@@ -170,48 +176,36 @@
 		</div>
 		<!-- five change  -->
 		<div class="play">
+			<!-- five picture -->
 			<div>
 				<div class="procedure_pic hidden pic1_style" id="pic_1"><img src="img/r1.png"/></div>
 				<div class="procedure_pic hidden" id="pic_2"><img src="img/r2.png"/></div>
 				<div class="procedure_pic hidden" id="pic_3"><img src="img/r3.png"/></div>
 				<div class="procedure_pic hidden" id="pic_4"><img src="img/r4.png"/></div>
 				<div class="procedure_pic hidden" id="pic_5"><img src="img/r5.png"/></div>
-				<div id="after_pic5" >
-					<div id="block_pic5"></div>		
-					<div class="pic5_style"><img src="img/r5.png"/></div>	 
-				</div>				
+								
 			</div>
 			<!-- five text -->
 			<div>
 				<div class="pic_text hidden_text" id="text1">
 					<div class="num_odd">01</div>
-					<div class="num_text">
-						<span>After </span><span style="color:rgba(88,72,245,1);">landowner</span><span> completes the venue<br/>application on the website, we will arrange<br/>the robot to the site to evaluate whether the<br/>venue can be used for parking, and apply<br/>status will displays </span><span style="font-style:normal;font-weight:bold;">"In the process"</span><span>.</span>
-					</div>
+					<div class="num_text"><span>After </span><span style="color:rgba(88,72,245,1);">landowner</span><span> completes the venue<br/>application on the website, we will arrange<br/>the robot to the site to evaluate whether the<br/>venue can be used for parking, and apply<br/>status will displays </span><span style="font-style:normal;font-weight:bold;">"In the process"</span><span>.</span></div>
 				</div>
 				<div class="pic_text hidden_text" id="text2">
 					<div class="num_even">02</div>
-					<div class="num_text">
-						<span>If the relevant conditions are met, the evaluation<br/>result will be returned to website, apply status<br/>will display </span><span style="font-style:normal;font-weight:bold;">"success"</span><span>; if the relevant conditions<br/>are not met, the application will be cancelled,<br/>apply status will display </span><span style="font-style:normal;font-weight:bold;">"canceled"</span><span>.</span>
-					</div>
+					<div class="num_text"><span>If the relevant conditions are met, the evaluation<br/>result will be returned to website, apply status<br/>will display </span><span style="font-style:normal;font-weight:bold;">"success"</span><span>; if the relevant conditions<br/>are not met, the application will be cancelled,<br/>apply status will display </span><span style="font-style:normal;font-weight:bold;">"canceled"</span><span>.</span></div>
 				</div>
 				<div class="pic_text hidden_text" id="text3">
 					<div class="num_odd">03</div>
-					<div class="num_text">
-						<span>After robot evaluation, you can view the<br/>parking space plan on the website. If you<br/>want to modify the site plan, you can call<br/>0800-xxx-xxx and we will adjust the site<br/>configuration for you.</span>
-					</div>
+					<div class="num_text"><span>After robot evaluation, you can view the<br/>parking space plan on the website. If you<br/>want to modify the site plan, you can call<br/>0800-xxx-xxx and we will adjust the site<br/>configuration for you.</span></div>
 				</div>
 				<div class="pic_text hidden_text" id="text4">
 					<div class="num_even">04</div>
-					<div class="num_text">
-						<span>If you agree to the final planning result, our<br/>company will handle the parking lot usage<br/>procedures for you.</span>
-					</div>
+					<div class="num_text"><span>If you agree to the final planning result, our<br/>company will handle the parking lot usage<br/>procedures for you.</span></div>
 				</div>
 				<div class="pic_text hidden_text" id="text5">
 					<div class="num_odd">05</div>
-					<div class="num_text">
-						<span>You can adjust the site "provide parking<br/>service" at any time on the website. If you<br/>have other site usage needs, you can<br/>temporarily stop using it as a parking lot,<br/>and open the parking lot when the site has<br/>no other uses.</span>
-					</div>
+					<div class="num_text"><span>You can adjust the site "provide parking<br/>service" at any time on the website. If you<br/>have other site usage needs, you can<br/>temporarily stop using it as a parking lot,<br/>and open the parking lot when the site has<br/>no other uses.</span></div>
 				</div>
 			</div>
 			<!-- five dot -->
@@ -222,6 +216,14 @@
 				<div class="circle" id="dot4"></div>
 				<div class="circle" id="dot5"></div>
 			</div>
+			<div id="after_pic5">
+				<div class="pic5_style"><img src="img/r5.png"/></div>	 
+				<div class="pic5_text">
+					<div class="num_odd">05</div>
+					<div class="num_text"><span>You can adjust the site "provide parking<br/>service" at any time on the website. If you<br/>have other site usage needs, you can<br/>temporarily stop using it as a parking lot,<br/>and open the parking lot when the site has<br/>no other uses.</span></div>
+				</div>
+			</div>
+			<div style="position:absolute;top: 4000px;height: 1000px;width: 1000px;background-color: black;"></div>
 		</div>
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script>
@@ -238,6 +240,7 @@
 				$(document).scroll(function() { 
 					scroll_pos = $(this).scrollTop(); 
 					if(scroll_pos > 3000) {		
+						// console.log(scroll_pos);
 						$('#pic_5-2').css({'opacity':'1'});
 						$('#block_pic5').css({'opacity':'1'});
 						console.log('6666');
@@ -250,7 +253,6 @@
 
 						$('#dot5').css({'background': 'rgba(91,71,255,1)'});
 						$('#dot4').css({'background': 'rgba(176,178,186,1)'});
-						// console.log(scroll_pos);
 						console.log('5555');
 						// $('#pic_5').css({'top': '500px','position': 'fixed','opacity':'1'});
 						// $('#pic_4').css({'position': 'absolute','opacity':'0'});
