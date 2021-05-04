@@ -15,6 +15,7 @@
     top: 184px;
 }
 .dropmenu {
+    height: 0px;
     white-space: nowrap;
     text-align: left;
     font-family: Tw Cen MT;
@@ -28,14 +29,14 @@
     -webkit-transition: all 0.3s;
 }	
 .submenu {
+    height: 0px;
     text-decoration: none;
     overflow: visible;
     white-space: nowrap;
     text-align: left;
     margin-left: 30px;
-    font-family: Tw Cen MT;
-    font-style: normal;
-    font-weight: bold;
+    font-family: Tw Cen MT;		
+    font-weight: lighter;
     font-size: 17px;
     color: rgba(0,0,0,1);
     letter-spacing: 0.15px;
@@ -43,19 +44,23 @@
     transition: all 0.3s;
     -webkit-transition: all 0.3s;		
 }
-a.dropmenu:hover { /* 滑鼠滑入level 1文字變色*/
+.dropmenu:hover { /* 滑鼠滑入level 1文字變色*/
     color: rgba(91,71,255,1) !important;
+    height: auto;
 }
-ul.menu li:hover > ul { /* 滑鼠滑入 展開次選單*/
+ul.menu li:hover > ul { /* 滑鼠滑入 apply往下*/
     opacity: 1;
-    display: block;
+    height: 180px;
 }
 ul.menu li:hover > a { /* 滑鼠移入次選單 上層按鈕保持變色*/
     color: rgba(91,71,255,1)!important;
 }
 ul.menu li ul { /*隱藏次選單*/
     opacity: 0;
-    display: none;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.6s;
+    -webkit-transition: all 0.6s;
 }
 .submenu:hover { /* 滑鼠滑入level 2文字變色*/
     color: rgba(91,71,255,1)!important;
