@@ -60,3 +60,196 @@ ul.menu li ul { /*隱藏次選單*/
 .submenu:hover { /* 滑鼠滑入level 2文字變色*/
     color: rgba(91,71,255,1)!important;
 }
+/* menu for purple background css */
+#black_logo {
+    display: none;
+    position: fixed;
+    width: 65px;
+    height: 96.343px;
+    left: 60px;
+    top: 44px;
+    overflow: visible;
+}
+.menu_purple {
+    display: none;
+    padding-left: 0;
+    position: fixed;
+    left: 60px;
+    top: 184px;
+}
+.dropmenu_purple {
+    white-space: nowrap;
+    text-align: left;
+    font-family: Tw Cen MT;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    color: rgba(256,256,256,1);
+    letter-spacing: 0.15px;
+    line-height:60px;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+}	
+.submenu_purple {
+    text-decoration: none;
+    white-space: nowrap;
+    text-align: left;
+    margin-left: 30px;
+    font-family: Tw Cen MT;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    color: rgba(256,256,256,1);
+    letter-spacing: 0.15px;
+    line-height:60px;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;		
+}
+a.dropmenu_purple:hover { /* 滑鼠滑入level 1文字變色*/
+    color: rgba(0,0,0,1) !important;
+}
+ul.menu_purple li:hover > ul { /* 滑鼠滑入 展開次選單*/
+    opacity: 1;
+    display: block;
+}
+ul.menu_purple li:hover > a { /* 滑鼠移入次選單 上層按鈕保持變色*/
+    color: rgba(0,0,0,1)!important;
+}
+ul.menu_purple li ul { /*隱藏次選單*/
+    opacity: 0;
+    display: none;
+}
+.submenu_purple:hover { /* 滑鼠滑入level 2文字變色*/
+    color: rgba(0,0,0,1)!important;
+}
+/* contact */
+#bottom_logo {
+    position: relative;
+    width: 70.841px;
+    height: 105px;
+    left: 317px;
+    top: 177px;
+}
+#contact {
+    position: relative;
+    left: 317px;
+    top: 225px;
+    width: 202px;
+    font-family: Work Sans;
+    font-weight: bold;
+    font-size: 50px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.15px;
+}
+#contact_message{
+    position: relative;
+    width: 1286px;
+    height: 245px;
+    display: flex;
+    justify-content: space-between;
+}
+.contact_menu{
+    font-family: Tw Cen MT;
+    font-weight: bold;
+    font-size: 17px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.15px;
+}
+.contact_submenu{
+    position: absolute;
+    font-family: Tw Cen MT;
+    font-size: 17px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.15px;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+}
+.contact_submenu:hover { /* 滑鼠滑入level 2文字變色*/
+    color: rgba(91,71,255,1);
+}
+.contact_submenu:hover > .contact_menu { /* 滑鼠移入次選單 上層按鈕保持變色*/
+    color: rgba(91,71,255,1);
+}
+#Web_Designer {
+    position: relative;
+    top:-5px;
+    font-family: Tw Cen MT;
+    font-size: 22px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.15px;
+    line-height: 35px;
+}
+#Web_Engineer {
+    position: relative;
+    top:-5px;
+    font-family: Tw Cen MT;
+    font-size: 22px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.15px;
+    line-height: 35px;
+}
+.Privacy_Policy {
+    position: relative;
+    font-family: Tw Cen MT;
+    font-weight: bold;
+    font-size: 17px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.15px;
+}
+#Pagetop_button {
+    position: absolute;
+    width: 19px;
+    height: 107.18px;
+    left: 60px;
+    top: 770px;
+    overflow: visible;
+    background-color: transparent;
+    border-width:0px;/*邊框透明*/
+    outline:none;/*點擊後無邊框*/
+}
+#Pagetop {
+    transform: translate(-60px, -1982.82px) matrix(1,0,0,1,39.5,2050.5) rotate(90deg);
+    transform-origin: center;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 61px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Tw Cen MT;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.15px;
+}
+#Group_148 {
+    transform: translate(-60px, -1982.82px) matrix(1,0,0,1,49.3534,1998.4668) rotate(-90deg);
+    transform-origin: center;
+    position: absolute;
+    width: 39.667px;
+    height: 8.373px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+#Path_8_ny {
+    fill: transparent;
+    stroke: rgba(255,255,255,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Path_8_ny {
+    overflow: visible;
+    position: absolute;
+    width: 8.373px;
+    height: 39.667px;
+    transform: translate(0px, 39.667px) matrix(1,0,0,1,15.6466,-15.6466) rotate(90deg);
+    transform-origin: center;
+    left: 0px;
+    top: -37px;
+}
