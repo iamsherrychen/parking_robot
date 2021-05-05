@@ -16,12 +16,27 @@
 			body {
 				background-color: rgba(242,249,255,1);
 			}		
+			.mediaViewInfo {
+				--web-view-name: apply requirement;
+				--web-view-id: apply_requirement;
+				--web-scale-on-resize: true;
+				--web-enable-deep-linking: true;
+			}
+			:root {
+				--web-view-ids: apply_requirement;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				border: none;
+			}
 			#apply_requirement {
 				position: absolute;
 				left: 0px;
 				width: 1920px;
 				height: 5786px;
-				background-color: rgba(255,255,255,1);
+				background-color: rgba(242,249,255,1);
 				overflow: hidden;
 				--web-view-name: apply requirement;
 				--web-view-id: apply_requirement;
@@ -48,6 +63,138 @@
 				font-size: 50px;
 				color: rgba(0,0,0,1);
 				letter-spacing: 0.15px;
+			}
+			/* 右上 */
+			#language {
+				position: absolute;
+				width: 59px;
+				height: 19px;
+				left: 1696px;
+				top: 84px;
+				overflow: visible;
+			}
+			.language_text {
+				top: 0px;
+				position: absolute;
+				overflow: visible;
+				white-space: nowrap;
+				text-align: center;
+				font-family: Tw Cen MT;
+				font-size: 17px;
+				color: rgba(0,0,0,1);
+				letter-spacing: 0.15px;
+				background-color: transparent;
+				border-width:0px;/*邊框透明*/
+				outline:none;/*點擊後無邊框*/
+			}
+			#language_line {
+				left: 24px;
+				top: -3px;
+				width: 10px;
+				position: relative;
+				font-weight: bold;
+				font-family: Tw Cen MT;
+				font-size: 22px;
+				color: rgba(0,0,0,1);
+			}
+			#login {
+				width: 75px;
+				height: 35px;
+				left: 1785px;
+				top: 76px;
+				position: absolute;
+				margin:0 auto;
+				text-align: center;
+				font-family: Tw Cen MT;
+				font-weight: bold;
+				font-size: 17px;
+				color: rgba(0,0,0,1);
+				border: 3px solid black;
+				letter-spacing: 0.15px;
+				transition: color 0.3s;
+				line-height: 8mm;
+			}
+			#login:hover{
+				color: rgba(91,71,255,1);
+				border: 3px solid rgba(91,71,255,1);
+			}
+			/* let's talk */
+			#button-lets_talk {
+				position: fixed;
+				width: 90px;
+				height: 90px;
+				left: 1770px;
+				top: 920px;
+				overflow: visible;
+				background-color: transparent;
+				border-width:0px;/*邊框透明*/
+				outline:none;/*點擊後無邊框*/
+			}
+			#ellipse {
+				fill: rgba(245,246,247,1);
+			}
+			.ellipse {
+				filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.251));
+				position: absolute;
+				overflow: visible;
+				width: 108px;
+				height: 108px;
+				left: 0px;
+				top: 0px;
+			}
+			#Lets_Talk {
+				left: 11px;
+				top: 36px;
+				position: absolute;
+				overflow: visible;
+				width: 69px;
+				white-space: nowrap;
+				text-align: center;
+				font-family: Tw Cen MT;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 17px;
+				color: rgba(91,71,255,1);
+				letter-spacing: 0.15px;
+				transition: all 0.2s;
+				-webkit-transition: all 0.2s;
+			}
+			#msg_pic {
+				opacity: 0;
+				position: absolute;
+				width: 25.665px;
+				height: 25.665px;
+				left: 32.167px;
+				top: 0px;
+				overflow: visible;
+				transition: all 0.2s;
+				-webkit-transition: all 0.2s;
+			}
+			#Path_11 {
+				fill: rgba(91,71,255,1);
+			}
+			.Path_11 {
+				overflow: visible;
+				position: absolute;
+				width: 25.665px;
+				height: 25.665px;
+				left: 0px;
+				top: 0px;
+				transform: matrix(1,0,0,1,0,0);
+			}
+			.button_lets_talk:hover > #Lets_Talk{
+				opacity: 0;
+				left: 11px;
+				top: 72px;
+				transition: all 0.2s;
+				-webkit-transition: all 0.2s;
+			}
+			.button_lets_talk:hover > #msg_pic{
+				opacity: 1;
+				left: 32.167px;
+				top: 36px;
+				transition: all 0.2s;
+				-webkit-transition: all 0.2s;
 			}
 			/* picture change */
 			.play {
@@ -169,6 +316,27 @@
 	<div id="apply_requirement">
 		<div id="title">Apply Requirement</div>
 		<div id="sub_title">Operating procedures</div>
+		<!-- 右上 -->
+		<div>
+			<div id="language">
+				<button id="CH" class="language_text">CH</button>
+				<button id="EN" class="language_text" style="left:39px;font-weight: bold;">EN</button>
+				<div id="language_line">|</div>
+			</div>
+			<a href='./login.html' id="login">Login</a>
+	
+			<button id="button-lets_talk" class="button_lets_talk">
+				<svg class="ellipse">
+					<ellipse id="ellipse" rx="45" ry="45" cx="45" cy="45"></ellipse>
+				</svg>
+				<span id="Lets_Talk">Let's Talk</span>
+				
+				<svg id="msg_pic" class="Path_11" viewBox="0 0.002 25.665 25.665">
+					<path id="Path_11" d="M 22.91533851623535 0.002000000094994903 L 2.749838352203369 0.002000000094994903 C 1.231143474578857 0.002000000094994903 0 1.233143329620361 0 2.751838207244873 L 0 17.41765975952148 C 0 18.93635559082031 1.231143474578857 20.16749954223633 2.749838352203369 20.16749954223633 L 6.00383186340332 20.16749954223633 L 5.505208969116211 24.64973640441895 C 5.449621200561523 25.15292167663574 5.812471389770508 25.6058406829834 6.315659523010254 25.66142845153809 C 6.575496673583984 25.69010734558105 6.835227966308594 25.60648536682129 7.029543399810791 25.43161392211914 L 12.8793420791626 20.16749954223633 L 22.91533851623535 20.16749954223633 C 24.43403434753418 20.16749954223633 25.6651782989502 18.93635559082031 25.6651782989502 17.41765975952148 L 25.6651782989502 2.751838207244873 C 25.66517448425293 1.233143329620361 24.43403244018555 0.002000000094994903 22.91533851623535 0.002000000094994903 Z M 23.8319149017334 17.41766166687012 C 23.8319149017334 17.92391204833984 23.42153358459473 18.33429145812988 22.915283203125 18.33429145812988 L 12.52733993530273 18.33429145812988 C 12.30085372924805 18.33434677124023 12.08242511749268 18.41828918457031 11.91410446166992 18.56985282897949 L 7.593206405639648 22.45904922485352 L 7.938762187957764 19.35264587402344 C 7.994940757751465 18.84956359863281 7.632681369781494 18.39616203308105 7.129546642303467 18.33993148803711 C 7.095711231231689 18.33617210388184 7.061714172363281 18.33423805236816 7.027663707733154 18.33429145812988 L 2.749838352203369 18.33429145812988 C 2.243588924407959 18.33429145812988 1.833207845687866 17.92391204833984 1.833207845687866 17.41766166687012 L 1.833207845687866 2.751838207244873 C 1.833207845687866 2.245589017868042 2.243588924407959 1.83520781993866 2.749838590621948 1.83520781993866 L 22.91533851623535 1.83520781993866 C 23.42158889770508 1.83520781993866 23.83196830749512 2.245589017868042 23.83196830749512 2.751838684082031 L 23.83196830749512 17.41766166687012 Z">
+					</path>
+				</svg>			
+			</button>
+		</div>
 		<!-- menu -->
 		<div>
 			<img id="purple_logo" src="img/logo_purple.png" width="65px" height="96px">
@@ -308,109 +476,109 @@
 		</div>
 	</div>
 		
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-		<script>
-			// 頁面刷新，回到頂部
-			$("html,body").animate({
-				scrollTop: 0,
-				screenLeft: 0,
-			}, 200);
-			$(document).ready(function() { 
-				$('#pic_1').removeClass('hidden');
-				$('#text1').removeClass('hidden_text');
-				var scroll_pos = 0; 
-				var pic_now;
-				$(document).scroll(function() { 
-					scroll_pos = $(this).scrollTop(); 
-					if(scroll_pos > 3000) {		
-						// console.log(scroll_pos);
-						$('#pic_5-2').css({'opacity':'1'});
-						$('#block_pic5').css({'opacity':'1'});
-						console.log('6666');
-					}else if(scroll_pos > 2500){
-						$('#pic_5').removeClass('hidden');
-						$('#pic_4').addClass('hidden');
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script>
+		// 頁面刷新，回到頂部
+		$("html,body").animate({
+			scrollTop: 0,
+			screenLeft: 0,
+		}, 200);
+		$(document).ready(function() { 
+			$('#pic_1').removeClass('hidden');
+			$('#text1').removeClass('hidden_text');
+			var scroll_pos = 0; 
+			var pic_now;
+			$(document).scroll(function() { 
+				scroll_pos = $(this).scrollTop(); 
+				if(scroll_pos > 3000) {		
+					// console.log(scroll_pos);
+					$('#pic_5-2').css({'opacity':'1'});
+					$('#block_pic5').css({'opacity':'1'});
+					console.log('6666');
+				}else if(scroll_pos > 2500){
+					$('#pic_5').removeClass('hidden');
+					$('#pic_4').addClass('hidden');
 
-						$('#text5').removeClass('hidden_text');
-						$('#text4').addClass('hidden_text');
+					$('#text5').removeClass('hidden_text');
+					$('#text4').addClass('hidden_text');
 
-						$('#dot5').css({'background': 'rgba(91,71,255,1)'});
-						$('#dot4').css({'background': 'rgba(176,178,186,1)'});
-						console.log('5555');
-						// $('#pic_5').css({'top': '500px','position': 'fixed','opacity':'1'});
-						// $('#pic_4').css({'position': 'absolute','opacity':'0'});
-					}
-					else if(scroll_pos > 2000) {
-						$('#pic_4').removeClass('hidden');
-						$('#pic_3').addClass('hidden');
-						$('#pic_5').addClass('hidden');
+					$('#dot5').css({'background': 'rgba(91,71,255,1)'});
+					$('#dot4').css({'background': 'rgba(176,178,186,1)'});
+					console.log('5555');
+					// $('#pic_5').css({'top': '500px','position': 'fixed','opacity':'1'});
+					// $('#pic_4').css({'position': 'absolute','opacity':'0'});
+				}
+				else if(scroll_pos > 2000) {
+					$('#pic_4').removeClass('hidden');
+					$('#pic_3').addClass('hidden');
+					$('#pic_5').addClass('hidden');
 
-						$('#text4').removeClass('hidden_text');
-						$('#text3').addClass('hidden_text');
-						$('#text5').addClass('hidden_text');
+					$('#text4').removeClass('hidden_text');
+					$('#text3').addClass('hidden_text');
+					$('#text5').addClass('hidden_text');
 
-						$('#dot4').css({'background': 'rgba(91,71,255,1)'});
-						$('#dot3').css({'background': 'rgba(176,178,186,1)'});
-						$('#dot5').css({'background': 'rgba(176,178,186,1)'});
-						// console.log(scroll_pos);
-						// console.log('4444');
-						// $('#pic_4').css({'position': 'fixed','opacity':'1'});
-						// $('#pic_3').css({'position': 'absolute','opacity':'0'});
-						// $('#pic_5').css({'position': 'absolute','opacity':'0'});
-					}
-					else if(scroll_pos > 1500) {
-						$('#pic_3').removeClass('hidden');
-						$('#pic_2').addClass('hidden');
-						$('#pic_4').addClass('hidden');
+					$('#dot4').css({'background': 'rgba(91,71,255,1)'});
+					$('#dot3').css({'background': 'rgba(176,178,186,1)'});
+					$('#dot5').css({'background': 'rgba(176,178,186,1)'});
+					// console.log(scroll_pos);
+					// console.log('4444');
+					// $('#pic_4').css({'position': 'fixed','opacity':'1'});
+					// $('#pic_3').css({'position': 'absolute','opacity':'0'});
+					// $('#pic_5').css({'position': 'absolute','opacity':'0'});
+				}
+				else if(scroll_pos > 1500) {
+					$('#pic_3').removeClass('hidden');
+					$('#pic_2').addClass('hidden');
+					$('#pic_4').addClass('hidden');
 
-						$('#text3').removeClass('hidden_text');
-						$('#text2').addClass('hidden_text');
-						$('#text4').addClass('hidden_text');
+					$('#text3').removeClass('hidden_text');
+					$('#text2').addClass('hidden_text');
+					$('#text4').addClass('hidden_text');
 
-						$('#dot3').css({'background': 'rgba(91,71,255,1)'});
-						$('#dot2').css({'background': 'rgba(176,178,186,1)'});
-						$('#dot4').css({'background': 'rgba(176,178,186,1)'});
-						// console.log(scroll_pos);
-						// console.log('3333');
-						// $('#pic_3').css({'position': 'fixed','opacity':'1'});
-						// $('#pic_2').css({'position': 'absolute','opacity':'0'});
-						// $('#pic_4').css({'position': 'absolute','opacity':'0'});
-					}
-					else if(scroll_pos > 1000) {
-						$('#pic_2').removeClass('hidden');
-						$('#pic_1').addClass('hidden');
-						$('#pic_3').addClass('hidden');
+					$('#dot3').css({'background': 'rgba(91,71,255,1)'});
+					$('#dot2').css({'background': 'rgba(176,178,186,1)'});
+					$('#dot4').css({'background': 'rgba(176,178,186,1)'});
+					// console.log(scroll_pos);
+					// console.log('3333');
+					// $('#pic_3').css({'position': 'fixed','opacity':'1'});
+					// $('#pic_2').css({'position': 'absolute','opacity':'0'});
+					// $('#pic_4').css({'position': 'absolute','opacity':'0'});
+				}
+				else if(scroll_pos > 1000) {
+					$('#pic_2').removeClass('hidden');
+					$('#pic_1').addClass('hidden');
+					$('#pic_3').addClass('hidden');
 
-						$('#text2').removeClass('hidden_text');
-						$('#text1').addClass('hidden_text');
-						$('#text3').addClass('hidden_text');
+					$('#text2').removeClass('hidden_text');
+					$('#text1').addClass('hidden_text');
+					$('#text3').addClass('hidden_text');
 
-						$('#dot2').css({'background': 'rgba(91,71,255,1)'});
-						$('#dot1').css({'background': 'rgba(176,178,186,1)'});
-						$('#dot3').css({'background': 'rgba(176,178,186,1)'});
-						// console.log(scroll_pos);
-						// console.log('2222');
-						// $('#pic_2').css({'position': 'fixed','opacity':'1'});
-						// $('#pic_1').css({'position': 'absolute','opacity':'0'});
-						// $('#pic_3').css({'position': 'absolute','opacity':'0'});
-					}
-					else if(scroll_pos > 130){
-						$('#pic_1').removeClass('hidden pic1_style');
-						$('#pic_2').addClass('hidden');
-						$('#pic_5').removeClass('pic5_style');
+					$('#dot2').css({'background': 'rgba(91,71,255,1)'});
+					$('#dot1').css({'background': 'rgba(176,178,186,1)'});
+					$('#dot3').css({'background': 'rgba(176,178,186,1)'});
+					// console.log(scroll_pos);
+					// console.log('2222');
+					// $('#pic_2').css({'position': 'fixed','opacity':'1'});
+					// $('#pic_1').css({'position': 'absolute','opacity':'0'});
+					// $('#pic_3').css({'position': 'absolute','opacity':'0'});
+				}
+				else if(scroll_pos > 130){
+					$('#pic_1').removeClass('hidden pic1_style');
+					$('#pic_2').addClass('hidden');
+					$('#pic_5').removeClass('pic5_style');
 
-						$('#text1').removeClass('hidden_text');
-						$('#text2').addClass('hidden_text');
+					$('#text1').removeClass('hidden_text');
+					$('#text2').addClass('hidden_text');
 
-						$('#dot1').css({'background': 'rgba(91,71,255,1)'});
-						$('#dot2').css({'background': 'rgba(176,178,186,1)'});
+					$('#dot1').css({'background': 'rgba(91,71,255,1)'});
+					$('#dot2').css({'background': 'rgba(176,178,186,1)'});
 
-						$('#dot').removeClass('dot_begin');
-						// $('#pic_1').css({'position': 'fixed','opacity':'1'});
-						// $('#pic_2').css({'position': 'absolute','opacity':'0'});
-					}
-				});				
-			});
-		</script>
+					$('#dot').removeClass('dot_begin');
+					// $('#pic_1').css({'position': 'fixed','opacity':'1'});
+					// $('#pic_2').css({'position': 'absolute','opacity':'0'});
+				}
+			});				
+		});
+	</script>
 	</body>
 </html>
