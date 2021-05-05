@@ -1,0 +1,6 @@
+picture的註解文字改顏色、regular
+confirm 完到status page
+how it works 要動
+大字固定慢慢地往左滑
+
+process of using 圖片滾一個滾圖片就會快速往上跑
