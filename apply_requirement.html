@@ -35,7 +35,7 @@
 				position: absolute;
 				left: 0px;
 				width: 1920px;
-				height: 5786px;
+				height: 5312px;
 				background-color: rgba(242,249,255,1);
 				overflow: hidden;
 				--web-view-name: apply requirement;
@@ -53,6 +53,7 @@
 				font-size: 80px;
 				color: rgba(91,71,255,1);
 				letter-spacing: 0.15px;
+				z-index:3;
 			}
 			#sub_title {
 				left: 729px;
@@ -63,6 +64,7 @@
 				font-size: 50px;
 				color: rgba(0,0,0,1);
 				letter-spacing: 0.15px;
+				z-index:3;
 			}
 			/* 右上 */
 			#language {
@@ -92,7 +94,6 @@
 				top: -3px;
 				width: 10px;
 				position: relative;
-				font-weight: bold;
 				font-family: Tw Cen MT;
 				font-size: 22px;
 				color: rgba(0,0,0,1);
@@ -109,7 +110,7 @@
 				font-weight: bold;
 				font-size: 17px;
 				color: rgba(0,0,0,1);
-				border: 3px solid black;
+				border: 2px solid black;
 				letter-spacing: 0.15px;
 				transition: color 0.3s;
 				line-height: 8mm;
@@ -117,6 +118,21 @@
 			#login:hover{
 				color: rgba(91,71,255,1);
 				border: 3px solid rgba(91,71,255,1);
+			}
+			#ID04__I__Apply_Requirement {
+				transform: matrix(1,0,0,1,1729.5,290.5) rotate(90deg);
+				transform-origin: center;
+				left: 0px;
+				top: 0px;
+				position: fixed;
+				overflow: visible;
+				width: 238px;
+				font-family: Tw Cen MT;
+				font-weight: bold;
+				font-size: 22px;
+				color: rgba(91,71,255,1);
+				letter-spacing: 0.2px;
+				z-index:1;
 			}
 			/* let's talk */
 			#button-lets_talk {
@@ -200,7 +216,7 @@
 			.play {
 				position: absolute;
 				height: 3900px;
-				z-index:1;
+				z-index:0;
 			}
 			.procedure_pic{
 				top: 250px;
@@ -208,39 +224,53 @@
 				position:fixed;
 				opacity: 1;
 				transition: all 0.7s;
-				
 			}
 			.hidden {
 				transform: scale(0);
 				opacity: 0;
 				transition: all 0.7s;
 			}
-			.pic1_style{
+			/* before five pic */
+			#before_pic1 {
+				opacity:1;
 				position: absolute;
-				top:510px;
-				left: 959px;
-				opacity:0;
+				top: 250px;
+				left: 350px;
+				width: 1200px;
+				height: 700px;
+				background-color: rgba(242,249,255,1);
+				z-index:2;
+			}
+			.pic1_style {
+				position: relative;
+				top: 261px;
+				left: 609px;
+			}
+			.pic1_text {
+				position: absolute;
+				top: 261px;
+				left: 62px;
 			}
 			/* after_pic5 */
 			#after_pic5 {
 				opacity:0;
 				position: absolute;
-				top: 3250px;
+				top: 3000px;
 				left: 350px;
 				width: 1200px;
-				height: 500px;
+				height: 675px;
 				background-color: rgba(242,249,255,1);
 				z-index:2;
 			}
 			.pic5_style {
 				position: relative;
-				top: 10px;
+				top: 61px;
 				left: 609px;
 			}
 			.pic5_text {
-				position: relative;
-				left: 10px;
-				top: 275px;
+				position: absolute;
+				top: 61px;
+				left: 62px;
 			}
 			/* text change */
 			.pic_text {
@@ -276,7 +306,8 @@
 				font-family: Tw Cen MT;
 				font-size: 22px;
 				color: rgba(0,0,0,1);
-				letter-spacing: 0.15px;
+				letter-spacing: 0.2px;
+				line-height: 10mm;
 			}
 			/* dot */
 			.dot {
@@ -300,10 +331,143 @@
 				height: 12px;
 				transition: all 0.7s;
 			}
+			.dot_last {
+				position:absolute;
+				top: 3220px;
+			}
+			/* start create */
+			#ready_to_start_page {
+				position: relative;
+				overflow: visible;
+				height: 684px;
+				top: 3669px;
+				width: 1920px;
+				background-color: white;
+			}
+			#Ready_to_get_started_Create_an {
+				left: 317px;
+				top: 189px;
+				position: absolute;
+				overflow: visible;
+				white-space: nowrap;
+				text-align: left;
+				font-family: Tw Cen MT;
+				font-weight: bold;
+				font-size: 80px;
+				color: rgba(0,0,0,1);
+				letter-spacing: 0.15px;
+			}
+			/* apply_now_button */
+			.start_btn {
+				position: absolute;
+				width: 260px;
+				height: 80px;
+				top: 424px;
+				overflow: visible;
+			}
+			.btn_text {
+				position: absolute;
+				width: 260px;
+				height: 80px;
+				left: 0px;
+				top: 0px;
+				overflow: visible;
+			}
+			.Component_rec {
+				position: absolute;
+				width: 260px;
+				height: 80px;
+				left: 0px;
+				top: 0px;
+				overflow: visible;
+			}
+			.rec_btn_text {
+				fill: rgba(91,71,255,1);
+			}
+			.btn_text_rec {
+				position: absolute;
+				overflow: visible;
+				width: 260px;
+				height: 80px;
+				left: 0px;
+				top: 0px;
+			}
+			.btn_text_position {
+				left: 76px;
+				top: 28px;
+				position: absolute;
+				white-space: nowrap;
+				font-family: Tw Cen MT;
+				font-weight: bold;
+				font-size: 22px;
+				color: rgba(255,255,255,1);
+				letter-spacing: 0.2px;
+				transition: all 0.2s;
+				-webkit-transition: all 0.2s;
+			}
+			#Create_Account_text {
+				left: 60px;;
+			}
+			.Group_arrow {
+				opacity: 0;
+				position: absolute;
+				width: 39.667px;
+				height: 8.373px;
+				left: 110px;
+				top: 36px;
+				overflow: visible;
+				transition: all 0.2s;
+				-webkit-transition: all 0.2s;
+			}
+			.Path_arrow {
+				overflow: visible;
+				position: absolute;
+				width: 8.373px;
+				height: 39.667px;
+				transform: translate(0px, 0px) matrix(1,0,0,1,15.6466,-15.6466) rotate(-90deg);
+				transform-origin: center;
+				left: 0px;
+				top: 0px;
+			}
+			.arrow {
+				fill: transparent;
+				stroke: rgba(255,255,255,1);
+				stroke-width: 2px;
+				stroke-linejoin: miter;
+				stroke-linecap: butt;
+				stroke-miterlimit: 4;
+				shape-rendering: auto;
+			}
+			.start_btn div:hover > #Apply_Now_text{
+				left: 45px;
+				top: 28px;
+				transition: all 0.2s;
+				-webkit-transition: all 0.2s;
+			}
+			.start_btn div:hover > #Create_Account_text{
+				left: 30px;
+				top: 28px;
+				transition: all 0.2s;
+				-webkit-transition: all 0.2s;
+			}
+			.start_btn:hover > #Apply_Now_arrow{
+				opacity: 1;
+				left: 175px;
+				top: 36px;
+				transition: all 0.2s;
+				-webkit-transition: all 0.2s;
+			}
+			.start_btn:hover > #Create_Account_arrow{
+				opacity: 1;
+				left: 190px;
+				top: 36px;
+				transition: all 0.2s;
+				-webkit-transition: all 0.2s;
+			}
 			/* contact */
 			#contact_area{
 				position: absolute;
-				top: 4684px;
+				top: 4352px;
 				width: 1920px;
 				height: 960px;
 				background-color: rgba(36,35,36,1);
@@ -324,6 +488,9 @@
 				<div id="language_line">|</div>
 			</div>
 			<a href='./login.html' id="login">Login</a>
+			<div id="ID04__I__Apply_Requirement">
+				<span>04  I  Apply Requirement</span>
+			</div>
 	
 			<button id="button-lets_talk" class="button_lets_talk">
 				<svg class="ellipse">
@@ -339,9 +506,9 @@
 		</div>
 		<!-- menu -->
 		<div>
-			<img id="purple_logo" src="img/logo_purple.png" width="65px" height="96px">
+			<a href="./index.html"><img id="purple_logo" src="img/logo_purple.png" width="65px" height="96px"></a>
 		</div>
-		<div>
+		<div style="position:fixed;z-index:2;">
 			<ul class="menu">
 			<!-- 第一項選單-->
 			<li>
@@ -367,7 +534,7 @@
 		<div class="play">
 			<!-- five picture -->
 			<div>
-				<div class="procedure_pic hidden pic1_style" id="pic_1"><img src="img/r1.png"/></div>
+				<div class="procedure_pic hidden" id="pic_1"><img src="img/r1.png"/></div>
 				<div class="procedure_pic hidden" id="pic_2"><img src="img/r2.png"/></div>
 				<div class="procedure_pic hidden" id="pic_3"><img src="img/r3.png"/></div>
 				<div class="procedure_pic hidden" id="pic_4"><img src="img/r4.png"/></div>
@@ -405,6 +572,14 @@
 				<div class="circle" id="dot4"></div>
 				<div class="circle" id="dot5"></div>
 			</div>
+			<!-- after five pic -->
+			<div id="before_pic1">
+				<div class="pic1_style"><img src="img/r1.png"/></div>
+				<div class="pic1_text">
+					<div class="num_odd">01</div>
+					<div class="num_text"><span>After </span><span style="color:rgba(88,72,245,1);">landowner</span><span> completes the venue<br/>application on the website, we will arrange<br/>the robot to the site to evaluate whether the<br/>venue can be used for parking, and apply<br/>status will displays </span><span style="font-style:normal;font-weight:bold;">"In the process"</span><span>.</span></div>
+				</div>
+			</div>
 			<div id="after_pic5">
 				<div class="pic5_style"><img src="img/r5.png"/></div>	 
 				<div class="pic5_text">
@@ -413,6 +588,50 @@
 				</div>
 			</div>
 		</div>
+		<!-- ready_to_start_page -->
+		<div id="ready_to_start_page">
+			<div id="Ready_to_get_started_Create_an">
+				<span>Ready to get started?</span><br><span style="color:rgba(91,71,255,1);">Create an account or get in touch.</span>
+			</div>
+			<a href='./apply_now.html' class="start_btn" id="apply_now_button" style="left: 317px;">
+				<div class="btn_text">
+					<div class="Component_rec">
+						<svg class="btn_text_rec">
+							<rect class="rec_btn_text" rx="0" ry="0" x="0" y="0" width="260" height="80">
+							</rect>
+						</svg>
+					</div>
+					<div class="btn_text_position" id="Apply_Now_text">
+						<span>Apply Now</span>
+					</div>
+				</div>
+				<div class="Group_arrow" id="Apply_Now_arrow">
+					<svg class="Path_arrow" viewBox="79 2002.8 8.373 39.667">
+						<path class="arrow" d="M 79 2002.800048828125 L 79 2042.466674804688 L 87.37348937988281 2034.093139648438 L 79 2034.093139648438">
+						</path>
+					</svg>
+				</div>
+			</a>
+			<a class="start_btn" id="create_account_button" style="left: 627px;">
+				<div class="btn_text">
+					<div class="Component_rec">
+						<svg class="btn_text_rec">
+							<rect class="rec_btn_text" rx="0" ry="0" x="0" y="0" width="260" height="80">
+							</rect>
+						</svg>
+					</div>
+					<div class="btn_text_position" id="Create_Account_text">
+						<span>Create Account</span>
+					</div>
+				</div>
+				<div class="Group_arrow" id="Create_Account_arrow">
+					<svg class="Path_arrow" viewBox="79 2002.8 8.373 39.667">
+						<path class="arrow" d="M 79 2002.800048828125 L 79 2042.466674804688 L 87.37348937988281 2034.093139648438 L 79 2034.093139648438">
+						</path>
+					</svg>
+				</div>
+			</a>
+		</div>	
 		<!-- contact -->
 		<div id="contact_area">
 			<div id="bottom_logo">
@@ -484,17 +703,17 @@
 			screenLeft: 0,
 		}, 200);
 		$(document).ready(function() { 
-			$('#pic_1').removeClass('hidden');
-			$('#text1').removeClass('hidden_text');
 			var scroll_pos = 0; 
 			var pic_now;
 			$(document).scroll(function() { 
 				scroll_pos = $(this).scrollTop(); 
-				if(scroll_pos > 3000) {		
-					// console.log(scroll_pos);
-					$('#pic_5-2').css({'opacity':'1'});
-					$('#block_pic5').css({'opacity':'1'});
-					console.log('6666');
+				console.log(scroll_pos);
+				if(scroll_pos > 2800) {
+					$('#after_pic5').css({'opacity':'1'});
+					$('#pic_5').addClass('hidden');
+					$('#text5').addClass('hidden_text');
+
+					$('#dot').addClass('dot_last');
 				}else if(scroll_pos > 2500){
 					$('#pic_5').removeClass('hidden');
 					$('#pic_4').addClass('hidden');
@@ -504,9 +723,11 @@
 
 					$('#dot5').css({'background': 'rgba(91,71,255,1)'});
 					$('#dot4').css({'background': 'rgba(176,178,186,1)'});
+
+					$('#after_pic5').css({'opacity':'0'});
+					$('#dot').removeClass('dot_last');
+
 					console.log('5555');
-					// $('#pic_5').css({'top': '500px','position': 'fixed','opacity':'1'});
-					// $('#pic_4').css({'position': 'absolute','opacity':'0'});
 				}
 				else if(scroll_pos > 2000) {
 					$('#pic_4').removeClass('hidden');
@@ -520,11 +741,6 @@
 					$('#dot4').css({'background': 'rgba(91,71,255,1)'});
 					$('#dot3').css({'background': 'rgba(176,178,186,1)'});
 					$('#dot5').css({'background': 'rgba(176,178,186,1)'});
-					// console.log(scroll_pos);
-					// console.log('4444');
-					// $('#pic_4').css({'position': 'fixed','opacity':'1'});
-					// $('#pic_3').css({'position': 'absolute','opacity':'0'});
-					// $('#pic_5').css({'position': 'absolute','opacity':'0'});
 				}
 				else if(scroll_pos > 1500) {
 					$('#pic_3').removeClass('hidden');
@@ -538,11 +754,6 @@
 					$('#dot3').css({'background': 'rgba(91,71,255,1)'});
 					$('#dot2').css({'background': 'rgba(176,178,186,1)'});
 					$('#dot4').css({'background': 'rgba(176,178,186,1)'});
-					// console.log(scroll_pos);
-					// console.log('3333');
-					// $('#pic_3').css({'position': 'fixed','opacity':'1'});
-					// $('#pic_2').css({'position': 'absolute','opacity':'0'});
-					// $('#pic_4').css({'position': 'absolute','opacity':'0'});
 				}
 				else if(scroll_pos > 1000) {
 					$('#pic_2').removeClass('hidden');
@@ -556,16 +767,11 @@
 					$('#dot2').css({'background': 'rgba(91,71,255,1)'});
 					$('#dot1').css({'background': 'rgba(176,178,186,1)'});
 					$('#dot3').css({'background': 'rgba(176,178,186,1)'});
-					// console.log(scroll_pos);
-					// console.log('2222');
-					// $('#pic_2').css({'position': 'fixed','opacity':'1'});
-					// $('#pic_1').css({'position': 'absolute','opacity':'0'});
-					// $('#pic_3').css({'position': 'absolute','opacity':'0'});
 				}
-				else if(scroll_pos > 130){
-					$('#pic_1').removeClass('hidden pic1_style');
+				else if(scroll_pos > 250){
+					$('#pic_1').removeClass('hidden');
 					$('#pic_2').addClass('hidden');
-					$('#pic_5').removeClass('pic5_style');
+					// $('#pic_5').removeClass('pic5_style');
 
 					$('#text1').removeClass('hidden_text');
 					$('#text2').addClass('hidden_text');
@@ -574,11 +780,28 @@
 					$('#dot2').css({'background': 'rgba(176,178,186,1)'});
 
 					$('#dot').removeClass('dot_begin');
-					// $('#pic_1').css({'position': 'fixed','opacity':'1'});
-					// $('#pic_2').css({'position': 'absolute','opacity':'0'});
+					// hidden before_pic1
+					$('#before_pic1').css({'opacity': '0'});
+					
+				}
+				else {
+					$('#pic_1').addClass('hidden');
+					$('#text1').addClass('hidden_text');
+					$('#before_pic1').css({'opacity': '1'});
+
+					$('#dot').addClass('dot_begin');
 				}
 			});				
 		});
+		$('#CH').on('click', function(){
+			$("#CH").css('font-weight', 'bold');
+			$("#EN").css('font-weight', 'normal');
+		}); 
+		
+		$('#EN').on('click', function(){
+			$("#CH").css('font-weight', 'normal');
+			$("#EN").css('font-weight', 'bold');
+		}); 
 	</script>
 	</body>
 </html>
