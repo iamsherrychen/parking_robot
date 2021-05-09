@@ -812,39 +812,23 @@
 		color: rgba(0,0,0,1);
 		letter-spacing: 0.15px;
 	}
-	#Group_141 {
+	/* apply status submessage */
+	#inprogress_msg {
 		position: absolute;
-		width: 790px;
 		height: 163px;
-		left: 523px;
-		top: 509px;
+		/* left: 523px;
+		top: 509px; */
 		overflow: visible;
 	}
-	#During_the_confirmation_of_the {
-		left: 0px;
-		top: 121px;
+	#progress1 {
 		position: absolute;
-		overflow: visible;
-		width: 341px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Calibri;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(91,71,255,1);
-		letter-spacing: 0.15px;
-	}
-	#Group_138 {
-		position: absolute;
-		width: 137px;
 		height: 61px;
-		left: 101px;
+		left: 0px;
 		top: 0px;
 		overflow: visible;
 	}
 	#information_upload {
-		left: 0px;
+		left: 101px;
 		top: 0px;
 		position: absolute;
 		overflow: visible;
@@ -858,17 +842,31 @@
 		color: rgba(91,71,255,1);
 		letter-spacing: 0.15px;
 	}
-	#Ellipse_4 {
-		fill: rgba(91,71,255,1);
-	}
-	.Ellipse_4 {
-		width: 10px;
-		height: 10px;
+	.dot1 {
 		position: absolute;
 		overflow: visible;
-		transform: translate(-628px, -1320px) matrix(1,0,0,1,692,1371) rotate(-90deg);
+		transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);
 		transform-origin: center;
+		background: rgba(176,178,186,1);
+		border-radius: 50%;
+		width: 10px;
+		height: 10px;
 	}
+	#During_the_confirmation_of_the {
+		left: 0px;
+		top: 121px;
+		position: absolute;
+		overflow: visible;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Calibri;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(91,71,255,1);
+		letter-spacing: 0.15px;
+	}
+	
 	#Group_139 {
 		position: absolute;
 		width: 121px;
@@ -4472,27 +4470,20 @@ window.application = new Application();
 			<span>...</span>
 		</div>
 	</div>
-	<div id="Group_141">
-		<div id="During_the_confirmation_of_the">
-			<span>During the confirmation of the site information,<br/>robots will be arranged for site evaluation</span>
-		</div>
-		<div id="Group_138">
-			<div id="information_upload">
-				<span>information upload</span>
+	<div id="inprogress_msg">
+		<div id="progress1">
+			<div id="information_upload">information upload</div>
+			<div class="dot1"></div>
+			<div id="During_the_confirmation_of_the">
+				<span>During the confirmation of the site information,<br/>robots will be arranged for site evaluation</span>
 			</div>
-			<svg class="Ellipse_4">
-				<ellipse id="Ellipse_4" rx="5" ry="5" cx="5" cy="5">
-				</ellipse>
-			</svg>
 		</div>
+		
 		<div id="Group_139">
 			<div id="under_evaluation">
 				<span>under evaluation</span>
 			</div>
-			<svg class="Ellipse_25">
-				<ellipse id="Ellipse_25" rx="5" ry="5" cx="5" cy="5">
-				</ellipse>
-			</svg>
+			<div class="dot1"></div>
 		</div>
 		<div id="Group_140">
 			<div id="complete_review">
