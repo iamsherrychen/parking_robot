@@ -4,4 +4,10 @@
     src: local('Tw Cen MT'),
          url('../fonts/TCB_____.TTF') format('opentype');
     /* font-weight: bold; */
-  }
+}
+@font-face {
+    font-family: 'Tw Cen MT';
+    src: local('Tw Cen MT'),
+         url('../fonts/TCM_____.TTF') format('opentype');
+    /* font-weight: bold; */
+}
