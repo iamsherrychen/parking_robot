@@ -3,6 +3,12 @@
     font-family: 'Work Sans';
     src: local('Work Sans'),
          url('../fonts/Work Sans.woff') format('woff'),  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-         url('../fonts/Work Sans.ttf') format('opentype'),
-         url('../fonts/Work Sans.eot') format("embedded-opentype");
-  }
+         url('../fonts/Work Sans.ttf') format('opentype');
+         /* url('../fonts/Work Sans.eot') format("embedded-opentype"); */
+}
+@font-face {
+    font-family: 'Tw Cen MT';
+    src: local('Tw Cen MT'),
+         url('../fonts/TCB_____.woff') format('woff'),  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../fonts/TCB_____.ttf') format('opentype'),
+}

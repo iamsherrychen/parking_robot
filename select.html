@@ -91,11 +91,16 @@
 		}
 		.odd{ /* odd欄位的背景色 */
 			background-color: rgba(242,249,255,1);
-			line-height: 35px;
 		}
 		.even{ /* even欄位的背景色 */
 			background-color: rgba(256,256,256,1);
+		}
+		.main_data {
 			line-height: 35px;
+		}
+		.sub_data {
+			line-height: 21px;
+			height: 330px;
 		}
 		.table-bordered td, .table-bordered th, .table-bordered  {
     		border: none;
@@ -109,25 +114,16 @@
 		}
 		/* subinformation */
 		#inprogress_msg {
-			position: absolute;
+			position: relative;
 			height: 163px;
-			/* left: 523px;
-			top: 509px; */
+			width: 790px;
+			left: 269px;
+			top: 81px;
 			overflow: visible;
 		}
-		#progress1 {
-			position: absolute;
-			height: 61px;
-			left: 0px;
-			top: 0px;
-			overflow: visible;
-		}
-		#information_upload {
-			left: 101px;
-			top: 0px;
+		.progress_text {
 			position: absolute;
 			overflow: visible;
-			width: 138px;
 			white-space: nowrap;
 			text-align: left;
 			font-family: Calibri;
@@ -137,10 +133,19 @@
 			color: rgba(91,71,255,1);
 			letter-spacing: 0.15px;
 		}
-		.dot1 {
+		#progress1 {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			overflow: visible;
+		}
+		#information_upload {
+			top: 0px;
+			left: 101px;
+		}
+		.progress_dot {
 			position: absolute;
 			overflow: visible;
-			transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);
 			transform-origin: center;
 			background: rgba(176,178,186,1);
 			border-radius: 50%;
@@ -150,16 +155,32 @@
 		#During_the_confirmation_of_the {
 			left: 0px;
 			top: 121px;
+		}
+
+		#progress2 {
 			position: absolute;
+			left: 296px;
+			top: 0px;
 			overflow: visible;
-			white-space: nowrap;
-			text-align: center;
-			font-family: Calibri;
-			font-style: normal;
-			font-weight: normal;
-			font-size: 17px;
-			color: rgba(91,71,255,1);
-			letter-spacing: 0.15px;
+		}
+		#under_evaluation {
+			top: 0px;
+			left: 96px;
+		}
+		#Robots_have_been_arranged_to {
+			left: 0px;
+			top: 121px;
+		}
+
+		#progress3 {
+			position: absolute;
+			left: 672px;
+			top: 0px;
+			overflow: visible;
+		}
+		#complete_review {
+			top: 0px;
+			left: px;
 		}
 		/* pagination's dom */
 		div.dataTables_wrapper div.dataTables_paginate ul.pagination{
@@ -207,11 +228,22 @@
 					<td colspan="5">
 						<div id="inprogress_msg">
 							<div id="progress1">
-								<div id="information_upload">information upload</div>
-								<div class="dot1"></div>
-								<div id="During_the_confirmation_of_the">
+								<div id="information_upload" class="progress_text">information upload</div>
+								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);"></div>
+								<div id="During_the_confirmation_of_the" class="progress_text">
 									<span>During the confirmation of the site information,<br/>robots will be arranged for site evaluation</span>
 								</div>
+							</div>
+							<div id="progress2">
+								<div id="under_evaluation" class="progress_text">under evaluation</div>
+								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,779,1371) rotate(-90deg);"></div>
+								<div id="Robots_have_been_arranged_to" class="progress_text">
+									<span>Robots have been arranged to conduct site <br/>assessment and will be completed within...</span>
+								</div>
+							</div>
+							<div id="progress3">
+								<div id="complete_review" class="progress_text">complete review</div>
+								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,684,1371) rotate(-90deg);"></div>
 							</div>
 						</div>
 					</td>
