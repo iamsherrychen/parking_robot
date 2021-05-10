@@ -34,13 +34,27 @@
 		#apply_status_page {
 			position: absolute;
 			width: 1920px;
-			height: 8076px;
+			height: 2405px;
 			background-color: rgba(242,249,255,1);
 			overflow: hidden;
 			--web-view-name: apply status;
 			--web-view-id: apply_status;
 			--web-scale-on-resize: true;
 			--web-enable-deep-linking: true;
+		}
+		#Apply_Status {
+			left: 240px;
+			top: 200px;
+			position: absolute;
+			overflow: visible;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Work Sans;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 50px;
+			color: rgba(91,71,255,1);
+			letter-spacing: 0.15px;
 		}
 		/* body{
 			background-color: rgba(242,249,255,1);
@@ -54,15 +68,41 @@
 			height: 163px;
 			overflow: visible;
 		}
-		
-		/* table */
+		#search {
+			top:272px;
+			left:1400px;
+			font-family:Tw Cen MT;
+			font-size: 17px;
+			position: absolute;
+			overflow: visible;
+			white-space: nowrap;
+			text-align: left;
+			color: black;
+			letter-spacing: 0.2px;
+		}
+		#side_title {
+			transform: matrix(1,0,0,1,1742,278) rotate(90deg);
+			transform-origin: center;
+			left: 0px;
+			top: 0px;
+			position: fixed;
+			overflow: visible;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Tw Cen MT;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 22px;
+			color: rgba(91,71,255,1);
+			letter-spacing: 0.15px;
+		}
+ 		/* table */
 		.Container{
 			text-align: center;
 			font-family:Tw Cen MT;
 			margin: 0 auto;
 			position: relative;
-			top: 100px;
-			top: 293px;
+			top: 310px;
 			width: 1440px;
 			font-size: 17px;
 		}
@@ -70,7 +110,7 @@
 			background-color: rgba(91,71,255,1); 
 			color: white;
 			font-size: 28px;
-			line-height: 40px;
+			height: 65px;
 		}
 		.detail_inf{
 			display: none; 
@@ -79,6 +119,13 @@
 			transform:rotate(90deg);
 			font-size: 2px;
 			text-align:center;
+			color: black;
+			transition: all 0.2s;
+			-webkit-transition: all 0.2s;
+		}
+		.arrow_turn {
+			transform:rotate(180deg);
+			color: rgba(91,71,255,1);
 		}
 		.cc_completed{
 			color: rgba(51,210,71,1);
@@ -97,10 +144,16 @@
 		}
 		.main_data {
 			line-height: 35px;
+			height: 65px;
 		}
 		.sub_data {
 			line-height: 21px;
 			height: 330px;
+			transition: all 0.2s;
+			-webkit-transition: all 0.2s;
+		}
+		.completed_lineheight {
+			height: 225px;
 		}
 		.table-bordered td, .table-bordered th, .table-bordered  {
     		border: none;
@@ -113,7 +166,7 @@
 			display: none;
 		}
 		/* subinformation */
-		#inprogress_msg {
+		.inprogress_msg {
 			position: relative;
 			height: 163px;
 			width: 790px;
@@ -180,7 +233,25 @@
 		}
 		#complete_review {
 			top: 0px;
-			left: px;
+			left: 0px;
+		}
+
+		.three_sdot {
+			position: absolute;
+			width: 78px;
+			height: 6px;
+			top: 55px;
+			display: flex;
+			justify-content:space-between;
+		}
+		.one_sdot {
+			background: rgba(176,178,186,1);
+			border-radius: 50%;
+			width: 6px;
+			height: 6px;
+		}
+		.finished_dot {
+			background: rgba(91,71,255,1);
 		}
 		/* pagination's dom */
 		div.dataTables_wrapper div.dataTables_paginate ul.pagination{
@@ -190,7 +261,7 @@
 		}
 		#contact_area{
 			position: absolute;
-			top: 1650px;
+			top: 1450px;
 			width: 1920px;
 			height: 960px;
 			background-color: rgba(36,35,36,1);
@@ -204,6 +275,15 @@
 <div id="apply_status_page">
 	<div>
 		<a href="./index.html"><img id="purple_logo" src="img/logo_purple.png" width="65px" height="96px"></a>
+	</div>
+	<div>
+	<div id="Apply_Status">
+		<span>Apply Status</span>
+	</div>
+	<div id="search">Search :</div>
+	</div>
+	<div id="side_title">
+		<span>05  I  Apply Status</span>
 	</div>
 	<div class="Container">
 		<table class="table table-bordered mydatatable" style="width: 100%">
@@ -224,26 +304,32 @@
 					<td>台北市中山區...</td>
 					<td class="cc_completed">completed</td>
 				</tr>
-				<tr class="sub_data odd">
+				<tr class="sub_data odd completed_lineheight">
 					<td colspan="5">
-						<div id="inprogress_msg">
+						<div class="inprogress_msg">
 							<div id="progress1">
 								<div id="information_upload" class="progress_text">information upload</div>
-								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);"></div>
-								<div id="During_the_confirmation_of_the" class="progress_text">
-									<span>During the confirmation of the site information,<br/>robots will be arranged for site evaluation</span>
-								</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);"></div>
+								
 							</div>
 							<div id="progress2">
 								<div id="under_evaluation" class="progress_text">under evaluation</div>
-								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,779,1371) rotate(-90deg);"></div>
-								<div id="Robots_have_been_arranged_to" class="progress_text">
-									<span>Robots have been arranged to conduct site <br/>assessment and will be completed within...</span>
-								</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,779,1371) rotate(-90deg);"></div>
+								
 							</div>
 							<div id="progress3">
 								<div id="complete_review" class="progress_text">complete review</div>
-								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,684,1371) rotate(-90deg);"></div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,684,1371) rotate(-90deg);"></div>
+							</div>
+							<div class="three_sdot" style="left: 272px;">
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+							</div>
+							<div class="three_sdot" style="left: 553px;">
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
 							</div>
 						</div>
 					</td>
@@ -256,11 +342,35 @@
 					<td class="cc_inPro">in progress</td>
 				</tr>
 				<tr class="sub_data even">
-					<td><div class="arrow">↑</div></td>
-					<td>123456789</td>
-					<td>222222222222</td>
-					<td>xjodifuhizs klsnfuo</td>
-					<td class="cc_completed">yeah</td>
+					<td colspan="5">
+						<div class="inprogress_msg">
+							<div id="progress1">
+								<div id="information_upload" class="progress_text">information upload</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);"></div>
+							</div>
+							<div id="progress2">
+								<div id="under_evaluation" class="progress_text">under evaluation</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,779,1371) rotate(-90deg);"></div>
+								<div id="Robots_have_been_arranged_to" class="progress_text">
+									<span>Robots have been arranged to conduct site <br/>assessment and will be completed within...</span>
+								</div>
+							</div>
+							<div id="progress3">
+								<div id="complete_review" class="progress_text">complete review</div>
+								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,684,1371) rotate(-90deg);"></div>
+							</div>
+							<div class="three_sdot" style="left: 272px;">
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+							</div>
+							<div class="three_sdot" style="left: 553px;">
+								<div class="one_sdot dot1"></div>
+								<div class="one_sdot dot2"></div>
+								<div class="one_sdot dot3"></div>
+							</div>
+						</div>
+					</td>
 				</tr>
 				<tr class="main_data odd">
 					<td><div class="arrow">▲</div></td>
@@ -270,11 +380,36 @@
 					<td class="cc_inPro">in progress</td>
 				</tr>
 				<tr class="sub_data odd">
-					<td><div class="arrow">↑</div></td>
-					<td>123456789</td>
-					<td>222222222222</td>
-					<td>xjodifuhizs klsnfuo</td>
-					<td class="cc_completed">yeah</td>
+					<td colspan="5">
+						<div class="inprogress_msg">
+							<div id="progress1">
+								<div id="information_upload" class="progress_text">information upload</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);"></div>
+								<div id="During_the_confirmation_of_the" class="progress_text">
+									<span>During the confirmation of the site information,<br/>robots will be arranged for site evaluation</span>
+								</div>
+							</div>
+							<div id="progress2">
+								<div id="under_evaluation" class="progress_text">under evaluation</div>
+								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,779,1371) rotate(-90deg);"></div>
+								
+							</div>
+							<div id="progress3">
+								<div id="complete_review" class="progress_text">complete review</div>
+								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,684,1371) rotate(-90deg);"></div>
+							</div>
+							<div class="three_sdot" style="left: 272px;">
+								<div class="one_sdot"></div>
+								<div class="one_sdot"></div>
+								<div class="one_sdot"></div>
+							</div>
+							<div class="three_sdot" style="left: 553px;">
+								<div class="one_sdot"></div>
+								<div class="one_sdot"></div>
+								<div class="one_sdot"></div>
+							</div>
+						</div>
+					</td>
 				</tr>
 				<tr class="main_data even">
 					<td><div class="arrow">▲</div></td>
@@ -283,12 +418,35 @@
 					<td>台北市大同區...</td>
 					<td class="cc_invalidation">invalidation</td>
 				</tr>
-				<tr class="sub_data even">
-					<td><div class="arrow">↑</div></td>
-					<td>123456789</td>
-					<td>222222222222</td>
-					<td>xjodifuhizs klsnfuo</td>
-					<td class="cc_completed">yeah</td>
+				<tr class="sub_data even completed_lineheight">
+					<td colspan="5">
+						<div class="inprogress_msg">
+							<div id="progress1">
+								<div id="information_upload" class="progress_text">information upload</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);"></div>
+								
+							</div>
+							<div id="progress2">
+								<div id="under_evaluation" class="progress_text">under evaluation</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,779,1371) rotate(-90deg);"></div>
+								
+							</div>
+							<div id="progress3">
+								<div id="complete_review" class="progress_text">complete review</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,684,1371) rotate(-90deg);"></div>
+							</div>
+							<div class="three_sdot" style="left: 272px;">
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+							</div>
+							<div class="three_sdot" style="left: 553px;">
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+							</div>
+						</div>
+					</td>
 				</tr>
 				<tr class="main_data odd">
 					<td><div class="arrow">▲</div></td>
@@ -297,12 +455,35 @@
 					<td>台北市中正區...</td>
 					<td class="cc_completed">completed</td>
 				</tr>
-				<tr class="sub_data odd">
-					<td><div class="arrow">↑</div></td>
-					<td>123456789</td>
-					<td>222222222222</td>
-					<td>xjodifuhizs klsnfuo</td>
-					<td class="cc_completed">yeah</td>
+				<tr class="sub_data odd completed_lineheight">
+					<td colspan="5">
+						<div class="inprogress_msg">
+							<div id="progress1">
+								<div id="information_upload" class="progress_text">information upload</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);"></div>
+								
+							</div>
+							<div id="progress2">
+								<div id="under_evaluation" class="progress_text">under evaluation</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,779,1371) rotate(-90deg);"></div>
+								
+							</div>
+							<div id="progress3">
+								<div id="complete_review" class="progress_text">complete review</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,684,1371) rotate(-90deg);"></div>
+							</div>
+							<div class="three_sdot" style="left: 272px;">
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+							</div>
+							<div class="three_sdot" style="left: 553px;">
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+							</div>
+						</div>
+					</td>
 				</tr>
 				<tr class="main_data even">
 					<td><div class="arrow">▲</div></td>
@@ -311,12 +492,35 @@
 					<td>台北市信義區...</td>
 					<td class="cc_completed">completed</td>
 				</tr>
-				<tr class="sub_data even">
-					<td><div class="arrow">↑</div></td>
-					<td>123456789</td>
-					<td>222222222222</td>
-					<td>xjodifuhizs klsnfuo</td>
-					<td class="cc_completed">yeah</td>
+				<tr class="sub_data even completed_lineheight">
+					<td colspan="5">
+						<div class="inprogress_msg">
+							<div id="progress1">
+								<div id="information_upload" class="progress_text">information upload</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);"></div>
+								
+							</div>
+							<div id="progress2">
+								<div id="under_evaluation" class="progress_text">under evaluation</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,779,1371) rotate(-90deg);"></div>
+								
+							</div>
+							<div id="progress3">
+								<div id="complete_review" class="progress_text">complete review</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,684,1371) rotate(-90deg);"></div>
+							</div>
+							<div class="three_sdot" style="left: 272px;">
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+							</div>
+							<div class="three_sdot" style="left: 553px;">
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+							</div>
+						</div>
+					</td>
 				</tr>
 				<tr class="main_data odd">
 					<td><div class="arrow">▲</div></td>
@@ -326,11 +530,36 @@
 					<td class="cc_inPro">in progress</td>
 				</tr>
 				<tr class="sub_data odd">
-					<td><div class="arrow">↑</div></td>
-					<td>123456789</td>
-					<td>222222222222</td>
-					<td>xjodifuhizs klsnfuo</td>
-					<td class="cc_completed">yeah</td>
+					<td colspan="5">
+						<div class="inprogress_msg">
+							<div id="progress1">
+								<div id="information_upload" class="progress_text">information upload</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);"></div>
+								<div id="During_the_confirmation_of_the" class="progress_text">
+									<span>During the confirmation of the site information,<br/>robots will be arranged for site evaluation</span>
+								</div>
+							</div>
+							<div id="progress2">
+								<div id="under_evaluation" class="progress_text">under evaluation</div>
+								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,779,1371) rotate(-90deg);"></div>
+								
+							</div>
+							<div id="progress3">
+								<div id="complete_review" class="progress_text">complete review</div>
+								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,684,1371) rotate(-90deg);"></div>
+							</div>
+							<div class="three_sdot" style="left: 272px;">
+								<div class="one_sdot"></div>
+								<div class="one_sdot"></div>
+								<div class="one_sdot"></div>
+							</div>
+							<div class="three_sdot" style="left: 553px;">
+								<div class="one_sdot"></div>
+								<div class="one_sdot"></div>
+								<div class="one_sdot"></div>
+							</div>
+						</div>
+					</td>
 				</tr>
 				<tr class="main_data even">
 					<td><div class="arrow">▲</div></td>
@@ -340,11 +569,36 @@
 					<td class="cc_inPro">in progress</td>
 				</tr>
 				<tr class="sub_data even">
-					<td><div class="arrow">↑</div></td>
-					<td>123456789</td>
-					<td>222222222222</td>
-					<td>xjodifuhizs klsnfuo</td>
-					<td class="cc_completed">yeah</td>
+					<td colspan="5">
+						<div class="inprogress_msg">
+							<div id="progress1">
+								<div id="information_upload" class="progress_text">information upload</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);"></div>
+								<div id="During_the_confirmation_of_the" class="progress_text">
+									<span>During the confirmation of the site information,<br/>robots will be arranged for site evaluation</span>
+								</div>
+							</div>
+							<div id="progress2">
+								<div id="under_evaluation" class="progress_text">under evaluation</div>
+								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,779,1371) rotate(-90deg);"></div>
+								
+							</div>
+							<div id="progress3">
+								<div id="complete_review" class="progress_text">complete review</div>
+								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,684,1371) rotate(-90deg);"></div>
+							</div>
+							<div class="three_sdot" style="left: 272px;">
+								<div class="one_sdot"></div>
+								<div class="one_sdot"></div>
+								<div class="one_sdot"></div>
+							</div>
+							<div class="three_sdot" style="left: 553px;">
+								<div class="one_sdot"></div>
+								<div class="one_sdot"></div>
+								<div class="one_sdot"></div>
+							</div>
+						</div>
+					</td>
 				</tr>
 				<tr class="main_data odd">
 					<td><div class="arrow">▲</div></td>
@@ -354,11 +608,35 @@
 					<td class="cc_inPro">in progress</td>
 				</tr>
 				<tr class="sub_data odd">
-					<td><div class="arrow">↑</div></td>
-					<td>123456789</td>
-					<td>222222222222</td>
-					<td>xjodifuhizs klsnfuo</td>
-					<td class="cc_completed">yeah</td>
+					<td colspan="5">
+						<div class="inprogress_msg">
+							<div id="progress1">
+								<div id="information_upload" class="progress_text">information upload</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);"></div>
+							</div>
+							<div id="progress2">
+								<div id="under_evaluation" class="progress_text">under evaluation</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,779,1371) rotate(-90deg);"></div>
+								<div id="Robots_have_been_arranged_to" class="progress_text">
+									<span>Robots have been arranged to conduct site <br/>assessment and will be completed within...</span>
+								</div>
+							</div>
+							<div id="progress3">
+								<div id="complete_review" class="progress_text">complete review</div>
+								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,684,1371) rotate(-90deg);"></div>
+							</div>
+							<div class="three_sdot" style="left: 272px;">
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+							</div>
+							<div class="three_sdot" style="left: 553px;">
+								<div class="one_sdot dot1"></div>
+								<div class="one_sdot dot2"></div>
+								<div class="one_sdot dot3"></div>
+							</div>
+						</div>
+					</td>
 				</tr>
 				<tr class="main_data even">
 					<td><div class="arrow">▲</div></td>
@@ -367,12 +645,35 @@
 					<td>新北市三重區...</td>
 					<td class="cc_completed">completed</td>
 				</tr>
-				<tr class="sub_data even">
-					<td><div class="arrow">↑</div></td>
-					<td>123456789</td>
-					<td>222222222222</td>
-					<td>xjodifuhizs klsnfuo</td>
-					<td class="cc_completed">yeah</td>
+				<tr class="sub_data even completed_lineheight">
+					<td colspan="5">
+						<div class="inprogress_msg">
+							<div id="progress1">
+								<div id="information_upload" class="progress_text">information upload</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);"></div>
+								
+							</div>
+							<div id="progress2">
+								<div id="under_evaluation" class="progress_text">under evaluation</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,779,1371) rotate(-90deg);"></div>
+								
+							</div>
+							<div id="progress3">
+								<div id="complete_review" class="progress_text">complete review</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,684,1371) rotate(-90deg);"></div>
+							</div>
+							<div class="three_sdot" style="left: 272px;">
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+							</div>
+							<div class="three_sdot" style="left: 553px;">
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+							</div>
+						</div>
+					</td>
 				</tr>
 				<tr class="main_data odd">
 					<td><div class="arrow">▲</div></td>
@@ -382,11 +683,35 @@
 					<td class="cc_inPro">in progress</td>
 				</tr>
 				<tr class="sub_data odd">
-					<td><div class="arrow">↑</div></td>
-					<td>123456789</td>
-					<td>222222222222</td>
-					<td>xjodifuhizs klsnfuo</td>
-					<td class="cc_completed">yeah</td>
+					<td colspan="5">
+						<div class="inprogress_msg">
+							<div id="progress1">
+								<div id="information_upload" class="progress_text">information upload</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,793,1371) rotate(-90deg);"></div>
+							</div>
+							<div id="progress2">
+								<div id="under_evaluation" class="progress_text">under evaluation</div>
+								<div class="progress_dot finished_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,779,1371) rotate(-90deg);"></div>
+								<div id="Robots_have_been_arranged_to" class="progress_text">
+									<span>Robots have been arranged to conduct site <br/>assessment and will be completed within...</span>
+								</div>
+							</div>
+							<div id="progress3">
+								<div id="complete_review" class="progress_text">complete review</div>
+								<div class="progress_dot" style="transform: translate(-628px, -1320px) matrix(1,0,0,1,684,1371) rotate(-90deg);"></div>
+							</div>
+							<div class="three_sdot" style="left: 272px;">
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+								<div class="one_sdot finished_dot"></div>
+							</div>
+							<div class="three_sdot" style="left: 553px;">
+								<div class="one_sdot dot1"></div>
+								<div class="one_sdot dot2"></div>
+								<div class="one_sdot dot3"></div>
+							</div>
+						</div>
+					</td>
 				</tr>
 			</tbody>
 		</table>
@@ -468,12 +793,18 @@
 	// 	"bInfo" : false, //Showing 1 of N entries
 	// 	"paging": false //分頁功能
 	// });
-	// $(".sub_data").show();
+	$(".sub_data").hide();
+	let lastclick = null;
 	$('.main_data').click(function() { 
-		// $(this).css('transform','rotate(180deg)');
+		if (lastclick != this) {
+			$('.main_data .arrow').removeClass('arrow_turn');
+			$(".sub_data").hide();
+		}
+		$(this).children().find('.arrow').toggleClass('arrow_turn');
 		$(this).nextUntil('.main_data').toggle();
- // don't use toggle() because it change display to block/none, we have to use display table-row 
-	}).click(); // hide by default
+
+		lastclick = this;
+	});
 </script>
 
 </body>
