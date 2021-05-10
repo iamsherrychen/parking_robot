@@ -1,8 +1,7 @@
-@font-face {font-family: "Tw Cen MT W01"; 
-    src: url("//db.onlinewebfonts.com/t/87ffd2f0e73410751e4ce0003a38ded7.eot"); 
-    src: url("//db.onlinewebfonts.com/t/87ffd2f0e73410751e4ce0003a38ded7.eot?#iefix") format("embedded-opentype"), 
-    url("//db.onlinewebfonts.com/t/87ffd2f0e73410751e4ce0003a38ded7.woff2") format("woff2"), 
-    url("//db.onlinewebfonts.com/t/87ffd2f0e73410751e4ce0003a38ded7.woff") format("woff"), 
-    url("//db.onlinewebfonts.com/t/87ffd2f0e73410751e4ce0003a38ded7.ttf") format("truetype"), 
-    url("//db.onlinewebfonts.com/t/87ffd2f0e73410751e4ce0003a38ded7.svg#Tw Cen MT W01") format("svg"); 
+/* roboto-regular - vietnamese_latin-ext_latin_greek_cyrillic-ext_cyrillic */
+
+@font-face {
+    font-family: 'Tw Cen MT';
+    src: local('Tw Cen MT'),
+         url('../fonts/TCB_____.TTF') format('opentype'),
 }
