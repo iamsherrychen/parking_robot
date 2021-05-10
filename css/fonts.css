@@ -1,14 +1,8 @@
-/* roboto-regular - vietnamese_latin-ext_latin_greek_cyrillic-ext_cyrillic */
-@font-face {
-    font-family: 'Work Sans';
-    src: local('Work Sans'),
-         url('../fonts/Work Sans.woff') format('woff'),  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-         url('../fonts/Work Sans.ttf') format('opentype');
-         /* url('../fonts/Work Sans.eot') format("embedded-opentype"); */
-}
-@font-face {
-    font-family: 'Tw Cen MT';
-    src: local('Tw Cen MT'),
-         url('../fonts/TCB_____.woff') format('woff'),  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-         url('../fonts/TCB_____.ttf') format('opentype'),
+@font-face {font-family: "Tw Cen MT W01";
+    src: url("http://db.onlinewebfonts.com/t/87ffd2f0e73410751e4ce0003a38ded7.eot"); /* IE9*/
+    src: url("http://db.onlinewebfonts.com/t/87ffd2f0e73410751e4ce0003a38ded7.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("http://db.onlinewebfonts.com/t/87ffd2f0e73410751e4ce0003a38ded7.woff2") format("woff2"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/87ffd2f0e73410751e4ce0003a38ded7.woff") format("woff"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/87ffd2f0e73410751e4ce0003a38ded7.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("http://db.onlinewebfonts.com/t/87ffd2f0e73410751e4ce0003a38ded7.svg#Tw Cen MT W01") format("svg"); /* iOS 4.1- */
 }
