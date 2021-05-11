@@ -7,14 +7,12 @@
     left: 60px;
     top: 44px;
     overflow: visible;
-    z-index: 2;
 }
 .menu {
     padding-left: 0; 
     position: fixed;
     left: 60px;
     top: 184px;
-    z-index: 2;
 }
 .dropmenu {
     height: 0px;

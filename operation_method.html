@@ -73,6 +73,8 @@
 	#ID03__I__Operation_Method {
 		transform: matrix(1,0,0,1,1735,285) rotate(90deg);
 		transform-origin: center;
+		left: 0px;
+    	top: 0px;
 		position: fixed;
 		overflow: visible;
 		white-space: nowrap;
@@ -96,8 +98,6 @@
 		position: absolute;
 		width: 535px;
 		height: 131px;
-		left: 0px;
-		top: 20px;
 		overflow: visible;
 		border: 2px solid rgba(88,72,245,1);
 		background: white;
@@ -138,8 +138,10 @@
 	}
 	#Group1 {
 		position: absolute;
+		width: 555px;
+		height: 151px;
 		left: 470px;
-		top: 1259px;
+		top: 2259px;
 		overflow: visible;
 	}
 	#Group2 {
@@ -147,7 +149,7 @@
 		width: 555px;
 		height: 151px;
 		left: 1096px;
-		top: 1438.667px;
+		top: 2438.667px;
 		overflow: visible;
 	}
 	#Group3 {
@@ -155,7 +157,7 @@
 		width: 555px;
 		height: 231px;
 		left: 470px;
-		top: 2299.667px;
+		top: 3299.667px;
 		overflow: visible;
 	}
 	#Group4 {
@@ -163,7 +165,7 @@
 		width: 555px;
 		height: 191px;
 		left: 1096px;
-		top: 2519.667px;
+		top: 3519.667px;
 		overflow: visible;
 	}
 	#Group5 {
@@ -171,7 +173,7 @@
 		width: 555px;
 		height: 151px;
 		left: 470px;
-		top: 3419.667px;
+		top: 4419.667px;
 		overflow: visible;
 	}
 	#Group6 {
@@ -179,7 +181,7 @@
 		width: 555px;
 		height: 191px;
 		left: 1096px;
-		top: 3559.667px;
+		top: 4559.667px;
 		overflow: visible;
 	}
 	#Group7 {
@@ -187,7 +189,7 @@
 		width: 555px;
 		height: 191px;
 		left: 470px;
-		top: 4478.667px;
+		top: 5478.667px;
 		overflow: visible;
 	}
 	#Group8 {
@@ -195,8 +197,28 @@
 		width: 555px;
 		height: 231px;
 		left: 1096px;
-		top: 4618.667px;
+		top: 5618.667px;
 		overflow: visible;
+	}
+	.method {
+		opacity: 0;
+	}
+	.come-in {
+		transform: translateY(-1000px);
+		opacity: 1;
+		transition: all 0.5s;
+	}
+	.fly-out {
+		transform: translateY(-1500px);
+		opacity: 0;
+		transition: all 0.5s;
+	}
+	.box {
+
+		width: 1370px;
+		height: 480px;
+		opacity: 1;
+		background-color: white;
 	}
 	/* last area */
 	#ready_to_start_page {
@@ -219,43 +241,7 @@
 </head>
 <body>
 <div id="home-operation_method">
-	<!-- menu -->
-	<div>
-		<a href="./index.html"><img id="purple_logo" src="img/logo_purple.png" width="65px" height="96px"></a>
-	</div>
-	<div>
-		<ul class="menu">
-		<!-- 第一項選單-->
-		  <li>
-		  <a class="dropmenu">About us</a>
-		   <ul>
-			<li><a href='./company_vision.html' class="submenu">Company Vision</a></li>
-			<li><a href='./our_service.html' class="submenu">Our Service</a></li>
-			<li><a href='./operation_method.html' class="submenu">Operation Method</a></li>
-		   </ul>
-		  </li>
-		<!-- 第二項選單 -->
-		  <li>
-		  <a class="dropmenu">Apply</a>
-			<ul>
-			<li><a href='./apply_requirement.html' class="submenu">Apply Requirements</a></li>
-			<li><a href='./apply_now.html' class="submenu">Apply Now</a></li>
-			<li><a href='./apply_status.html' class="submenu">Apply Status</a></li>
-		   </ul>
-		  </li>  
-		</ul>
-	</div>
-	<button id="button-lets_talk" class="button_lets_talk">
-		<svg class="ellipse">
-			<ellipse id="ellipse" rx="45" ry="45" cx="45" cy="45"></ellipse>
-		</svg>
-		<span id="Lets_Talk">Let's Talk</span>
-		
-		<svg id="msg_pic" class="Path_11" viewBox="0 0.002 25.665 25.665">
-			<path id="Path_11" d="M 22.91533851623535 0.002000000094994903 L 2.749838352203369 0.002000000094994903 C 1.231143474578857 0.002000000094994903 0 1.233143329620361 0 2.751838207244873 L 0 17.41765975952148 C 0 18.93635559082031 1.231143474578857 20.16749954223633 2.749838352203369 20.16749954223633 L 6.00383186340332 20.16749954223633 L 5.505208969116211 24.64973640441895 C 5.449621200561523 25.15292167663574 5.812471389770508 25.6058406829834 6.315659523010254 25.66142845153809 C 6.575496673583984 25.69010734558105 6.835227966308594 25.60648536682129 7.029543399810791 25.43161392211914 L 12.8793420791626 20.16749954223633 L 22.91533851623535 20.16749954223633 C 24.43403434753418 20.16749954223633 25.6651782989502 18.93635559082031 25.6651782989502 17.41765975952148 L 25.6651782989502 2.751838207244873 C 25.66517448425293 1.233143329620361 24.43403244018555 0.002000000094994903 22.91533851623535 0.002000000094994903 Z M 23.8319149017334 17.41766166687012 C 23.8319149017334 17.92391204833984 23.42153358459473 18.33429145812988 22.915283203125 18.33429145812988 L 12.52733993530273 18.33429145812988 C 12.30085372924805 18.33434677124023 12.08242511749268 18.41828918457031 11.91410446166992 18.56985282897949 L 7.593206405639648 22.45904922485352 L 7.938762187957764 19.35264587402344 C 7.994940757751465 18.84956359863281 7.632681369781494 18.39616203308105 7.129546642303467 18.33993148803711 C 7.095711231231689 18.33617210388184 7.061714172363281 18.33423805236816 7.027663707733154 18.33429145812988 L 2.749838352203369 18.33429145812988 C 2.243588924407959 18.33429145812988 1.833207845687866 17.92391204833984 1.833207845687866 17.41766166687012 L 1.833207845687866 2.751838207244873 C 1.833207845687866 2.245589017868042 2.243588924407959 1.83520781993866 2.749838590621948 1.83520781993866 L 22.91533851623535 1.83520781993866 C 23.42158889770508 1.83520781993866 23.83196830749512 2.245589017868042 23.83196830749512 2.751838684082031 L 23.83196830749512 17.41766166687012 Z">
-			</path>
-		</svg>			
-	</button>
+	
 	<svg class="Rectangle_175">
 		<rect id="Rectangle_175" rx="0" ry="0" x="0" y="0" width="1920" height="2519">
 		</rect>
@@ -263,34 +249,32 @@
 	<div id="How_Pinry_works_Operation_Meth">
 		<span>How Pinry works</span><br><span style="font-size:50px;">Operation Method</span>
 	</div>
-	
-	<div id="ID03__I__Operation_Method">
-		<span>03  I  Operation Method</span>
-	</div>
 
 	<div>
-		<div id="Group1">
-			<img class="pic" src="img/om1.png" srcset="img/om1.png 1x, img/om1@2x.png 2x">
-			<div class="rectangle" style="left: 0px;top: 20px;"></div>
-			<div class="rectangle" style="left: 10px;top: 10px;"></div>
-			<div class="rectangle" style="left: 20px;top: 0px;">
-				<div class="rec_text">
-					<span>O1</span><br><span style="font-size:22px;">Landowner apply venue on the website.</span>
-				</div>
-			</div>			
-		</div>
-		<div id="Group2">
-			<img class="pic" src="img/om2.png" srcset="img/om2.png 1x, img/om2@2x.png 2x">	
-			<div class="rectangle" style="left: 0px;top: 20px;"></div>
-			<div class="rectangle" style="left: 10px;top: 10px;"></div>
-			<div class="rectangle" style="left: 20px;top: 0px;">
-				<div class="rec_text">
-					<span>O2</span><br><span style="font-size:22px;">System audit site information.</span>
-				</div>
+		<div>
+			<div id="Group1" class="method">
+				<img class="pic" src="img/om1.png" srcset="img/om1.png 1x, img/om1@2x.png 2x">
+				<div class="rectangle out-line" style="left: 0px;top: 20px;"></div>
+				<div class="rectangle out-line" style="left: 10px;top: 10px;"></div>
+				<div class="rectangle out-line" style="left: 20px;top: 0px;">
+					<div class="rec_text">
+						<span>O1</span><br><span style="font-size:22px;">Landowner apply venue on the website.</span>
+					</div>
+				</div>	
+				<div class="box"></div>	
 			</div>
-
+			<div id="Group2" class="method">
+				<img class="pic" src="img/om2.png" srcset="img/om2.png 1x, img/om2@2x.png 2x">	
+				<div class="rectangle" style="left: 0px;top: 20px;"></div>
+				<div class="rectangle" style="left: 10px;top: 10px;"></div>
+				<div class="rectangle" style="left: 20px;top: 0px;">
+					<div class="rec_text">
+						<span>O2</span><br><span style="font-size:22px;">System audit site information.</span>
+					</div>
+				</div>	
+			</div>
 		</div>
-		<div id="Group3">
+		<div id="Group3" class="method">
 			<img class="pic p3" src="img/om3.png" srcset="img/om3.png 1x, img/om3@2x.png 2x">	
 			<div class="rectangle r3" style="left: 0px;top: 20px;"></div>
 			<div class="rectangle r3" style="left: 10px;top: 10px;"></div>
@@ -300,7 +284,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="Group4">
+		<div id="Group4" class="method">
 			<img class="pic p2" src="img/om4.png" srcset="img/om4.png 1x, img/om4@2x.png 2x">	
 			<div class="rectangle r2" style="left: 0px;top: 20px;"></div>
 			<div class="rectangle r2" style="left: 10px;top: 10px;"></div>
@@ -310,7 +294,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="Group5">
+		<div id="Group5" class="method">
 			<img class="pic" src="img/om5.png" srcset="img/om5.png 1x, img/om5@2x.png 2x">
 			<div class="rectangle" style="left: 0px;top: 20px;"></div>
 			<div class="rectangle" style="left: 10px;top: 10px;"></div>
@@ -320,7 +304,7 @@
 				</div>
 			</div>			
 		</div>
-		<div id="Group6">
+		<div id="Group6" class="method">
 			<img class="pic p2" src="img/om6.png" srcset="img/om6.png 1x, img/om6@2x.png 2x">	
 			<div class="rectangle r2" style="left: 0px;top: 20px;"></div>
 			<div class="rectangle r2" style="left: 10px;top: 10px;"></div>
@@ -330,7 +314,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="Group7">
+		<div id="Group7" class="method">
 			<img class="pic p2" src="img/om7.png" srcset="img/om7.png 1x, img/om7@2x.png 2x">	
 			<div class="rectangle r2" style="left: 0px;top: 20px;"></div>
 			<div class="rectangle r2" style="left: 10px;top: 10px;"></div>
@@ -340,7 +324,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="Group8">
+		<div id="Group8" class="method">
 			<img class="pic p3" src="img/om8.png" srcset="img/om8.png 1x, img/om8@2x.png 2x">	
 			<div class="rectangle r3" style="left: 0px;top: 20px;"></div>
 			<div class="rectangle r3" style="left: 10px;top: 10px;"></div>
@@ -395,6 +379,46 @@
 			</div>
 		</a>
 	</div>	
+	<!-- menu -->
+	<div>
+		<a href="./index.html"><img id="purple_logo" src="img/logo_purple.png" width="65px" height="96px"></a>
+	</div>
+	<div>
+		<ul class="menu">
+		<!-- 第一項選單-->
+		  <li>
+		  <a class="dropmenu">About us</a>
+		   <ul>
+			<li><a href='./company_vision.html' class="submenu">Company Vision</a></li>
+			<li><a href='./our_service.html' class="submenu">Our Service</a></li>
+			<li><a href='./operation_method.html' class="submenu">Operation Method</a></li>
+		   </ul>
+		  </li>
+		<!-- 第二項選單 -->
+		  <li>
+		  <a class="dropmenu">Apply</a>
+			<ul>
+			<li><a href='./apply_requirement.html' class="submenu">Apply Requirements</a></li>
+			<li><a href='./apply_now.html' class="submenu">Apply Now</a></li>
+			<li><a href='./apply_status.html' class="submenu">Apply Status</a></li>
+		   </ul>
+		  </li>  
+		</ul>
+	</div>
+	<div id="ID03__I__Operation_Method">
+		<span>03  I  Operation Method</span>
+	</div>
+	<button id="button-lets_talk" class="button_lets_talk">
+		<svg class="ellipse">
+			<ellipse id="ellipse" rx="45" ry="45" cx="45" cy="45"></ellipse>
+		</svg>
+		<span id="Lets_Talk">Let's Talk</span>
+		
+		<svg id="msg_pic" class="Path_11" viewBox="0 0.002 25.665 25.665">
+			<path id="Path_11" d="M 22.91533851623535 0.002000000094994903 L 2.749838352203369 0.002000000094994903 C 1.231143474578857 0.002000000094994903 0 1.233143329620361 0 2.751838207244873 L 0 17.41765975952148 C 0 18.93635559082031 1.231143474578857 20.16749954223633 2.749838352203369 20.16749954223633 L 6.00383186340332 20.16749954223633 L 5.505208969116211 24.64973640441895 C 5.449621200561523 25.15292167663574 5.812471389770508 25.6058406829834 6.315659523010254 25.66142845153809 C 6.575496673583984 25.69010734558105 6.835227966308594 25.60648536682129 7.029543399810791 25.43161392211914 L 12.8793420791626 20.16749954223633 L 22.91533851623535 20.16749954223633 C 24.43403434753418 20.16749954223633 25.6651782989502 18.93635559082031 25.6651782989502 17.41765975952148 L 25.6651782989502 2.751838207244873 C 25.66517448425293 1.233143329620361 24.43403244018555 0.002000000094994903 22.91533851623535 0.002000000094994903 Z M 23.8319149017334 17.41766166687012 C 23.8319149017334 17.92391204833984 23.42153358459473 18.33429145812988 22.915283203125 18.33429145812988 L 12.52733993530273 18.33429145812988 C 12.30085372924805 18.33434677124023 12.08242511749268 18.41828918457031 11.91410446166992 18.56985282897949 L 7.593206405639648 22.45904922485352 L 7.938762187957764 19.35264587402344 C 7.994940757751465 18.84956359863281 7.632681369781494 18.39616203308105 7.129546642303467 18.33993148803711 C 7.095711231231689 18.33617210388184 7.061714172363281 18.33423805236816 7.027663707733154 18.33429145812988 L 2.749838352203369 18.33429145812988 C 2.243588924407959 18.33429145812988 1.833207845687866 17.92391204833984 1.833207845687866 17.41766166687012 L 1.833207845687866 2.751838207244873 C 1.833207845687866 2.245589017868042 2.243588924407959 1.83520781993866 2.749838590621948 1.83520781993866 L 22.91533851623535 1.83520781993866 C 23.42158889770508 1.83520781993866 23.83196830749512 2.245589017868042 23.83196830749512 2.751838684082031 L 23.83196830749512 17.41766166687012 Z">
+			</path>
+		</svg>			
+	</button>
 	<!-- contact -->
 	<div id="contact_area">
 		<div id="bottom_logo">
@@ -458,5 +482,35 @@
 	</div>
 
 </div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		// var allMods = $(".method");
+		$(window).scroll(function(){
+			// allMods.each(function(i, el) {
+			// 	var el = $(el);
+			// 	if (el.visible(true)) {
+			// 	el.addClass("come-in"); 
+			// 	} 
+			// });
+			/* Check the location of each desired element */
+			$('.method').each( function(i){
+            
+				var bottom_of_object = $(this).offset().top - 600;
+				var bottom_of_window = $(window).scrollTop() + $(window).height();
+				
+				/* If the object is completely visible in the window, fade it it */
+				if( bottom_of_window > bottom_of_object ){
+					$(this).addClass("come-in");
+					$(this).removeClass("fly-out");
+				}
+				if( bottom_of_window > bottom_of_object + 2000 ){
+					$(this).addClass("fly-out");
+				}
+				
+			}); 		
+		});		
+	});
+</script>
 </body>
 </html>
