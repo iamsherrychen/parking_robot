@@ -1,13 +1,11 @@
 /* roboto-regular - vietnamese_latin-ext_latin_greek_cyrillic-ext_cyrillic */
 @font-face {
     font-family: 'Tw Cen MT';
-    src: local('Tw Cen MT'),
-         url('../fonts/TCM_____.TTF') format('opentype');
+    src: url('../fonts/TCM_____.TTF') format('opentype');
     font-weight: normal;
 }
 @font-face {
     font-family: 'Tw Cen MT';
-    src: local('Tw Cen MT'),
-         url('../fonts/TCB_____.TTF') format('opentype');
+    src: url('../fonts/TCB_____.TTF') format('opentype');
     font-weight: bold;
 }
