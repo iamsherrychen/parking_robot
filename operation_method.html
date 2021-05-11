@@ -31,6 +31,7 @@
 		padding: 0;
 		box-sizing: border-box;
 		border: none;
+		font-family: 'Tw Cen MT';
 	}
 	#home-operation_method {
 		position: absolute;
@@ -84,6 +85,7 @@
 		font-size: 22px;
 		color: rgba(91,71,255,1);
 		letter-spacing: 0.15px;
+		z-index: 2;
 	}
 	/* eight method */
 	.pic {
@@ -214,11 +216,20 @@
 		transition: all 0.5s;
 	}
 	.box {
-
+		transform: rotate(18deg);
+		position: fixed;
+		top: 121px;
+		left: 437px;
 		width: 1370px;
 		height: 480px;
 		opacity: 1;
-		background-color: white;
+		background-color: black;
+		z-index: 1;
+		transition: all 0.5s;
+	}
+	.hide-box {
+		opacity: 0;
+		transform: translateY(-1000px);
 	}
 	/* last area */
 	#ready_to_start_page {
@@ -251,6 +262,7 @@
 	</div>
 
 	<div>
+		<div class="box"></div>	
 		<div>
 			<div id="Group1" class="method">
 				<img class="pic" src="img/om1.png" srcset="img/om1.png 1x, img/om1@2x.png 2x">
@@ -261,7 +273,6 @@
 						<span>O1</span><br><span style="font-size:22px;">Landowner apply venue on the website.</span>
 					</div>
 				</div>	
-				<div class="box"></div>	
 			</div>
 			<div id="Group2" class="method">
 				<img class="pic" src="img/om2.png" srcset="img/om2.png 1x, img/om2@2x.png 2x">	
@@ -501,11 +512,13 @@
 				
 				/* If the object is completely visible in the window, fade it it */
 				if( bottom_of_window > bottom_of_object ){
-					$(this).addClass("come-in");
-					$(this).removeClass("fly-out");
+					$(this).addClass('come-in');
+					$(this).removeClass('fly-out');
+					$('.box').addClass('hide-box');
 				}
 				if( bottom_of_window > bottom_of_object + 2000 ){
 					$(this).addClass("fly-out");
+					$('.box').removeClass('hide-box');
 				}
 				
 			}); 		

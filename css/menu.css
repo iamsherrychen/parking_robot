@@ -112,17 +112,21 @@ ul.menu li ul { /*隱藏次選單*/
 }
 a.dropmenu_purple:hover { /* 滑鼠滑入level 1文字變色*/
     color: rgba(0,0,0,1) !important;
+    height: auto;
 }
 ul.menu_purple li:hover > ul { /* 滑鼠滑入 展開次選單*/
     opacity: 1;
-    display: block;
+    height: 180px;
 }
 ul.menu_purple li:hover > a { /* 滑鼠移入次選單 上層按鈕保持變色*/
     color: rgba(0,0,0,1)!important;
 }
 ul.menu_purple li ul { /*隱藏次選單*/
     opacity: 0;
-    display: none;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.6s;
+    -webkit-transition: all 0.6s;
 }
 .submenu_purple:hover { /* 滑鼠滑入level 2文字變色*/
     color: rgba(0,0,0,1)!important;
