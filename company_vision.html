@@ -5,9 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>company vision</title>
-<link rel="stylesheet" type="text/css" href="css/menu.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/menu.css">
 <link rel="stylesheet" type="text/css" href="css/fonts.css">
 
 <style id="applicationStylesheet" type="text/css">
@@ -63,6 +62,7 @@
 		top: 786px;
 		overflow: visible;
 	}
+	
 	#Due_to_the_limited_land_space_ {
 		left: 943px;
 		top: 350px;
@@ -127,7 +127,7 @@
 		top: 456px;
 		transform: matrix(1,0,0,1,0,0);
 	}
-	#The_path_to_a_livable_city {
+	.The_path_to_a_livable_city {
 		transform: matrix(1,0,0,1,995,772) rotate(-180deg);
 		transform-origin: center;
 		left: 0px;
@@ -144,7 +144,10 @@
 		color: rgba(91,71,255,1);
 		letter-spacing: 0.15px;
 	}
-	
+	.big_text_move {
+		transform: matrix(1,0,0,1,995,-680) rotate(-180deg);
+		transition: all 20s linear;
+	}
 	#button-lets_talk {
 		position: fixed;
 		width: 90px;
@@ -424,7 +427,7 @@
 		<path id="Line_25" d="M 0 0 L 73 0">
 		</path>
 	</svg>
-	<div id="The_path_to_a_livable_city">
+	<div class="The_path_to_a_livable_city">
 		<img style="max-width: 33.1%;" src="img/cv_bigword.png">
 	</div>	
 
@@ -529,6 +532,9 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
+	$(document).ready(function() {
+		$('.The_path_to_a_livable_city').addClass('big_text_move');
+	});
 	$('#Pagetop_button').on('click', function(event){ 
 		event.preventDefault(); 
 		$('html, body').stop().animate({scrollTop: $('#company_vision').offset().top}, 500); 

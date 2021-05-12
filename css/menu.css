@@ -344,6 +344,7 @@ ul.menu_purple li ul { /*隱藏次選單*/
     top: 225px;
     width: 202px;
     font-family: Work Sans;
+    font-style: normal;
     font-weight: bold;
     font-size: 50px;
     color: rgba(255,255,255,1);
