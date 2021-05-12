@@ -138,81 +138,98 @@
 		line-height: 41px;
 	}
 	#Group1 {
-		position: absolute;
+		position: relative;
 		width: 555px;
 		height: 151px;
-		left: 470px;
-		top: 2259px;
+		left: 0px;
+		top: 0px;
 		overflow: visible;
 	}
 	#Group2 {
-		position: absolute;
+		position: relative;
 		width: 555px;
 		height: 151px;
-		left: 1096px;
-		top: 2438.667px;
+		left: 626px;
+		top: 40px;
 		overflow: visible;
 	}
 	#Group3 {
-		position: absolute;
+		position: relative;
 		width: 555px;
 		height: 231px;
-		left: 470px;
-		top: 3299.667px;
+		left: 0px;
+		top: 0px;
 		overflow: visible;
 	}
 	#Group4 {
-		position: absolute;
+		position: relative;
 		width: 555px;
 		height: 191px;
-		left: 1096px;
-		top: 3519.667px;
+		left: 626px;
+		top: -10px;
 		overflow: visible;
 	}
 	#Group5 {
-		position: absolute;
+		position: relative;
 		width: 555px;
 		height: 151px;
-		left: 470px;
-		top: 4419.667px;
+		left: 0px;
+		top: 0px;
 		overflow: visible;
 	}
 	#Group6 {
-		position: absolute;
+		position: relative;
 		width: 555px;
 		height: 191px;
-		left: 1096px;
-		top: 4559.667px;
+		left: 626px;
+		top: -10px;
 		overflow: visible;
 	}
 	#Group7 {
-		position: absolute;
+		position: relative;
 		width: 555px;
 		height: 191px;
-		left: 470px;
-		top: 5478.667px;
+		left: 0px;
+		top: 0px;
 		overflow: visible;
 	}
 	#Group8 {
-		position: absolute;
+		position: relative;
 		width: 555px;
 		height: 231px;
-		left: 1096px;
-		top: 5618.667px;
+		left: 626px;
+		top: -50px;
 		overflow: visible;
 	}
 	.method {
+		position: absolute;
 		opacity: 0;
+		left: 470px;
+		width: 1200px;
+		height: 802px;
+	}
+	.method1 {
+		top: 2259px;
+	}
+	.method2 {
+		top: 3300px;
+	}
+	.method3 {
+		top: 4420px;
+	}
+	.method4 {
+		top: 5479px;
 	}
 	.come-in {
 		transform: translateY(-1000px);
 		opacity: 1;
-		transition: all 0.5s;
+		transition: all 0.6s;
 	}
 	.fly-out {
-		transform: translateY(-1500px);
-		opacity: 0;
-		transition: all 0.5s;
+		position:absolute;
+		opacity: 1;
+		transition: all 1s;
+		top: 2259px;
 	}
 	.box {
 		transform: rotate(18deg);
@@ -261,9 +278,9 @@
 	</div>
 
 	<div>
-		<div class="box"></div>	
-		<div>
-			<div id="Group1" class="method">
+		<!-- <div class="box"></div>	 -->
+		<div class="method method1">
+			<div id="Group1">
 				<img class="pic" src="img/om1.png" srcset="img/om1.png 1x, img/om1@2x.png 2x">
 				<div class="rectangle out-line" style="left: 0px;top: 20px;"></div>
 				<div class="rectangle out-line" style="left: 10px;top: 10px;"></div>
@@ -273,7 +290,7 @@
 					</div>
 				</div>	
 			</div>
-			<div id="Group2" class="method">
+			<div id="Group2">
 				<img class="pic" src="img/om2.png" srcset="img/om2.png 1x, img/om2@2x.png 2x">	
 				<div class="rectangle" style="left: 0px;top: 20px;"></div>
 				<div class="rectangle" style="left: 10px;top: 10px;"></div>
@@ -284,63 +301,69 @@
 				</div>	
 			</div>
 		</div>
-		<div id="Group3" class="method">
-			<img class="pic p3" src="img/om3.png" srcset="img/om3.png 1x, img/om3@2x.png 2x">	
-			<div class="rectangle r3" style="left: 0px;top: 20px;"></div>
-			<div class="rectangle r3" style="left: 10px;top: 10px;"></div>
-			<div class="rectangle r3" style="left: 20px;top: 0px;">
-				<div class="rec_text rt3">
-					<span>O3</span><br><span style="font-size:22px;line-height: 20px;">Arrange robots to the site and assess<br/>whether the venue is suitable, also evaluate<br/>how much parking spaces can provide.</span>
+		<div class="method method2">
+			<div id="Group3">
+				<img class="pic p3" src="img/om3.png" srcset="img/om3.png 1x, img/om3@2x.png 2x">	
+				<div class="rectangle r3" style="left: 0px;top: 20px;"></div>
+				<div class="rectangle r3" style="left: 10px;top: 10px;"></div>
+				<div class="rectangle r3" style="left: 20px;top: 0px;">
+					<div class="rec_text rt3">
+						<span>O3</span><br><span style="font-size:22px;line-height: 20px;">Arrange robots to the site and assess<br/>whether the venue is suitable, also evaluate<br/>how much parking spaces can provide.</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group4">
+				<img class="pic p2" src="img/om4.png" srcset="img/om4.png 1x, img/om4@2x.png 2x">	
+				<div class="rectangle r2" style="left: 0px;top: 20px;"></div>
+				<div class="rectangle r2" style="left: 10px;top: 10px;"></div>
+				<div class="rectangle r2" style="left: 20px;top: 0px;">
+					<div class="rec_text rt2">
+						<span>O4</span><br><span style="font-size:22px;line-height: 20px;">Driver request for parking and navigate to<br/>parking lot with google maps.</span>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div id="Group4" class="method">
-			<img class="pic p2" src="img/om4.png" srcset="img/om4.png 1x, img/om4@2x.png 2x">	
-			<div class="rectangle r2" style="left: 0px;top: 20px;"></div>
-			<div class="rectangle r2" style="left: 10px;top: 10px;"></div>
-			<div class="rectangle r2" style="left: 20px;top: 0px;">
-				<div class="rec_text rt2">
-					<span>O4</span><br><span style="font-size:22px;line-height: 20px;">Driver request for parking and navigate to<br/>parking lot with google maps.</span>
+		<div class="method method3">
+			<div id="Group5">
+				<img class="pic" src="img/om5.png" srcset="img/om5.png 1x, img/om5@2x.png 2x">
+				<div class="rectangle" style="left: 0px;top: 20px;"></div>
+				<div class="rectangle" style="left: 10px;top: 10px;"></div>
+				<div class="rectangle" style="left: 20px;top: 0px;">
+					<div class="rec_text">
+						<span>05</span><br><span style="font-size:22px;">Link to specific location on google maps.</span>
+					</div>
+				</div>			
+			</div>
+			<div id="Group6">
+				<img class="pic p2" src="img/om6.png" srcset="img/om6.png 1x, img/om6@2x.png 2x">	
+				<div class="rectangle r2" style="left: 0px;top: 20px;"></div>
+				<div class="rectangle r2" style="left: 10px;top: 10px;"></div>
+				<div class="rectangle r2" style="left: 20px;top: 0px;">
+					<div class="rec_text rt2">
+						<span>06</span><br><span style="font-size:22px;line-height: 20px;">Driver arrive at the entrance of parking lot<br/>and induce etc id to record time.</span>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div id="Group5" class="method">
-			<img class="pic" src="img/om5.png" srcset="img/om5.png 1x, img/om5@2x.png 2x">
-			<div class="rectangle" style="left: 0px;top: 20px;"></div>
-			<div class="rectangle" style="left: 10px;top: 10px;"></div>
-			<div class="rectangle" style="left: 20px;top: 0px;">
-				<div class="rec_text">
-					<span>05</span><br><span style="font-size:22px;">Link to specific location on google maps.</span>
-				</div>
-			</div>			
-		</div>
-		<div id="Group6" class="method">
-			<img class="pic p2" src="img/om6.png" srcset="img/om6.png 1x, img/om6@2x.png 2x">	
-			<div class="rectangle r2" style="left: 0px;top: 20px;"></div>
-			<div class="rectangle r2" style="left: 10px;top: 10px;"></div>
-			<div class="rectangle r2" style="left: 20px;top: 0px;">
-				<div class="rec_text rt2">
-					<span>06</span><br><span style="font-size:22px;line-height: 20px;">Driver arrive at the entrance of parking lot<br/>and induce etc id to record time.</span>
+		<div class="method method4">
+			<div id="Group7">
+				<img class="pic p2" src="img/om7.png" srcset="img/om7.png 1x, img/om7@2x.png 2x">	
+				<div class="rectangle r2" style="left: 0px;top: 20px;"></div>
+				<div class="rectangle r2" style="left: 10px;top: 10px;"></div>
+				<div class="rectangle r2" style="left: 20px;top: 0px;">
+					<div class="rec_text rt2">
+						<span>07</span><br><span style="font-size:22px;line-height: 20px;">Robot guide driver to specific parking space,<br/>while laser light display parking grid.</span>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div id="Group7" class="method">
-			<img class="pic p2" src="img/om7.png" srcset="img/om7.png 1x, img/om7@2x.png 2x">	
-			<div class="rectangle r2" style="left: 0px;top: 20px;"></div>
-			<div class="rectangle r2" style="left: 10px;top: 10px;"></div>
-			<div class="rectangle r2" style="left: 20px;top: 0px;">
-				<div class="rec_text rt2">
-					<span>07</span><br><span style="font-size:22px;line-height: 20px;">Robot guide driver to specific parking space,<br/>while laser light display parking grid.</span>
-				</div>
-			</div>
-		</div>
-		<div id="Group8" class="method">
-			<img class="pic p3" src="img/om8.png" srcset="img/om8.png 1x, img/om8@2x.png 2x">	
-			<div class="rectangle r3" style="left: 0px;top: 20px;"></div>
-			<div class="rectangle r3" style="left: 10px;top: 10px;"></div>
-			<div class="rectangle r3" style="left: 20px;top: 0px;">
-				<div class="rec_text rt3">
-					<span>08</span><br><span style="font-size:22px;line-height: 20px;">After driver finish parking, robot return to<br/>charging station and wait for the next user<br/>to enter the venue.</span>
+			<div id="Group8">
+				<img class="pic p3" src="img/om8.png" srcset="img/om8.png 1x, img/om8@2x.png 2x">	
+				<div class="rectangle r3" style="left: 0px;top: 20px;"></div>
+				<div class="rectangle r3" style="left: 10px;top: 10px;"></div>
+				<div class="rectangle r3" style="left: 20px;top: 0px;">
+					<div class="rec_text rt3">
+						<span>08</span><br><span style="font-size:22px;line-height: 20px;">After driver finish parking, robot return to<br/>charging station and wait for the next user<br/>to enter the venue.</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -495,32 +518,59 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
 	$(document).ready(function() {
-		// var allMods = $(".method");
 		$(window).scroll(function(){
-			// allMods.each(function(i, el) {
-			// 	var el = $(el);
-			// 	if (el.visible(true)) {
-			// 	el.addClass("come-in"); 
-			// 	} 
-			// });
 			/* Check the location of each desired element */
-			$('.method').each( function(i){
-            
-				var bottom_of_object = $(this).offset().top - 600;
+			$('.method').each( function(i){            
+				var bottom_of_object = $(this).offset().top - 800;
 				var bottom_of_window = $(window).scrollTop() + $(window).height();
-				
-				/* If the object is completely visible in the window, fade it it */
+				/* If the object is completely visible in the window, fade it */
 				if( bottom_of_window > bottom_of_object ){
 					$(this).addClass('come-in');
-					$(this).removeClass('fly-out');
-					$('.box').addClass('hide-box');
+					// $(this).removeClass('fly-out');
+					// $('.box').addClass('hide-box');
 				}
-				if( bottom_of_window > bottom_of_object + 2000 ){
-					$(this).addClass("fly-out");
-					$('.box').removeClass('hide-box');
-				}
-				
-			}); 		
+				// if( bottom_of_window > bottom_of_object + 2000 ){
+				// 	$(this).addClass('fly-out');
+				// 	// $('.box').removeClass('hide-box');
+				// }				
+			}); 	
+			//animation 2
+			// var scroll_pos = 0; 
+			// var pic_now;
+			// $(document).scroll(function() { 
+			// 	scroll_pos = $(this).scrollTop(); 
+			// 	console.log(scroll_pos);
+			// 	if(scroll_pos > 4000){
+			// 		$('.m4').removeClass('come-in');
+			// 		$('.m4').addClass('fly-out');
+			// 		// $('.m4').css({'top':'4479px'});
+			// 	}else if(scroll_pos > 3940){
+			// 		$('.m4').addClass('come-in');
+			// 		$('.m3').removeClass('come-in');
+			// 		$('.m3').addClass('fly-out');
+			// 		// $('.m3').css({'top':'3420px'});
+			// 	}else if(scroll_pos > 2860){
+			// 		$('.m4').removeClass('come-in');
+
+			// 		$('.m3').addClass('come-in');
+			// 		$('.m2').removeClass('come-in');
+			// 		$('.m2').addClass('fly-out');
+			// 		// $('.m2').css({'top':'2300px'});
+			// 	}else if(scroll_pos > 1580) {
+			// 		$('.m3').removeClass('come-in');
+
+			// 		$('.m2').addClass('come-in');
+			// 		$('.m1').removeClass('come-in');
+			// 		$('.m1').addClass('fly-out');
+			// 		// $('.m1').css({'top':'1259px'});
+			// 	}else if(scroll_pos > 610){
+			// 		$('.m2').removeClass('come-in');
+
+			// 		$('.m1').addClass('come-in');
+			// 	}else {
+			// 		$('.m1').addClass('fly-out');
+			// 	}
+			// });					
 		});		
 	});
 </script>
