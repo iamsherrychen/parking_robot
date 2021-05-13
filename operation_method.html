@@ -253,14 +253,14 @@
 		top: 6320px;
 	}
 	.come-in {
-		transform: translateY(-1560px);
+		transform: translateY(-1860px);
 		opacity: 1;
 		transition: all 0.5s;
 	}
-	.fly-out {
+	/* .fly-out {
 		transform: translateY(-1860px);
 		transition: all 0.5s;
-	}
+	} */
 	
 	/* .method1 {
 		top: 1220px;
@@ -351,7 +351,7 @@
 	</div>
 
 	<div>
-		<!-- <div class="box"></div>	 -->
+		<!-- <div class="box"></div> -->
 		<div class="method method1">
 			<div id="Group1">
 				<img class="pic" src="img/om1.png" srcset="img/om1.png 1x, img/om1@2x.png 2x">
@@ -613,10 +613,10 @@
 				// console.log(i);    
 				var bottom_of_object = $(this).offset().top -1860;
 				var bottom_of_window = $(window).scrollTop() + $(window).height();
-				console.log(bottom_of_window);
+				// console.log(bottom_of_window);
 				/* If the object is completely visible in the window, fade it */
 				if( bottom_of_window > bottom_of_object + 2000 ){
-					$(this).addClass('fly-out');
+					// $(this).addClass('fly-out');
 					// $('.box').removeClass('hide-box');
 				}
 				if( bottom_of_window > bottom_of_object ){
