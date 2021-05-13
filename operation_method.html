@@ -94,6 +94,37 @@
 		top: 100px;
 		overflow: visible;
 	}
+	.turn_rec {
+		transform:rotate(270deg);
+	}
+	.svg-wrapper {
+		position: relative;
+		width: 535px;
+		left: 20px;
+		top: 0px;
+	}
+	.shape1,
+	.shape2 {
+		stroke-dasharray: 1332;
+		stroke-width: 4px;
+		fill: transparent;
+		stroke: rgba(88,72,245,1);
+		border-bottom: 2px solid white;
+		transition-timing-function: linear;
+		transition: stroke-dashoffset 0.5s, stroke-dasharray 0.5s;
+	}
+	.shape1 {
+		stroke-dashoffset: 1332;
+	}
+	.shape2 {
+		stroke-dashoffset: -1332;
+	}
+	.svg-wrapper:hover .shape1,
+	.svg-wrapper:hover .shape2 {
+		stroke-dashoffset: 0;
+		stroke-dasharray: 1332;
+	}
+	
 	.rectangle {
 		position: absolute;
 		width: 535px;
@@ -103,7 +134,7 @@
 		background: white;
 	}
 	.rec_text {
-		left: 25px;
+		left: 45px;
 		top: 25px;
 		position: absolute;
 		overflow: visible;
@@ -208,29 +239,71 @@
 		width: 1200px;
 		height: 802px;
 	}
+	/* top 多1860 */
 	.method1 {
-		top: 2259px;
+		top: 3080px;
 	}
 	.method2 {
-		top: 3300px;
+		top: 4160px;
 	}
 	.method3 {
-		top: 4420px;
+		top: 5240px;
 	}
 	.method4 {
-		top: 5479px;
+		top: 6320px;
 	}
 	.come-in {
-		transform: translateY(-1000px);
+		transform: translateY(-1860px);
 		opacity: 1;
-		transition: all 0.6s;
+		transition: all 0.5s;
 	}
 	.fly-out {
-		position:absolute;
-		opacity: 1;
-		transition: all 1s;
-		top: 2259px;
+		transform: translateY(-1860px);
+		transition: all 0.5s;
 	}
+	
+	/* .method1 {
+		top: 1220px;
+	}
+	.method2 {
+		top: 2300px;
+	}
+	.method3 {
+		top: 3380px;
+	}
+	.method4 {
+		top: 4460px;
+	}*/
+	/* .come-in {
+		position: fixed;
+		opacity: 1;
+		top: 140px;
+		transition: all 0.5s;
+	}  */
+	/* .fly-out1 {
+		position:absolute;
+		top: 1220px;
+		opacity: 1;
+		transition: all 0.5s;
+	}
+	.fly-out2 {
+		position:absolute;
+		top: 2300px;
+		opacity: 1;
+		transition: all 0.5s;
+	}
+	.fly-out3 {
+		position:absolute;
+		top: 3380px;
+		opacity: 1;
+		transition: all 0.5s;
+	}
+	.fly-out4 {
+		position:absolute;
+		top: 4460px;
+		opacity: 1;
+		transition: all 0.5s;
+	} */
 	.box {
 		transform: rotate(18deg);
 		position: fixed;
@@ -239,7 +312,7 @@
 		width: 1370px;
 		height: 480px;
 		opacity: 1;
-		background-color: black;
+		background-color: rgb(192, 193, 194);
 		z-index: 1;
 		transition: all 0.5s;
 	}
@@ -282,13 +355,24 @@
 		<div class="method method1">
 			<div id="Group1">
 				<img class="pic" src="img/om1.png" srcset="img/om1.png 1x, img/om1@2x.png 2x">
-				<div class="rectangle out-line" style="left: 0px;top: 20px;"></div>
-				<div class="rectangle out-line" style="left: 10px;top: 10px;"></div>
-				<div class="rectangle out-line" style="left: 20px;top: 0px;">
+				<div class="rectangle" style="left: 0px;top: 20px;"></div>
+				<div class="rectangle" style="left: 10px;top: 10px;"></div>
+				<rect class="turn_rec">
+					<div class="svg-wrapper">
+						<svg height="131px" width="535px"> 
+							<rect class="shape1" height="131px" width="535px"></rect>
+							<rect class="shape2" height="131px" width="535px"></rect>
+						</svg>
+					</div>
+				</rect>
+				<div class="rec_text">
+					<span>O1</span><br><span style="font-size:22px;">Landowner apply venue on the website.</span>
+				</div>
+				<!-- <div class="rectangle" style="left: 20px;top: 0px;">
 					<div class="rec_text">
 						<span>O1</span><br><span style="font-size:22px;">Landowner apply venue on the website.</span>
 					</div>
-				</div>	
+				</div>	 -->
 			</div>
 			<div id="Group2">
 				<img class="pic" src="img/om2.png" srcset="img/om2.png 1x, img/om2@2x.png 2x">	
@@ -519,58 +603,57 @@
 <script>
 	$(document).ready(function() {
 		$(window).scroll(function(){
+			// var m1top = 3119;
+			// var m2top = 4160;
+			// var m3top = 5280;
+			// var m4top = 6339;
+			var last_this = null;
 			/* Check the location of each desired element */
-			$('.method').each( function(i){            
-				var bottom_of_object = $(this).offset().top - 800;
+			$('.method').each( function(i){        
+				// console.log(i);    
+				var bottom_of_object = $(this).offset().top -1380;
 				var bottom_of_window = $(window).scrollTop() + $(window).height();
+				console.log(bottom_of_window);
 				/* If the object is completely visible in the window, fade it */
+				if( bottom_of_window > bottom_of_object + 2000 ){
+					// $(this).addClass('fly-out');
+					// $('.box').removeClass('hide-box');
+				}
 				if( bottom_of_window > bottom_of_object ){
 					$(this).addClass('come-in');
-					// $(this).removeClass('fly-out');
-					// $('.box').addClass('hide-box');
-				}
-				// if( bottom_of_window > bottom_of_object + 2000 ){
-				// 	$(this).addClass('fly-out');
-				// 	// $('.box').removeClass('hide-box');
-				// }				
-			}); 	
-			//animation 2
-			// var scroll_pos = 0; 
-			// var pic_now;
-			// $(document).scroll(function() { 
-			// 	scroll_pos = $(this).scrollTop(); 
-			// 	console.log(scroll_pos);
-			// 	if(scroll_pos > 4000){
-			// 		$('.m4').removeClass('come-in');
-			// 		$('.m4').addClass('fly-out');
-			// 		// $('.m4').css({'top':'4479px'});
-			// 	}else if(scroll_pos > 3940){
-			// 		$('.m4').addClass('come-in');
-			// 		$('.m3').removeClass('come-in');
-			// 		$('.m3').addClass('fly-out');
-			// 		// $('.m3').css({'top':'3420px'});
-			// 	}else if(scroll_pos > 2860){
-			// 		$('.m4').removeClass('come-in');
+				}	
+				// if(bottom_of_window > 5702){
+				// 	// $('.method4').removeClass('come-in');
+				// 	// $('.method4').addClass('fly-out');
+				// 	// $('.method4').css({'position':'absolute','top':'2300'});
+				// 	$('.method4').addClass('fly-out4');
 
-			// 		$('.m3').addClass('come-in');
-			// 		$('.m2').removeClass('come-in');
-			// 		$('.m2').addClass('fly-out');
-			// 		// $('.m2').css({'top':'2300px'});
-			// 	}else if(scroll_pos > 1580) {
-			// 		$('.m3').removeClass('come-in');
+				// }	
+				// if(bottom_of_window > 5122){
+				// 	// $('.method3').removeClass('come-in');
+				// 	// $('.method3').addClass('fly-out');
+				// 	$('.method3').animate({'position':'absolute','top':'4460px'},0);
+				// 	$('.method3').addClass('fly-out3');
 
-			// 		$('.m2').addClass('come-in');
-			// 		$('.m1').removeClass('come-in');
-			// 		$('.m1').addClass('fly-out');
-			// 		// $('.m1').css({'top':'1259px'});
-			// 	}else if(scroll_pos > 610){
-			// 		$('.m2').removeClass('come-in');
+				// 	$('.method4').addClass('come-in');
+				// }else if(bottom_of_window > 4042){
+				// 	// $('.method2').removeClass('come-in');
+				// 	// $('.method2').addClass('fly-out');
+				// 	$('.method2').animate({'position':'absolute','top':'3380px'},0);
+				// 	$('.method2').addClass('fly-out2');
 
-			// 		$('.m1').addClass('come-in');
-			// 	}else {
-			// 		$('.m1').addClass('fly-out');
-			// 	}
-			// });					
+				// 	$('.method3').addClass('come-in');
+				// }else if(bottom_of_window > 2962){
+				// 	// $('.method1').removeClass('come-in');
+				// 	// $('.method1').addClass('fly-out');
+				// 	$('.method1').animate({'position':'absolute','top':'2300px'},0);
+				// 	$('.method1').addClass('fly-out1');
+
+				// 	$('.method2').addClass('come-in');
+				// }else if(bottom_of_window > 1882){
+				// 	$('.method1').addClass('come-in');
+				// }		
+			}); 			
 		});		
 	});
 </script>
