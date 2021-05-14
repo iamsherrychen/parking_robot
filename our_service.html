@@ -1220,6 +1220,8 @@
 					</path>
 				</svg>
 			</div>
+			<div id="FD_HIW_position1" style="position: absolute;top: 1080px;height: 1px;width: 1px;"></div>
+
 			<img id="o1" src="o1.png" srcset="img/o1.png 1x, img/o1@2x.png 2x">
 		</div>
 		<div>
@@ -1319,7 +1321,7 @@
 			</svg>
 		</div>
 		<div id="FD_HIW_position" style="position: absolute;top: 1002px;height: 1px;width: 1px;"></div>
-	</div>	
+	</div>
 	<!-- Process of using -->
 	<div id="page-process_of_using">
 		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		 -->
@@ -1663,9 +1665,9 @@
 		$("#CH").css('font-weight', 'normal');
 		$("#EN").css('font-weight', 'bold');
 	}); 
-	// $('#how_it_works_1').on('click', function(){ 
-	// 	$('html, body').stop().animate({scrollTop: $('#page2_rec').offset().top}, 500); 
-	// });
+	$('#how_it_works_1').on('click', function(){ 
+		$('html, body').stop().animate({scrollTop: $('#FD_HIW_position1').offset().top}, 500); 
+	});
 	$('#how_it_works_2').on('click', function(){ 
 		$('html, body').stop().animate({scrollTop: $('#FD_HIW_position').offset().top}, 500); 
 	});
