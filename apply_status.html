@@ -762,6 +762,10 @@
 	// 	"bInfo" : false, //Showing 1 of N entries
 	// 	"paging": false //分頁功能
 	// });
+	$("html,body").animate({
+        scrollTop: 0,
+        screenLeft: 0,
+    }, 200);
 	$(".sub_data").hide();
 	let lastclick = null;
 	$('.main_data').click(function() { 
@@ -773,6 +777,10 @@
 		$(this).nextUntil('.main_data').toggle();
 
 		lastclick = this;
+	});
+	$('#Pagetop_button').on('click', function(event){ 
+		event.preventDefault(); 
+		$('html, body').stop().animate({scrollTop: $('#apply_status_page').offset().top}, 500); 
 	});
 </script>
 

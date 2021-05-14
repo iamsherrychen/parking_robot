@@ -933,6 +933,10 @@
 		$("#CH").css('font-weight', 'normal');
 		$("#EN").css('font-weight', 'bold');
 	}); 
+	$('#Pagetop_button').on('click', function(event){ 
+		event.preventDefault(); 
+		$('html, body').stop().animate({scrollTop: $('#home-apply-apply_now').offset().top}, 500); 
+	});
 </script>
 </body>
 </html>

@@ -594,7 +594,7 @@
 			$(document).scroll(function() { 
 				scroll_pos = $(this).scrollTop(); 
 				console.log(scroll_pos);
-				if(scroll_pos > 2800) {
+				if(scroll_pos > 2600) {
 					$('#title').css({'position': 'absolute'});
 					$('#sub_title').css({'position': 'absolute'});
 					$('#after_pic5').css({'opacity':'1'});
@@ -659,6 +659,8 @@
 					$('#dot3').css({'background': 'rgba(176,178,186,1)'});
 				}
 				else {
+					$('#title').css({'position': 'fixed'});
+					$('#sub_title').css({'position': 'fixed'});
 					$('#pic_1').removeClass('hidden');
 					$('#pic_2').addClass('hidden');
 					// $('#pic_5').removeClass('pic5_style');
@@ -693,6 +695,10 @@
 			$("#CH").css('font-weight', 'normal');
 			$("#EN").css('font-weight', 'bold');
 		}); 
+		$('#Pagetop_button').on('click', function(event){ 
+			event.preventDefault(); 
+			$('html, body').stop().animate({scrollTop: $('#apply_requirement').offset().top}, 500); 
+		});
 	</script>
 	</body>
 </html>
