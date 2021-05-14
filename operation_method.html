@@ -241,19 +241,19 @@
 	}
 	/* top 多1860 */
 	.method1 {
-		top: 3080px;
+		top: 2080px;
 	}
 	.method2 {
-		top: 4160px;
+		top: 3160px;
 	}
 	.method3 {
-		top: 5240px;
+		top: 4240px;
 	}
 	.method4 {
-		top: 6320px;
+		top: 5320px;
 	}
 	.come-in {
-		transform: translateY(-1860px);
+		transform: translateY(-860px);
 		opacity: 1;
 		transition: all 0.5s;
 	}
@@ -357,7 +357,12 @@
 				<img class="pic" src="img/om1.png" srcset="img/om1.png 1x, img/om1@2x.png 2x">
 				<div class="rectangle" style="left: 0px;top: 20px;"></div>
 				<div class="rectangle" style="left: 10px;top: 10px;"></div>
-				<rect class="turn_rec">
+				<div class="rectangle" style="left: 20px;top: 0px;">
+					<div class="rec_text">
+						<span>O1</span><br><span style="font-size:22px;">Landowner apply venue on the website.</span>
+					</div>
+				</div>
+				<!-- <rect class="turn_rec">
 					<div class="svg-wrapper">
 						<svg height="131px" width="535px"> 
 							<rect class="shape1" height="131px" width="535px"></rect>
@@ -367,7 +372,7 @@
 				</rect>
 				<div class="rec_text">
 					<span>O1</span><br><span style="font-size:22px;">Landowner apply venue on the website.</span>
-				</div>
+				</div> -->
 				<!-- <div class="rectangle" style="left: 20px;top: 0px;">
 					<div class="rec_text">
 						<span>O1</span><br><span style="font-size:22px;">Landowner apply venue on the website.</span>
@@ -611,7 +616,7 @@
 			/* Check the location of each desired element */
 			$('.method').each( function(i){        
 				// console.log(i);    
-				var bottom_of_object = $(this).offset().top -1860;
+				var bottom_of_object = $(this).offset().top - 750;
 				var bottom_of_window = $(window).scrollTop() + $(window).height();
 				// console.log(bottom_of_window);
 				/* If the object is completely visible in the window, fade it */
